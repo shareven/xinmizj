@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>心密之家</title>
+  <base href="/tpl/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/font/iconfont.css">
+  <link rel="stylesheet" href="/static/style.css">
+
+
+</head>
+
+<body>
+  <!-- head -->
+  <header class="navbar" role="navigation">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/index.html">首页</a>
+        </li>
+        <li class="active">
+          <a href="book.html">心密书库</a>
+        </li>
+        <li>
+          <a href="video.html">心密视频</a>
+        </li>
+        <li>
+          <a href="video.html">心密音频</a>
+        </li>
+
+      </ul>
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+        <a class="navbar-brand" href="#">
+          <img src="/static/images/logo.png" width="70" height="73" alt="">
+        </a>
+      </div>
+      <ul class="nav navbar-nav ">
+
+        <li>
+          <a href="daochang.html">道场简介</a>
+        </li>
+        <li>
+          <a href="shoplink.html">法物流通</a>
+        </li>
+        <li>
+          <a href="activity.html">活动报名</a>
+        </li>
+        <li>
+          <!-- 登录注册按钮 -->
+          <div class="login-btn hide">
+            <a class="login" href="login.html">登录</a>
+            <div class="line"></div>
+            <a href="register.html">注册</a>
+          </div>
+          <!-- 登录注册按钮 -->
+
+          <!-- 登录后显示个人头像 -->
+          <a href="my.html hide" class="person">
+            <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
+          </a>
+          <!-- 登录后显示个人头像 -->
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </header>
+  <!-- head -->
+  <div class="main bookdetail clearfix">
+    <section class="top-nav text-right">
+      <ol class="breadcrumb">
+        <li>
+          <a href="/index.html">首页</a>
+        </li>
+        <li>
+          <a href="book.html"> 心密书库</a>
+        </li>
+        <li class="active"> 佛说法受尘经</li>
+      </ol>
+    </section>
+
+
+    <section class="book-catalog ">
+      <div role="tabpanel" class="clearfix row">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-stacked col-md-1 col-xs-3" role="tablist">
+          <li role="presentation" >
+            <a href="#catalog" aria-controls="catalog" role="tab" data-toggle="tab">
+              <i class="iconfont icon-liebiao"></i>
+              <div>目录</div>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#setting" aria-controls="setting" role="tab" data-toggle="tab">
+              <i class="iconfont icon-shezhi"></i>
+              <div>设置</div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content col-md-11 col-xs-12 ">
+          <div role="tabpanel" class="tab-pane" id="catalog">
+            <a href="javascript:;" class="close iconfont icon-shanchuguanbiquxiaowubiankuang"></a>
+
+            <ul class="book-catalog-list">
+              <li class="col-md-4 col-sm-4 col-xs-6">
+                <a href="" class="show-book">第一章 佛说因果</a>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-6">
+                <a href="" class="show-book">第二章 佛说因果</a>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-6">
+                <a href="" class="show-book">第三章 佛说因果</a>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-6">
+                <a href="" class="show-book">第四章 佛说因果</a>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-6">
+                <a href="" class="show-book">第五章 佛说因果</a>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-6">
+                <a href="" class="show-book">第六章 佛说因果</a>
+              </li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane " id="setting">
+            <form role="form">
+              <a href="javascript:;" class="close iconfont icon-shanchuguanbiquxiaowubiankuang"></a>
+
+              <div class="form-group clearfix">
+                <label class="col-sm-4 col-xs-12 control-label">正文字体</label>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="javascript:zh_tran('s');" class="btn btn-main form-control active jianti">简体</a>
+                  <!-- <input type="button" class="btn btn-main form-control active jianti" value="简体"> -->
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="javascript:zh_tran('t');" class="btn btn-main form-control fanti">繁体</a>
+                  <!-- <input type="button" class="btn btn-main form-control fanti" value="繁体"> -->
+                </div>
+              </div>
+
+              <div class="form-group clearfix">
+                <label class="col-sm-4 col-xs-12 control-label">字体大小</label>
+                <div class="col-sm-4 col-xs-6">
+                  <select name="fontSize" id="fontSize1" class="form-control ">
+                    <option value="12">12px</option>
+                    <option value="14" selected>14px</option>
+                    <option value="16">16px</option>
+                    <option value="18">18px</option>
+                    <option value="20">20px</option>
+                    <option value="22">22px</option>
+                    <option value="24">24px</option>
+                  </select>
+                </div>
+                <span class="input-group-btn col-sm-4 col-xs-6">
+                  <button type="button" id="fontSizeAdd" class="btn btn-default">A+</button>
+                  <button type="button" id="fontSizeReduce"class="btn btn-default">A-</button>
+                </span>
+              </div>
+
+              <div class="form-group clearfix">
+                <label class="col-sm-4 col-xs-12 control-label">文字行距</label>
+                <div class="col-sm-8 col-xs-12">
+                  <select name="" id="lineHeight1" class="form-control" required="required">
+                    <option value="1.4">1.4倍</option>
+                    <option value="1.6" selected>1.6倍</option>
+                    <option value="1.8">1.8倍</option>
+                    <option value="2">2倍</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <h3>佛法的真精神</h3>
+      <h5>
+        <span class="author">印能法师</span>
+        <span class="line">|</span>
+        <span class="time">2018-03-24</span>
+      </h5>
+      <p>人生的悲欢苦乐只是心的作用，一切造作也是心的作用，佛度众生，只是要人觉悟，心上再来个心，了解人生的所以然。觉是感觉环境的幻化，悟是悟到自心的缘妄，外不被环境所惑诱，内不被妄心所转辗，明白自己天然有个自主独立性体，虽然一时糊涂妄作，一觉便回到本来。所谓悲欢苦乐，和一切一切，都是梦幻泡影，不再上当，这是个自主独立的伟大精神。佛不自称是佛的功能，是一切人无贤无愚无大无小自有的功能。佛法的真精神就在此。</p>
+      <p>人生欲解决这个大问题，籍佛的导力是一二，靠自己的努力是八九，若全然想靠佛或定要靠自己不依佛法，这都是大迷信，不是佛子。</p>
+      <p>佛说因果，不是有了佛才有因果。佛说平等，不是有了佛才有平等。佛说众生与佛，本来不二，不二即是平等，是众生自己本来平等，非特地做来不平等。论到外相，自然有大小高下美丑种种的不同，不同就不平等了，但一切相是缘生缘灭，幻起幻落，同一不实，这是平等的，所以平等是实，不平等是幻，而世人总是执取有相，久久成为习惯，于平等的真理，忘之久矣。独有觉悟的人，不受这个束缚，自己能别具见解，由理想上推出这个真理来，觉知一切众生，性体与我不二，何以我一定是好是对，他人就一定是坏是不对呢？那不明这个平等真理的人，先立了个人我之见，我要好，你不必要好，我有钱是阔，你没钱是贫，不知是钱的问题，于人有什么相关，我的钱给了你，我就贫，你就阔了，就是我不给你，我用完了，我也就贫了。本来钱是外相，根本靠不住的，但是患得患失的习性已久，要永久保持它，忘记了因果和平等的真理，所以多争，以至残杀抢夺，枉受诸苦，佛法的真精神，就是要打破你这个迷见。</p>
+      <p>人有了这个迷见，一迷再迷，势力越大，迷的力量也越大，迷人越多，迷的团体也越多，一步步的演进到了糊涂的极点，反说佛法是迷信了。</p>
+      <p>世上的一切一切，无不是示我的教训，人事的种种幻变，即是告我以无常种种的不定，即是教我勿固执。世上一切恶业，无不由我执所起，天下最苦闷的人就是刚愎自是，总是我的不错，一直迷到底，至死不悟。我人看了他是真苦，他自己也苦，苦于不知道自己的苦。但我人自己，又何尝真明白呢？处于旁观是明白的，一轮到自己被虚荣货利所引诱，也许一样会刚愎自是。所以佛要你彻底觉悟。朱子只说到不为外物所诱，不知外物是什么，就是我自心的缘妄。不从心上下手，是不会彻底的，到佛法的真精神实在此。</p>
+      <p>佛教和佛法，本无所别，所教的就是法。但到现在，所可见的只是佛教的形式，所不明的却是佛法的真理。佛子四众，上焉者，闭门自修，不问社会上的疾苦；中焉者，好出风头，勤作有相功德；下焉者，犯奸作恶，无所不为。一班学佛的，不是死气沉沉，就是妖形怪气，社会上只见其害，不见其利，叫人如何信仰得起。现在更进一步，连一班自修的人们，门也关不住了。东奔西走，更无暇把真正的佛法精神，介绍于社会，所以愈离愈远，人的怀疑也愈深，此佛教之衰落也。佛教既经过许多年的残破，然而佛法的精神潜势力，非但不见削改，反而日见膨胀，想研究真理的人，日见其多，这就是人心苦闷的反动，无形中把佛教和佛法分了家。有智识的人，自然不取佛教的形式庄严，而尊重佛法的精神自在。佛法的有相功德，原为一班初入门的方便引导。至于根本上，佛本来不取于相，要人自觉，最正宗的，是自他两利，化敌为友，让他自动的驯伏，使各人明了自身的本来面目，把大智辅助大悲，做救世的工作。第一不许贪，能够不取于相，那贪污之风，自然灭了。第二勿瞋，能够平等慈视，了解互助之义，那诈伪残杀之习，自然止了。第三勿痴，能够阐明真理，开大觉慧，打破迷信，那刚愎自用，颠倒妄作之行，自然少了。总之要他自动的感化。可见无一人不有心，心即是佛。无一心不有理，理即是法。佛法的伟大作用，在不争自己佛教的门面，和其他宗教论短长，而在使人个个自己觉悟真理。学佛的平等救世精神，救不在衣食住的满足，而在人人能得衣食住的平等享受，以为衣食住是维持这个身，身是维持这个大悲心。要去做大悲利众的事业，不是自了汉，焦芽败种的罗汉，而是智悲双运的菩萨，正合乎现世所倡的平等主义。倘有刚愎自是的人，他自会众叛亲离，不打自倒，为天下人作个大榜样，大教训，这才是佛法的真精神。</p>
+      <p>佛法是重实干的，是重自然性的，先自克己，取得定力，由定力增长识力，体力自然加强，这是人生的三力。用三力以应付社会上一切事业，自得游刃有余，处于今日狂风暴雨之局势下，没有心力的把持，必定被外境所冲动。即如一班贪污的人，本性并不愿贪污，只因环境的诱惑，前途没有希望，眼下即有恐怖，自己又无把持，逼迫到贪污的路上去。贪是人人本具的劣性，污是一时的妄作，一人作俑，众人效尤，遂成了公开的流行病。如果要改造这个劣性，应先使其自觉，生活一安定，此风自然而止，此是佛法的真精神。</p>
+      <p>一个人贪，可以引得许多人贪。以贪为本位，欲壑自然难盈，必至多数人受逼迫没饭吃。反动过来，自己所贪得来的根本就靠不住。倘早知贪得的危险，自不至深入自杀的一途。"平安"二字，是要人人平了，我才得安，有一个人不平，即有一个反动，即是自己的危险。我尝说世界要真正平安时，锁和保险柜，是用不着了。用到这两件东西时，即是心怀疑忌，四面都有了反动的恐怖。那反动即是不均平，心和物质都不均平，而不均平的主因，还是个贪。贪的主因，仍是由于恐怖。恐怖的主因，由于不觉。不觉所以见理不明，不肯施舍。佛说一切法，首重布施，布施是放弃的意思，不但金钱物品要布施去，连我的迷见也布施去，放大眼光，勿固执劣见。使人人有饭吃，即是我的无上保险，最大安乐，所以布施是佛法最伟大的精神。</p>
+      <p>佛法只是要把世事翻个身，我所执持的且放一下，看是如何？我所看重的且看贱他,看是如何？我所爱的不爱，取的舍去，惊奇的不惊奇，其苦自断，并且处事灵活面面玲珑矣!</p>
+    </section>
+
+    <section class="frame-btn">
+      <a href="" class="btn btn-defaullt">上一章</a>
+      <a href="" class="btn btn-defaullt">目录</a>
+      <a href="" class="btn btn-defaullt">下一章</a>
+    </section>
+  </div>
+
+
+  <!-- footer -->
+  <footer>
+    <div class="row">
+      <div class="link col-md-6 col-xs-12">
+        <div class="col-xs-3">
+          <a href="contact.html">联系我们</a>
+        </div>
+        <div class="col-xs-3">
+          <a href="#">网站地图</a>
+        </div>
+        <div class="col-xs-3">
+          <a href="privacy.html">隐私政策</a>
+        </div>
+        <div class="col-xs-3">
+          <a href="#">友情链接</a>
+        </div>
+      </div>
+      <div class="copyright col-md-6 col-xs-12  text-right">Copyright©2018 印心精舍, 版权所有,
+        <a href="http://www.miitbeian.gov.cn">豫ICP备18014080号-1</a>
+      </div>
+
+    </div>
+  </footer>
+  <!-- footer -->
+
+  <script src="/static/lib/jquery.min.js"></script>
+  <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/js/bookdetail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>心密之家</title>
+  <base href="/tpl/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/static/style.css">
+
+
+</head>
+
+<body>
+  <div class="login-wrap forgetPwd">
+    <a href="/index.html" class="goback">返回心密之家</a>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <p class="panel-title">忘记密码</p>
+      </div>
+      <div class="panel-body">
+
+
+        <form class="form">
+
+          <div class="form-group">
+            <div class="input-group-addon1">
+              <img src="/static/images/phone.png" alt="">
+            </div>
+            <input type="number" name="telephone" id="telephone" class=" form-control " placeholder="请输入手机号 ">
+          </div>
+
+          <div class="form-group">
+            <div class="input-group-addon1">
+              <img src="/static/images/validatecode.png" alt="">
+            </div>
+              <input type="text" name="validatecode" class="form-control " placeholder="请输入短信验证码 ">
+          
+              <button type="button" disabled id="getvalidatecode"  class="disabled btn-success">获取验证码</button>
+            
+          </div>
+          <div class="form-group ">
+            <div class="input-group-addon1 ">
+              <img src="/static/images/password.png " alt=" ">
+            </div>
+            <input type="password " name="password" class="form-control " placeholder="请设置新密码 ">
+          </div>
+          <button type="submit " class="btn btn-primary ">登录</button>
+          <div class="link ">
+            <a href="login.html ">已有账号，去登录</a>
+            <span class="line "></span>
+            <a href="register.html ">立即注册</a>
+          </div>
+          <dis class="result red ">此处显示错误信息</dis>
+        </form>
+
+
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="row ">
+        <div class="copyright ">Copyright©2018 印心精舍, 版权所有,
+          <a href="http://www.miitbeian.gov.cn ">豫ICP备18014080号-1</a>
+        </div>
+
+      </div>
+    </footer>
+    <!-- footer -->
+  </div>
+
+
+
+
+
+
+
+  <script src="/static/lib/jquery.min.js "></script>
+  <script src="/static/lib/bootstrap/bootstrap.min.js "></script>
+  <script src="/static/js/forgetPwd.js "></script>
+</body>
+
+</html>
