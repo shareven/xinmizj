@@ -255,7 +255,7 @@ a:hover {
     position: @position;
     right: 0;
     left: 0;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -263,9 +263,21 @@ a:hover {
     position: @position;
     top: 0;
     bottom: 0;
-    margin: auto;
+    margin: auto 0;
 }
-
+.search-group {
+    position: relative;
+    a{
+       position: absolute; 
+       top: 0;
+       right: 10px;
+    }
+    i {
+        position: absolute;
+        top: 2px;
+        right: 15px;
+    }
+}
 /* 定义 */
 
 a:focus,
@@ -1137,14 +1149,7 @@ footer {
                 label {
                     font-weight: normal;
                 }
-                .search-group {
-                    position: relative;
-                    .fa-search {
-                        position: absolute;
-                        top: 8px;
-                        right: 23px;
-                    }
-                }
+                
             }
             .media-heading {
                 margin-top: 12px;
@@ -1795,6 +1800,23 @@ footer {
     
 }
 /* 音频播放 end */
+/* 活动 start */
+.activity{
+    .head{
+        .search-group{
+            position: relative;
+            a{
+                .center-y;
+                right: 0px;
+                z-index: 3;
+            }
+        }
+    }
+    .activity-list{
+        margin-top: 20px;
+    }
+}
+/* 活动 end */
 
 
 @media (min-width: 1376px) and (max-width:2000px) {

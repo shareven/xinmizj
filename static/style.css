@@ -167,6 +167,19 @@ a:hover {
   text-align: center;
   border-radius: 50%;
 }
+.search-group {
+  position: relative;
+}
+.search-group a {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.search-group i {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+}
 /* 定义 */
 a:focus,
 a:hover {
@@ -476,7 +489,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   width: 26px;
   height: 26px;
   line-height: 26px;
@@ -615,7 +628,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   width: 26px;
   height: 26px;
   line-height: 26px;
@@ -768,7 +781,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   right: 0;
   text-align: center;
   width: 50px;
@@ -824,7 +837,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   width: 40px;
   height: 32px;
   line-height: 32px;
@@ -876,7 +889,7 @@ footer a {
   position: absolute;
   right: 0;
   left: 0;
-  margin: auto;
+  margin: 0 auto;
   bottom: 3%;
   border: none;
   text-align: center;
@@ -897,7 +910,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   right: 1px;
   width: 80px;
   border: none;
@@ -944,7 +957,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   left: 0;
   width: 2px;
   height: 16px;
@@ -1059,7 +1072,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   left: 200px;
   width: 100%;
   height: 41px;
@@ -1087,14 +1100,6 @@ footer a {
 }
 .book .book-list .panel .panel-title label {
   font-weight: normal;
-}
-.book .book-list .panel .panel-title .search-group {
-  position: relative;
-}
-.book .book-list .panel .panel-title .search-group .fa-search {
-  position: absolute;
-  top: 8px;
-  right: 23px;
 }
 .book .book-list .panel .media-heading {
   margin-top: 12px;
@@ -1348,7 +1353,7 @@ footer a {
   position: absolute;
   right: 0;
   left: 0;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   padding: 8px;
   width: 135px;
@@ -1388,7 +1393,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   right: 10px;
 }
 .video .get-video .navbar .search .btn-default {
@@ -1543,7 +1548,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   right: 10px;
   color: inherit;
   cursor: pointer;
@@ -1589,7 +1594,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   line-height: 100px;
   right: 10px;
   color: #999999;
@@ -1686,7 +1691,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   width: 100%;
   height: 4px;
   border-radius: 2px;
@@ -1698,7 +1703,7 @@ footer a {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto 0;
   height: 4px;
   border-radius: 2px;
   width: 0px;
@@ -1732,6 +1737,22 @@ footer a {
   cursor: pointer;
 }
 /* 音频播放 end */
+/* 活动 start */
+.activity .head .search-group {
+  position: relative;
+}
+.activity .head .search-group a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 0px;
+  z-index: 3;
+}
+.activity .activity-list {
+  margin-top: 20px;
+}
+/* 活动 end */
 @media (min-width: 1376px) and (max-width: 2000px) {
   .audiodetail .audio-info {
     margin: 100px;
