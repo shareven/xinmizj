@@ -12,74 +12,73 @@
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/font/iconfont.css">
   <link rel="stylesheet" href="/static/style.css">
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 
 
 </head>
 
 <body>
   <!-- head -->
-  <header class="navbar" role="navigation">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="/index.html">首页</a>
-        </li>
-        <li>
-          <a href="book.html">心密书库</a>
-        </li>
-        <li>
-          <a href="video.html">心密视频</a>
-        </li>
-        <li>
-          <a href="audio.html">心密音频</a>
-        </li>
-
-      </ul>
+  <header>
+    <nav class="navbar" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-
-        <a class="navbar-brand" href="#">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">
           <img src="/static/images/logo.png" width="70" height="73" alt="">
         </a>
       </div>
-      <ul class="nav navbar-nav ">
 
-        <li>
-          <a href="daochang.html">道场简介</a>
-        </li>
-        <li>
-          <a href="shoplink.html">法物流通</a>
-        </li>
-        <li class="active">
-          <a href="activity.html">活动报名</a>
-        </li>
-        <li>
-          <!-- 登录注册按钮 -->
-          <div class="login-btn hide">
-            <a class="login" href="login.html">登录</a>
-            <div class="line"></div>
-            <a href="register.html">注册</a>
-          </div>
-          <!-- 登录注册按钮 -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav nvabar-center">
+          <li>
+            <a href="/index.html">首页</a>
+          </li>
+          <li>
+            <a href="book.html">心密书库</a>
+          </li>
+          <li>
+            <a href="video.html">心密视频</a>
+          </li>
+          <li>
+            <a href="audio.html">心密音频</a>
+          </li>
+          <li>
+            <a href="daochang.html">道场简介</a>
+          </li>
+          <li>
+            <a href="shoplink.html">法物流通</a>
+          </li>
+          <li class="active">
+            <a href="activity.html">活动报名</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <!-- 登录注册按钮 -->
+            <div class="login-btn hide">
+              <a class="login" href="login.html">登录</a>
+              <div class="line"></div>
+              <a href="register.html">注册</a>
+            </div>
+            <!-- 登录注册按钮 -->
 
-          <!-- 登录后显示个人头像 -->
-          <a href="my.html hide" class="person">
-            <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
-          </a>
-          <!-- 登录后显示个人头像 -->
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
+            <!-- 登录后显示个人头像 -->
+            <a href="my.html" class="person">
+              <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
+            </a>
+            <!-- 登录后显示个人头像 -->
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
+
   <!-- head -->
   <div class="main activity">
 
@@ -94,57 +93,78 @@
           </div>
         </div>
         <div class="col-sm-10">
-          <div class="head row">
-            
-            <div class="input-group-btn col-sm-3">
-              <button type="button" class="btn btn-default">
-                <i class="iconfont icon-wo"></i>
-              </button>
-              <button type="button" class="btn btn-default">
-                <i class="iconfont icon-xiaoxi"></i>
-              </button>
-              <button type="button" class="btn btn-default">
-                <i class="iconfont icon-xiaoxi"></i>
-              </button>
-            </div>
+          <div class="head clearfix">
 
-            
-            <div class="input-group search-group col-sm-5 col-sm-offset-4 pull-right">
-              
-              <input type="search" name="" placeholder="搜索" class="form-control" value="" >
+
+            <div class="input-group search-group col-xs-12 col-sm-5 col-md-3 pull-right">
+
+              <input type="search" name="" placeholder="搜索活动" class="form-control" value="">
               <a href="" class="">
                 <i class="iconfont icon-iconss"></i>
               </a>
             </div>
-            
-            
-            
+
+
+
           </div>
 
           <div class="activity-list">
             <ul>
+              
               <li>
                 <div class="media">
-                  <a class="pull-left" href="#">
+                  <a class="pull-left" href="javascript:;">
                     <img class="media-object" src="/static/images/activity_img.png" alt="Image">
                   </a>
                   <div class="media-body">
-                    <h4 class="media-heading">佛书指与佛教有关之典籍，又作佛典、内典</h4>
-                    <span class="name">元音老人</span>
-                    <p class="ellip">佛书指与佛教有关之典籍，又作佛典、内典、妙典，反之，佛教以外之典籍称外典、世典、外道书、外俗书。妙典系尊称，尤指一</p>
-                    
-                    <img src="/static/images/activity_img2.png" class="img-responsive" alt="Image">
-                    
-                    <p class="foot">
-                      <span>13585赞成</span>
-                      <span>|</span>
-                      <span>123评论 - 关注问题</span>
-                      <span>|</span>
-                      <span>269报名</span>
-                    </p>
+                    <div class="content">
+                      <h4 class="media-heading">
+                        <a href="activitydetail.html" title="查看活动详情">佛书指与佛教有关之典籍，又作佛典、内典</a>
+                      </h4>
+                      <span class="name">元音老人</span>
+                      <p class="content">佛书指与佛教有关之典籍。 又作佛典、内典、妙典。反之，佛教以外之典籍称外典、世典、外道书、外俗书。</p>
+
+                      <img src="/static/images/activity_img2.png" class="img-responsive" alt="Image">
+
+                      <div class="foot">
+                        <span>13585赞成</span>
+                        <span class="line">|</span>
+                        <span>123评论 - 关注问题</span>
+                        <span class="line">|</span>
+                        <span>269报名</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
+
+              </li>
+              
+              <li>
+                <div class="media">
+                  <a class="pull-left" href="javascript:;">
+                    <img class="media-object" src="/static/images/activity_img.png" alt="Image">
+                  </a>
+                  <div class="media-body">
+                    <div class="content">
+                      <h4 class="media-heading">
+                        <a href="activitydetail.html" title="查看活动详情">佛书指与佛教有关之典籍，又作佛典、内典</a>
+                      </h4>
+                      <span class="name">元音老人</span>
+                      <p class="content">佛书指与佛教有关之典籍。 又作佛典、内典、妙典。反之，佛教以外之典籍称外典、世典、外道书、外俗书。</p>
+
+                      <img src="/static/images/activity_img2.png" class="img-responsive" alt="Image">
+
+                      <div class="foot">
+                        <span>13585赞成</span>
+                        <span class="line">|</span>
+                        <span>123评论 - 关注问题</span>
+                        <span class="line">|</span>
+                        <span>269报名</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </li>
             </ul>
           </div>
