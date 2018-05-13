@@ -149,6 +149,47 @@
 
     </section>
 
+    <section class="comments">
+
+      <form action="" method="POST" class="write">
+        <textarea name="" id="content" maxlength="200" class="form-control" rows="3" required="required"></textarea>
+
+        <div class="form-group text-right">
+          <i id="emoji" class="pull-left iconfont icon-xiaoliansmiley40"></i>
+          <span class="num">200</span>
+          <button type="submit" class="btn btn-main">发送</button>
+        </div>
+
+      </form>
+
+      <h5>全部评论（2）</h5>
+      <ul class="media-list">
+        <li class="media">
+          <div class="media-left">
+            <a href="javascript:;">
+              <img class="media-object" src="/static/images/signup_avatar_details.png" alt="头像">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">唐玄奘</h4>
+            <p class="comment-emoji">人生的悲欢苦乐只是心的作用，[qq_13]adfasc[qq_24][qq_12]什么贵[qq_13]一切造作也是心的作用，佛度众生，只是要人觉悟，心上再来个心，了解人</p>
+          </div>
+        </li>
+        <li class="media">
+          <div class="media-left">
+            <a href="javascript:;">
+              <img class="media-object" src="/static/images/signup_avatar_details.png" alt="头像">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">唐玄奘</h4>
+            <p class="comment-emoji">世上的一切一切，无不是示我的教训，人事的种种幻变，即是告我以无常种种的不定，执所起，天下最苦闷的人就是刚愎自是，总是我的不错世上的一切一切，无不是示我的教训，人事的种种幻变，即是告我以无常种种的不定，即是教我勿固执。世上一切恶业无不由我执所起，天下最苦闷的人就是刚愎自是，总是我的不错即是教我勿固执。世上一切恶业无不由我执所起，天下最苦闷的人就是刚愎自是，总是我的不错世上的一切一切，无不是示我的教由我执</p>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
 
     <!-- 设置 -->
     <div class="modal fade" id="setting">
@@ -347,8 +388,10 @@
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
   <script src="/static/lib/jquery.qrcode.min.js"></script>
+  <script src="/static/lib/jquery.emoji.js"></script>
   <script src="/static/js/share.js"></script>
   <script src="/static/js/activitydetail.js"></script>
+
 
   <script>
     //回到顶部
@@ -371,7 +414,6 @@
     })
   </script>
   <script type="text/javascript">
-    
   </script>
   <!-- <script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script> -->
 </body>
