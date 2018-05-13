@@ -54,7 +54,7 @@ $('.night-mode').on('click', function () {
 
 // 监测评论文字数
 var $num = $('.num');
-$('#comment_content').bind('input propertychange', function () {
+$('#content').bind('input propertychange', function () {
 	var length = $(this).val().length;
 	$num.html(200 - length);
 });

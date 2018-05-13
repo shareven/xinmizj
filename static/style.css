@@ -1072,6 +1072,36 @@ footer a {
   padding: 30px 0;
   background: #fff;
 }
+.my .slide-nav .head .wrap-img {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.my .slide-nav .head .wrap-img a {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.51);
+}
+.my .slide-nav .head .wrap-img:hover {
+  color: #fff;
+}
+.my .slide-nav .head .wrap-img:hover a {
+  display: block;
+}
+.my .slide-nav .head .wrap-img img {
+  border-radius: 50%;
+}
 .my .slide-nav .head .name {
   margin-top: 10px;
 }
@@ -1128,6 +1158,39 @@ footer a {
   color: #797979;
   font-size: 13px;
   right: 30px;
+}
+.my #uploadModal #user-photo {
+  width: 300px;
+  height: 300px;
+  margin-top: 10px;
+}
+.my #uploadModal #photo {
+  max-width: 100%;
+  max-height: 350px;
+}
+.my #uploadModal .img-container {
+  height: 150px;
+}
+.my #uploadModal .img-preview-box {
+  text-align: center;
+}
+.my #uploadModal .img-preview-box > div {
+  display: inline-block;
+  margin-right: 10px;
+}
+.my #uploadModal .img-preview {
+  overflow: hidden;
+}
+.my #uploadModal .img-preview-box .img-preview-md {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #aaaaaa;
+}
+.my #uploadModal .img-preview-box .img-preview-round {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #aaaaaa;
 }
 /* 我的 end */
 /* 法物流通 start */
