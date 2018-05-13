@@ -51,6 +51,13 @@ table {
 .suojin {
   text-indent: 2em;
 }
+body.night-view {
+  background: #222222;
+  color: #aaa;
+}
+body.night-view .navbar ul li a {
+  color: #aaa;
+}
 *:first-chile + html .clear {
   min-height: 1px;
 }
@@ -78,7 +85,24 @@ img {
   background-color: #4E8500;
   border-color: #4E8500;
 }
-.nav .open > a,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 5px auto #4E8500;
+  outline-color: #4E8500;
+  outline-style: auto;
+  outline-width: 5px;
+  outline-offset: -2px;
+}
+.form-control:focus {
+  border-color: #53830f;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(111, 146, 62, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(105, 145, 50, 0.6);
+}
 .nav .open > a:focus,
 .nav .open > a:hover {
   border-color: #4E8500;
@@ -144,10 +168,42 @@ a:hover {
 .m-color-hover:hover {
   color: #4E8500;
 }
+.btn-main {
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  color: #999999;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  color: #4E8500;
+  background: none;
+  border: 1px solid #4E8500;
+}
+.btn-main:hover {
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
+  color: #fff;
+  border: 1px solid #4E7319;
+}
 .m-bgcolor {
   background: #4E8500;
   border-color: #4E8500;
   color: #ffffff;
+}
+#toTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 12px;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+}
+#toTop:hover {
+  color: #4E8500;
 }
 .my-arrow {
   width: 26px;
@@ -166,6 +222,26 @@ a:hover {
   background: #4E8500;
   text-align: center;
   border-radius: 50%;
+}
+#share .share-wrap {
+  height: 130px;
+}
+#share .share-wrap .share-weixin {
+  position: relative;
+}
+#share .share-wrap .share-weixin:hover #qrcode {
+  display: block;
+}
+#share .share-wrap img {
+  border-radius: 50%;
+}
+#share .share-wrap #qrcode {
+  display: none;
+  position: absolute;
+  top: -20px;
+  right: -110px;
+  width: 100px;
+  height: 100px;
 }
 .search-group {
   position: relative;
@@ -425,7 +501,7 @@ footer a {
   min-height: 400px;
 }
 .main .breadcrumb {
-  padding-right: 30px;
+  padding-right: 50px;
   background: none;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -1866,12 +1942,58 @@ footer a {
 /* 活动 end */
 /* 活动详情 start */
 .activitydetail .content {
+  position: relative;
   margin-left: 50px;
   margin-right: 50px;
   padding: 40px;
   border: 1px solid #dddddd;
 }
+.activitydetail .content .author {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+}
+.activitydetail .content .author img {
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.activitydetail .content .right-group {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  height: 35px;
+  line-height: 35px;
+}
+.activitydetail .content .right-group a {
+  display: inline-block;
+  height: 35px;
+  vertical-align: middle;
+}
+.activitydetail .content .right-group a i {
+  font-size: 25px;
+  line-height: 35px;
+}
+.activitydetail .content .right-group a .btn-main {
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  color: #999999;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  color: #4E8500;
+  background: none;
+  border: 1px solid #4E8500;
+}
+.activitydetail .content .right-group a .btn-main:hover {
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
+  color: #fff;
+  border: 1px solid #4E7319;
+}
 .activitydetail .content h3 {
+  width: 100%;
   text-align: center;
 }
 .activitydetail .content h5 {
@@ -1890,11 +2012,20 @@ footer a {
   margin: 10px 0;
 }
 .activitydetail #setting {
-  position: relative;
+  position: fixed;
   border: 1px solid #ddd;
 }
+.activitydetail #setting .modal-dialog {
+  margin-top: 10%;
+  width: 400px;
+}
 .activitydetail #setting form {
-  padding: 40px 20px 40px 0;
+  padding: 10px 20px 10px 0;
+}
+.activitydetail #setting form .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 .activitydetail #setting form .form-group label {
   line-height: 28px;
@@ -1917,6 +2048,15 @@ footer a {
   background: #4E8500;
   border-color: #4E8500;
   color: #ffffff;
+}
+.activitydetail .btn-group {
+  padding-right: 50px;
+  margin: 20px 0;
+  width: 100%;
+}
+.activitydetail .btn-group .btn {
+  float: right;
+  margin: 0 10px;
 }
 /* 活动详情 end */
 @media (min-width: 1376px) and (max-width: 2000px) {

@@ -80,7 +80,7 @@
             </div> \
           </div> \
           <div class="right-item pull-right "> \
-          <a class=" iconfont icon-fenxiang pull-right" title="分享"></a>\
+          <a data-toggle="modal" href="#share"  class=" iconfont icon-fenxiang pull-right" title="分享"></a>\
           <a class=" iconfont icon-xiazai pull-right" title="下载"></a>\
           </div> \
           <div class="error-message"></div>',

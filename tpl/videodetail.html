@@ -13,71 +13,71 @@
   <link rel="stylesheet" href="/static/font/iconfont.css">
   <link href="/static/lib/video/video-js.css" rel="stylesheet">
   <link rel="stylesheet" href="/static/style.css">
-<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 
 </head>
 
 <body>
   <!-- head -->
-<header>
-  <nav class="navbar" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/index.html">
-        <img src="/static/images/logo.png" width="70" height="73" alt="">
-      </a>
-    </div>
+  <header>
+    <nav class="navbar" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">
+          <img src="/static/images/logo.png" width="70" height="73" alt="">
+        </a>
+      </div>
 
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav nvabar-center">
-        <li>
-          <a href="/index.html">首页</a>
-        </li>
-        <li>
-          <a href="book.html">心密书库</a>
-        </li>
-        <li class="active">
-          <a href="video.html">心密视频</a>
-        </li>
-        <li>
-          <a href="audio.html">心密音频</a>
-        </li>
-        <li>
-          <a href="daochang.html">道场简介</a>
-        </li>
-        <li>
-          <a href="shoplink.html">法物流通</a>
-        </li>
-        <li>
-          <a href="activity.html">活动报名</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <!-- 登录注册按钮 -->
-          <div class="login-btn hide">
-            <a class="login" href="login.html">登录</a>
-            <div class="line"></div>
-            <a href="register.html">注册</a>
-          </div>
-          <!-- 登录注册按钮 -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav nvabar-center">
+          <li>
+            <a href="/index.html">首页</a>
+          </li>
+          <li>
+            <a href="book.html">心密书库</a>
+          </li>
+          <li class="active">
+            <a href="video.html">心密视频</a>
+          </li>
+          <li>
+            <a href="audio.html">心密音频</a>
+          </li>
+          <li>
+            <a href="daochang.html">道场简介</a>
+          </li>
+          <li>
+            <a href="shoplink.html">法物流通</a>
+          </li>
+          <li>
+            <a href="activity.html">活动报名</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <!-- 登录注册按钮 -->
+            <div class="login-btn hide">
+              <a class="login" href="login.html">登录</a>
+              <div class="line"></div>
+              <a href="register.html">注册</a>
+            </div>
+            <!-- 登录注册按钮 -->
 
-          <!-- 登录后显示个人头像 -->
-          <a href="my.html" class="person">
-            <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
-          </a>
-          <!-- 登录后显示个人头像 -->
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+            <!-- 登录后显示个人头像 -->
+            <a href="my.html" class="person">
+              <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
+            </a>
+            <!-- 登录后显示个人头像 -->
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <!-- head -->
   <div class="main videodetail">
     <section class="top-nav text-right">
@@ -93,7 +93,7 @@
     </section>
 
     <section class="videowrap">
-      <video id="html5Video" class="video-js  vjs-big-play-centered" controls preload="auto"  >
+      <video id="html5Video" class="video-js  vjs-big-play-centered" controls preload="auto">
         <source src="/static/media/bbb.flv" type='video/x-flv'>
         <!-- <source src="/static/media/a.mp4" type="video/mp4"> -->
         <p class="vjs-no-js">
@@ -101,7 +101,7 @@
           <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
         </p>
       </video>
-      
+
     </section>
 
     <section class="video-info clearfix">
@@ -113,13 +113,13 @@
         </p>
       </div>
       <div class="item-right ">
-        <a href="" title="收藏">
+        <!-- <a href="" title="收藏">
           <i class="iconfont icon-shoucang1"></i>
-        </a>
+        </a> -->
         <a href="" title="下载">
           <i class="iconfont icon-xiazai"></i>
         </a>
-        <a href="" title="分享">
+        <a data-toggle="modal" href='#share' title="分享">
           <i class="iconfont icon-fenxiang1"></i>
         </a>
       </div>
@@ -128,17 +128,58 @@
     <section class="all-episode">
       <h4>全部剧集</h4>
       <ul class="list clearfix">
-        <li class="active"><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-        <li><a href="">5</a></li>
-        <li><a href="">6</a></li>
+        <li class="active">
+          <a href="">1</a>
+        </li>
+        <li>
+          <a href="">2</a>
+        </li>
+        <li>
+          <a href="">3</a>
+        </li>
+        <li>
+          <a href="">4</a>
+        </li>
+        <li>
+          <a href="">5</a>
+        </li>
+        <li>
+          <a href="">6</a>
+        </li>
       </ul>
     </section>
   </div>
 
-
+  <!-- 分享 -->
+  <div class="modal fade" id="share">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">分享到：</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container1">
+            <div class="row text-center">
+              <div class="share-wrap col-sm-6">
+                <a href="javascript:;" class="share-weixin">
+                  <img src="/static/images/share_weixin.png">
+                  <div id="qrcode"></div>
+                </a>
+                <p>微信分享</p>
+              </div>
+              <div class="share-wrap col-sm-6">
+                <a href="" class="share-qq" target="_blank">
+                  <img src="/static/images/share_qq.png">
+                </a>
+                <p>QQ分享</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- footer -->
   <footer>
     <div class="row">
@@ -166,35 +207,37 @@
 
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/lib/jquery.qrcode.min.js"></script>
+  <script src="/static/js/share.js"></script>
   <!-- <script src="/static/lib/html5media/html5media.min.js"></script> -->
-  
+
   <script src="/static/lib/video/videojs-ie8.min.js"></script>
   <script src="/static/lib/video/video.min.js"></script>
-  
+
   <script src="https://unpkg.com/flv.js/dist/flv.min.js"></script>
   <script src="https://unpkg.com/videojs-flvjs/dist/videojs-flvjs.min.js"></script>
-  
-  <script>
 
-  (function (window, videojs) {
-    // Setting the techOrder is necessary in 5.x
-    // In 6.x techs are added automatically
-    // var player = window.player = videojs('html5Video', {
-    //    techOrder: ['html5', 'flvjs']
-    // });
-    var video1=videojs('html5Video', {
-      techOrder: ['html5', 'flvjs'],
-      fluid: true,
-      flvjs: {
-        mediaDataSource: {
-          isLive: true,
-          cors: true,
-          withCredentials: false,
+  <script>
+    (function (window, videojs) {
+      // Setting the techOrder is necessary in 5.x
+      // In 6.x techs are added automatically
+      // var player = window.player = videojs('html5Video', {
+      //    techOrder: ['html5', 'flvjs']
+      // });
+      var video1 = videojs('html5Video', {
+        techOrder: ['html5', 'flvjs'],
+        fluid: true,
+        flvjs: {
+          mediaDataSource: {
+            isLive: true,
+            cors: true,
+            withCredentials: false,
+          },
+          // config: {},
         },
-        // config: {},
-      },
-    });console.log(video1);
-  }(window, window.videojs));
+      });
+      console.log(video1);
+    }(window, window.videojs));
 
     // videojs.options.flash.swf = "{{ config.app.static_url }}assets/flash/video-js.swf";
     // var player = videojs("html5Video", {
@@ -222,7 +265,6 @@
     //     }, function () {
     //       $(".vjs-control-bar").append('<button class="vjs-control " id="danmu_send_opt"><u>按钮1</u></button>');
     //     });
-        
   </script>
 </body>
 

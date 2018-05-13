@@ -130,7 +130,37 @@
       <!-- </div> -->
     </section>
   </div>
+<!-- 分享 -->
 
+<div class="modal fade" id="share">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">分享到：</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container1">
+          <div class="row text-center">
+            <div class="share-wrap col-sm-6">
+              <a href="javascript:;" class="share-weixin">
+                <img src="/static/images/share_weixin.png">
+                <div id="qrcode"></div>
+              </a>
+              <p>微信分享</p>
+            </div>
+            <div class="share-wrap col-sm-6">
+              <a href="" class="share-qq" target="_blank">
+                <img src="/static/images/share_qq.png">
+              </a>
+              <p>QQ分享</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- footer -->
   
@@ -138,6 +168,8 @@
 
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/lib/jquery.qrcode.min.js"></script>
+  <script src="/static/js/share.js"></script>
   <!-- <script src="/static/lib/html5media/html5media.min.js"></script> -->
   
   <!-- <script src="/static/lib/video/videojs-ie8.min.js"></script>

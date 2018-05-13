@@ -95,20 +95,20 @@
 
     <section class="content">
 
-      <div class="media author">
-        <a class="pull-left" href="#">
-          <img class="media-object" src="/static/images/signup_avatar_details.png" alt="Image">
-        </a>
-        <div class="media-body">
-          <p class="author">印能法师</p>
-        </div>
+      <div class=" author">
+        <img class="media-object" src="/static/images/signup_avatar_details.png" alt="Image">
+        <span class="">印能法师</span>
+
       </div>
 
-      <div class="right-group">
-        <a data-toggle="modal" href='#setting'>
+      <div class="right-group ">
+        <a data-toggle="modal" data-backdrop="false" href='#setting'>
           <i class="iconfont icon-shezhi"></i>
         </a>
-        <button type="button" class="btn btn-main">报名</button>
+
+        <a href="#signup" data-toggle="modal" data-backdrop="false">
+          <button type="button" class="btn btn-main ">报名</button>
+        </a>
 
       </div>
 
@@ -130,24 +130,44 @@
 
     </section>
 
+    <section class="handle">
+
+      <div class="btn-group ">
+        <a data-toggle="modal" href='#share' class="btn btn-default">
+          <i class="iconfont icon-fenxiang1"></i>
+          分享
+        </a>
+        <button type="button" class="btn btn-default">
+          <i class="iconfont icon-shoucang1"></i>
+          点赞
+        </button>
+        <button type="button" class="btn btn-default">
+          <i class="iconfont icon-shoucang2"></i>
+          收藏
+        </button>
+      </div>
+
+    </section>
 
 
+    <!-- 设置 -->
     <div class="modal fade" id="setting">
       <div class="modal-dialog">
         <div class="modal-content">
+          <div class="modal-header">
+            <a href="javascript:;" data-dismiss="modal" class="close iconfont icon-shanchuguanbiquxiaowubiankuang"></a>
+
+          </div>
           <div class="modal-body">
             <form role="form">
-              <a href="javascript:;" data-dismiss="modal" class="close iconfont icon-shanchuguanbiquxiaowubiankuang"></a>
 
               <div class="form-group clearfix">
                 <label class="col-sm-4 col-xs-12 control-label">正文字体</label>
                 <div class="col-sm-4 col-xs-6">
                   <a href="javascript:zh_tran('s');" class="btn btn-main form-control active jianti">简体</a>
-                  <!-- <input type="button" class="btn btn-main form-control active jianti" value="简体"> -->
                 </div>
                 <div class="col-sm-4 col-xs-6">
                   <a href="javascript:zh_tran('t');" class="btn btn-main form-control fanti">繁体</a>
-                  <!-- <input type="button" class="btn btn-main form-control fanti" value="繁体"> -->
                 </div>
               </div>
 
@@ -185,7 +205,7 @@
               <div class="form-group clearfix">
                 <label class="col-sm-4 col-xs-12 control-label">阅读模式</label>
                 <div class="col-sm-8 col-xs-12">
-                  <a href="javascript:zh_tran('s');" class="btn btn-main form-control active">夜间模式</a>
+                  <a href="javascript:;" class="btn btn-main form-control night-mode">夜间模式</a>
                 </div>
               </div>
             </form>
@@ -194,9 +214,111 @@
       </div>
     </div>
 
+    <!-- 报名 -->
+    <div class="modal fade" id="signup">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">灌顶报名</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" method="POST">
+              <div class="form-group">
+                <label for="inputName3" class="col-sm-2 control-label">姓名</label>
+                <div class="col-sm-10">
+                  <input type="text" name="" class="form-control" id="inputName3" placeholder="姓名">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputTel3" class="col-sm-2 control-label">手机</label>
+                <div class="col-sm-10">
+                  <input type="tel" name="" class="form-control" maxlength="11" id="inputTel3" placeholder="手机">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputSex3" class="col-sm-2 control-label">性别</label>
+                <div class="col-sm-10">
+                  <select name="" id="inputSex3" class="form-control" required="required">
+                    <option value="man">男</option>
+                    <option value="woman">女</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAge3" class="col-sm-2 control-label">年龄</label>
+                <div class="col-sm-10">
+                  <input type="number" name="" class="form-control" id="inputAge3" placeholder="年龄">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputLocation3" class="col-sm-2 control-label">所在地</label>
+                <div class="col-sm-10">
+                  <input type="text" name="" class="form-control" id="inputLocation3" placeholder="所在地">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputArriveTime3" class="col-sm-2 control-label">到达日期</label>
+                <div class="col-sm-10">
+                  <input type="date" name="" class="form-control" id="inputArriveTime3" placeholder="到达日期">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputLeaveTime3" class="col-sm-2 control-label">离开日期</label>
+                <div class="col-sm-10">
+                  <input type="date" name="" class="form-control" id="inputLeaveTime3" placeholder="离开日期">
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-main">提交</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分享 -->
+
+    <div class="modal fade" id="share">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">分享到：</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container1">
+              <div class="row text-center">
+                <div class="share-wrap col-sm-6">
+                  <a href="javascript:;" class="share-weixin">
+                    <img src="/static/images/share_weixin.png">
+                    <div id="qrcode"></div>
+                  </a>
+                  <p>微信分享</p>
+                </div>
+                <div class="share-wrap col-sm-6">
+                  <a href="" class="share-qq" target="_blank">
+                    <img src="/static/images/share_qq.png">
+                  </a>
+                  <p>QQ分享</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-
+  <div id="toTop">顶部</div>
   <!-- footer -->
   <footer>
     <div class="row">
@@ -224,17 +346,34 @@
 
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
-  <script src="/static/lib/jquery.lazyload.min.js"></script>
+  <script src="/static/lib/jquery.qrcode.min.js"></script>
+  <script src="/static/js/share.js"></script>
+  <script src="/static/js/activitydetail.js"></script>
+
   <script>
-    ;
-    (function () {
-      $('.main img').lazyload({
-        threshold: 100,
-        placeholder: "/static/images/loading.svg",
-        effects: "fadeIn"
+    //回到顶部
+    $(function () {
+      var scrollTrigger = 150; // px
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > scrollTrigger) {
+          $("#toTop").addClass('show');
+        } else {
+          $("#toTop").removeClass('show');
+        }
       });
-    })()
+
+      $("#toTop").click(function () {
+        $("html,body").animate({
+          scrollTop: 0
+        }, 500);
+      });
+    })
   </script>
+  <script type="text/javascript">
+    
+  </script>
+  <!-- <script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script> -->
 </body>
 
 </html>

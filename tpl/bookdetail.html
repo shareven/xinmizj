@@ -184,6 +184,13 @@
                   </select>
                 </div>
               </div>
+
+              <div class="form-group clearfix">
+                <label class="col-sm-4 col-xs-12 control-label">阅读模式</label>
+                <div class="col-sm-8 col-xs-12">
+                  <a href="javascript:;" class="btn btn-main form-control night-mode">夜间模式</a>
+                </div>
+              </div>
             </form>
 
 
@@ -215,8 +222,10 @@
       <a href="" class="btn btn-defaullt">目录</a>
       <a href="" class="btn btn-defaullt">下一章</a>
     </section>
-  </div>
 
+  </div>
+  
+  <div id="toTop">顶部</div>
 
   <!-- footer -->
   <footer>
@@ -246,6 +255,26 @@
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
   <script src="/static/js/bookdetail.js"></script>
+  <script>
+   //回到顶部
+    $(function () {
+      var scrollTrigger = 150; // px
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > scrollTrigger) {
+          $("#toTop").addClass('show');
+        } else {
+          $("#toTop").removeClass('show');
+        }
+      });
+
+      $("#toTop").click(function () {
+        $("html,body").animate({
+          scrollTop: 0
+        }, 500);
+      });
+    })
+  </script>
 </body>
 
 </html>
