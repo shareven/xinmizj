@@ -1061,6 +1061,14 @@ footer a {
 }
 /* 登录注册 end */
 /* 我的 start */
+@keyframes line1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 .my .slide-nav {
   margin: 15px 20px 30px 50px;
   width: 160px;
@@ -1135,29 +1143,62 @@ footer a {
   border-color: #4E8500;
   color: #ffffff;
 }
-.my .content {
+.my .main-content {
   margin: 30px 50px 50px 230px;
   min-height: 300px;
 }
-.my .content ul li {
+.my .main-content .navbar-nav {
+  float: none;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+.my .main-content .navbar-nav li {
+  width: 90px;
+  text-align: center;
+}
+.my .main-content .navbar-nav li .line {
+  width: 0;
+  height: 1px;
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
+}
+.my .main-content .navbar-nav li.active .line {
+  width: 100%;
+}
+.my .main-content .navbar-nav li:hover .line {
+  width: 100%;
+  animation: line1 0.5s;
+}
+.my .main-content .navbar-nav li:hover a {
+  background: none;
+}
+.my .main-content .signup-list li {
   position: relative;
   margin: 15px auto;
   padding: 31px;
   background: #fff;
 }
-.my .content ul li h4 {
+.my .main-content .signup-list li h4 {
   font-size: 16px;
   color: #545454;
 }
-.my .content ul li p {
+.my .main-content .signup-list li p {
   color: #999999;
   font-size: 13px;
 }
-.my .content ul li .readNum {
+.my .main-content .signup-list li span {
   float: right;
   color: #797979;
   font-size: 13px;
   right: 30px;
+}
+.my .main-content .signup-list li .links {
+  text-align: center;
+}
+.my .main-content .signup-list li .links a {
+  margin: 0 10px;
 }
 .my #uploadModal #user-photo {
   width: 300px;
@@ -1193,6 +1234,175 @@ footer a {
   border: 1px solid #aaaaaa;
 }
 /* 我的 end */
+/* 活动管理 start */
+.manageActivity .slide-nav {
+  margin: 15px 20px 30px 50px;
+  width: 160px;
+}
+.manageActivity .slide-nav .head {
+  width: 160px;
+  height: 160px;
+  text-align: center;
+  padding: 30px 0;
+  background: #fff;
+}
+.manageActivity .slide-nav .head .wrap-img {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.manageActivity .slide-nav .head .wrap-img a {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.51);
+}
+.manageActivity .slide-nav .head .wrap-img:hover {
+  color: #fff;
+}
+.manageActivity .slide-nav .head .wrap-img:hover a {
+  display: block;
+}
+.manageActivity .slide-nav .head .wrap-img img {
+  border-radius: 50%;
+}
+.manageActivity .slide-nav .head .name {
+  margin-top: 10px;
+}
+.manageActivity .slide-nav .list-group-item {
+  background: #fff;
+  border-color: #E5E5E5;
+}
+.manageActivity .slide-nav .list-group-item:hover,
+.manageActivity .slide-nav .list-group-item.active,
+.manageActivity .slide-nav .list-group-item.active:focus,
+.manageActivity .slide-nav .list-group-item.active:hover {
+  z-index: 2;
+  color: #4E8500;
+  background-color: #fff;
+  border-color: #E5E5E5;
+}
+.manageActivity .slide-nav .list-group-item:hover:before,
+.manageActivity .slide-nav .list-group-item.active:before,
+.manageActivity .slide-nav .list-group-item.active:focus:before,
+.manageActivity .slide-nav .list-group-item.active:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 0;
+  width: 2px;
+  height: 16px;
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
+}
+.manageActivity .main-content {
+  margin: 30px 50px 50px 230px;
+  min-height: 300px;
+}
+.manageActivity .main-content .navbar-nav {
+  float: none;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+.manageActivity .main-content .navbar-nav li {
+  width: 90px;
+  text-align: center;
+}
+.manageActivity .main-content .navbar-nav li .line {
+  width: 0;
+  height: 1px;
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
+}
+.manageActivity .main-content .navbar-nav li.active .line {
+  width: 100%;
+}
+.manageActivity .main-content .navbar-nav li:hover .line {
+  width: 100%;
+  animation: line1 0.5s;
+}
+.manageActivity .main-content .navbar-nav li:hover a {
+  background: none;
+}
+.manageActivity .main-content .signup-list li {
+  position: relative;
+  margin: 15px auto;
+  padding: 31px;
+  background: #fff;
+}
+.manageActivity .main-content .signup-list li h4 {
+  font-size: 16px;
+  color: #545454;
+}
+.manageActivity .main-content .signup-list li p {
+  color: #999999;
+  font-size: 13px;
+}
+.manageActivity .main-content .signup-list li span {
+  float: right;
+  color: #797979;
+  font-size: 13px;
+  right: 30px;
+}
+.manageActivity .main-content .signup-list li .links {
+  text-align: center;
+}
+.manageActivity .main-content .signup-list li .links a {
+  margin: 0 10px;
+}
+.manageActivity #uploadModal #user-photo {
+  width: 300px;
+  height: 300px;
+  margin-top: 10px;
+}
+.manageActivity #uploadModal #photo {
+  max-width: 100%;
+  max-height: 350px;
+}
+.manageActivity #uploadModal .img-container {
+  height: 150px;
+}
+.manageActivity #uploadModal .img-preview-box {
+  text-align: center;
+}
+.manageActivity #uploadModal .img-preview-box > div {
+  display: inline-block;
+  margin-right: 10px;
+}
+.manageActivity #uploadModal .img-preview {
+  overflow: hidden;
+}
+.manageActivity #uploadModal .img-preview-box .img-preview-md {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #aaaaaa;
+}
+.manageActivity #uploadModal .img-preview-box .img-preview-round {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #aaaaaa;
+}
+.manageActivity .main-content {
+  margin: 30px 50px 50px 50px;
+}
+/* 活动管理 end */
 /* 法物流通 start */
 .shoplink {
   padding: 0 50px;

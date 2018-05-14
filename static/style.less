@@ -1093,6 +1093,15 @@ footer {
 
 /* 我的 start */
 
+@keyframes line1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
 .my {
     .slide-nav {
         margin: 15px 20px 30px 50px;
@@ -1152,10 +1161,36 @@ footer {
             }
         }
     }
-    .content {
+    .main-content {
         margin: 30px 50px 50px 230px;
         min-height: 300px;
-        ul {
+        .navbar-nav {
+            float: none;
+            .size-lh(100%,
+            50px);
+            li {
+                width: 90px;
+                text-align: center;
+                .line {
+                    .size(0,
+                    1px);
+                    .m-bgcolor;
+                }
+                &.active .line {
+                    width: 100%;
+                }
+                &:hover {
+                    .line {
+                        width: 100%;
+                        animation: line1 0.5s;
+                    }
+                    a {
+                        background: none;
+                    }
+                }
+            }
+        }
+        .signup-list {
             li {
                 position: relative;
                 margin: 15px auto;
@@ -1169,11 +1204,17 @@ footer {
                     color: #999999;
                     font-size: 13px;
                 }
-                .readNum {
+                span {
                     float: right;
                     color: #797979;
                     font-size: 13px;
                     right: 30px;
+                }
+                .links {
+                    text-align: center;
+                    a {
+                        margin: 0 10px;
+                    }
                 }
             }
         }
@@ -1188,10 +1229,10 @@ footer {
             max-width: 100%;
             max-height: 350px;
         }
-        .img-container{
+        .img-container {
             height: 150px;
         }
-         .img-preview-box {
+        .img-preview-box {
             text-align: center;
         }
         .img-preview-box>div {
@@ -1217,6 +1258,17 @@ footer {
 }
 
 /* 我的 end */
+
+/* 活动管理 start */
+
+.manageActivity {
+    .my;
+    .main-content{
+        margin: 30px 50px 50px 50px;
+    }
+}
+
+/* 活动管理 end */
 
 /* 法物流通 start */
 
