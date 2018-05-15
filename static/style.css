@@ -186,6 +186,25 @@ a:hover {
   color: #fff;
   border: 1px solid #4E7319;
 }
+.btn-m-bg {
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  color: #999999;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
+  border: 1px solid #4E8500;
+}
+.btn-m-bg:hover {
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
+  color: #fff;
+  border: 1px solid #4E7319;
+}
 .m-bgcolor {
   background: #4E8500;
   border-color: #4E8500;
@@ -268,6 +287,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 500px;
+  color: #545454;
 }
 .navbar {
   height: 132px;
@@ -1177,7 +1197,7 @@ footer a {
 .my .main-content .signup-list li {
   position: relative;
   margin: 15px auto;
-  padding: 31px;
+  padding: 15px 31px;
   background: #fff;
 }
 .my .main-content .signup-list li h4 {
@@ -1185,20 +1205,28 @@ footer a {
   color: #545454;
 }
 .my .main-content .signup-list li p {
+  margin: 5px 0;
   color: #999999;
   font-size: 13px;
 }
-.my .main-content .signup-list li span {
+.my .main-content .signup-list li .readNum {
   float: right;
   color: #797979;
   font-size: 13px;
   right: 30px;
 }
 .my .main-content .signup-list li .links {
-  text-align: center;
+  text-align: left;
 }
 .my .main-content .signup-list li .links a {
-  margin: 0 10px;
+  color: inherit;
+  cursor: pointer;
+}
+.my .main-content .signup-list li .links a:hover {
+  color: #4E8500;
+}
+.my .main-content .signup-list li .links .line {
+  margin: 0 15px;
 }
 .my #uploadModal #user-photo {
   width: 300px;
@@ -1343,7 +1371,7 @@ footer a {
 .manageActivity .main-content .signup-list li {
   position: relative;
   margin: 15px auto;
-  padding: 31px;
+  padding: 15px 31px;
   background: #fff;
 }
 .manageActivity .main-content .signup-list li h4 {
@@ -1351,20 +1379,28 @@ footer a {
   color: #545454;
 }
 .manageActivity .main-content .signup-list li p {
+  margin: 5px 0;
   color: #999999;
   font-size: 13px;
 }
-.manageActivity .main-content .signup-list li span {
+.manageActivity .main-content .signup-list li .readNum {
   float: right;
   color: #797979;
   font-size: 13px;
   right: 30px;
 }
 .manageActivity .main-content .signup-list li .links {
-  text-align: center;
+  text-align: left;
 }
 .manageActivity .main-content .signup-list li .links a {
-  margin: 0 10px;
+  color: inherit;
+  cursor: pointer;
+}
+.manageActivity .main-content .signup-list li .links a:hover {
+  color: #4E8500;
+}
+.manageActivity .main-content .signup-list li .links .line {
+  margin: 0 15px;
 }
 .manageActivity #uploadModal #user-photo {
   width: 300px;
@@ -2212,6 +2248,10 @@ footer a {
 .activity .activity-list ul li .media .content .foot .line {
   margin: 0 8px;
 }
+.activity .activity-list ul li .media .content .foot .goto {
+  margin-left: 20px;
+  color: #4E8500;
+}
 /* 活动 end */
 /* 活动详情 start */
 .activitydetail .content {
@@ -2443,6 +2483,27 @@ footer a {
   border-radius: 50%;
 }
 /* 活动详情 end */
+/* 活动发布 start */
+.publicActivity {
+  margin: 0 50px;
+}
+.publicActivity .radio {
+  margin: 30px 0;
+}
+.publicActivity .radio label {
+  padding-left: 0;
+}
+.publicActivity .radio .btn {
+  margin-right: 15px;
+}
+.publicActivity .radio .btn.active,
+.publicActivity .radio .btn:hover {
+  border: 1px solid #4E8500;
+  background: #fff;
+  color: #4E8500;
+  box-shadow: none;
+}
+/* 活动发布 end */
 @media (min-width: 1376px) and (max-width: 2000px) {
   .audiodetail .audio-info {
     margin: 100px;

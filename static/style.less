@@ -204,7 +204,7 @@ a:hover {
     line-height: @y;
 }
 
-.border(@color) {
+.border(@color: #4E8500) {
     border: 1px solid @color;
 }
 
@@ -224,6 +224,12 @@ a:hover {
     .m-btn;
     .m-color;
     background: none;
+    .border(#4E8500);
+}
+
+.btn-m-bg {
+    .m-btn;
+    .m-bgcolor;
     .border(#4E8500);
 }
 
@@ -370,6 +376,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 500px;
+    color: #545454;
 }
 
 .navbar {
@@ -1194,26 +1201,30 @@ footer {
             li {
                 position: relative;
                 margin: 15px auto;
-                padding: 31px;
+                padding: 15px 31px;
                 background: #fff;
                 h4 {
                     font-size: 16px;
                     color: #545454;
                 }
                 p {
+                    margin: 5px 0;
                     color: #999999;
                     font-size: 13px;
                 }
-                span {
+                .readNum {
                     float: right;
                     color: #797979;
                     font-size: 13px;
                     right: 30px;
                 }
                 .links {
-                    text-align: center;
+                    text-align: left;
                     a {
-                        margin: 0 10px;
+                        .m-color-hover;
+                    }
+                    .line{
+                        margin: 0 15px;
                     }
                 }
             }
@@ -1263,7 +1274,7 @@ footer {
 
 .manageActivity {
     .my;
-    .main-content{
+    .main-content {
         margin: 30px 50px 50px 50px;
     }
 }
@@ -2098,6 +2109,10 @@ footer {
                             .line {
                                 margin: 0 8px;
                             }
+                            .goto {
+                                margin-left: 20px;
+                                .m-color;
+                            }
                         }
                     }
                 }
@@ -2325,6 +2340,30 @@ footer {
 }
 
 /* 活动详情 end */
+
+/* 活动发布 start */
+
+.publicActivity {
+    margin: 0 50px;
+    .radio {
+        margin: 30px 0;
+        label {
+            padding-left: 0;
+        }
+        .btn {
+            margin-right: 15px;
+            &.active,
+            &:hover {
+                .border;
+                background: #fff;
+                .m-color;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+/* 活动发布 end */
 
 @media (min-width: 1376px) and (max-width:2000px) {
     .audiodetail {

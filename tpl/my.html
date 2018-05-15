@@ -138,24 +138,27 @@
       <ul class="signup-list">
         <li>
           <h4>打七报名</h4>
+          <span class="readNum">268报名</span>
           <p>唐三藏</p>
           <p class="links">
-
-            <a href="#" class="link">修改报名信息</a>
+            <a href="#signup" data-toggle="modal" data-backdrop="false" class="link">修改报名信息</a>
+            <span class="line">|</span>
             <a href="#" class="link">取消报名</a>
-            <a href="#" class="link">查看活动详情</a>
+            <span class="line">|</span>
+            <a href="activitydetail.html" class="link">查看活动详情</a>
           </p>
-          <span class="readNum">268阅读</span>
         </li>
         <li>
           <h4>灌顶报名</h4>
+          <span class="readNum">262报名</span>
           <p>元音老人</p>
           <p class="links">
-            <a href="#" class="link">修改报名信息</a>
+            <a href="#signup" data-toggle="modal" data-backdrop="false" class="link">修改报名信息</a>
+            <span class="line">|</span>
             <a href="#" class="link">取消报名</a>
-            <a href="#" class="link">查看活动详情</a>
+            <span class="line">|</span>
+            <a href="activitydetail.html" class="link">查看活动详情</a>
           </p>
-          <span class="readNum">262阅读</span>
         </li>
       </ul>
     </section>
@@ -197,6 +200,72 @@
 
             <button class="btn btn-success disabled" disabled="true" onclick="sendPhoto();">提交</button>
             <button class="btn btn-close" aria-hidden="true" data-dismiss="modal">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 修改报名信息 -->
+    <div class="modal fade" id="signup">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">灌顶报名</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" method="POST">
+              <div class="form-group">
+                <label for="inputName3" class="col-sm-2 control-label">姓名</label>
+                <div class="col-sm-10">
+                  <input type="text" name="" class="form-control" id="inputName3" placeholder="姓名" value="小张">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputTel3" class="col-sm-2 control-label">手机</label>
+                <div class="col-sm-10">
+                  <input type="tel" name="" class="form-control" maxlength="11" id="inputTel3" placeholder="手机" value="18888888888">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputSex3" class="col-sm-2 control-label">性别</label>
+                <div class="col-sm-10">
+                  <select name="" id="inputSex3" class="form-control" required="required">
+                    <option value="man">男</option>
+                    <option value="woman">女</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAge3" class="col-sm-2 control-label">年龄</label>
+                <div class="col-sm-10">
+                  <input type="number" name="" class="form-control" id="inputAge3" placeholder="年龄" value="23">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputLocation3" class="col-sm-2 control-label">所在地</label>
+                <div class="col-sm-10">
+                  <input type="text" name="" class="form-control" id="inputLocation3" placeholder="所在地" value="深圳市" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputArriveTime3" class="col-sm-2 control-label">到达日期</label>
+                <div class="col-sm-10">
+                  <input type="date" name="" class="form-control" id="inputArriveTime3" placeholder="到达日期" value="2018-04-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputLeaveTime3" class="col-sm-2 control-label">离开日期</label>
+                <div class="col-sm-10">
+                  <input type="date" name="" class="form-control" id="inputLeaveTime3" placeholder="离开日期" value="2018-06-12">
+                </div>
+              </div>
+            </form>
+    
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-main">提交</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
           </div>
         </div>
       </div>
