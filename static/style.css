@@ -1486,7 +1486,7 @@ footer a {
 }
 /* 法物流通 end */
 /* 道场介绍 start */
-.daochang {
+.daochang .pics {
   padding: 0 50px;
 }
 .daochang .pics > div.col-md-4 {
@@ -1494,6 +1494,76 @@ footer a {
 }
 .daochang .content {
   margin: 40px auto;
+  padding: 0 50px;
+}
+.daochang .contactme > h4 {
+  width: 100%;
+  height: 88px;
+  line-height: 88px;
+  border-top: 1px solid #E5E5E5;
+}
+.daochang .contactme > .container {
+  border: 1px solid #EEEEEE;
+  border-radius: 8px;
+}
+.daochang .contactme img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.daochang .contactme p {
+  font-size: 12px;
+  color: #999999;
+}
+.daochang .contactme h5 {
+  color: #545454;
+}
+.daochang .contactme .left-item {
+  padding: 0;
+}
+.daochang .contactme .left-item .media {
+  margin: 0;
+  padding: 30px 15px;
+  width: 100%;
+  height: 111px;
+}
+.daochang .contactme .left-item .media.weixin {
+  border-bottom: 1px solid #EEEEEE;
+}
+.daochang .contactme .left-item .media .line {
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+}
+.daochang .contactme .right-item {
+  padding: 0;
+  border-left: 1px solid #EEEEEE;
+}
+.daochang .contactme .right-item .media {
+  margin: 0;
+  padding: 15px;
+  padding-left: 25px;
+  width: 100%;
+  height: 74px;
+  line-height: 74px;
+}
+.daochang .contactme .right-item .media.line {
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+}
+.daochang .contactme .right-item .media p {
+  line-height: 42px;
+}
+.daochang .query {
+  margin-top: 40px;
+}
+.daochang .query > h4 {
+  width: 100%;
+  height: 88px;
+  line-height: 88px;
+  border-top: 1px solid #E5E5E5;
+}
+.daochang .query .m-btn {
+  width: 100px;
 }
 @media (max-width: 768px) {
   .daochang {
@@ -1806,13 +1876,14 @@ footer a {
 }
 .video .get-video .navbar {
   margin: 0;
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
+  line-height: 60px;
   background: inherit;
   border: none;
 }
 .video .get-video .navbar .breadcrumb {
   border: none;
+  margin-bottom: 0;
 }
 .video .get-video .navbar .navbar-center {
   position: absolute;
@@ -1821,10 +1892,22 @@ footer a {
   margin: 0 auto;
   text-align: center;
   padding: 8px;
-  width: 135px;
+  width: 160px;
+}
+.video .get-video .navbar .navbar-center .dropdown {
+  width: 100%;
+  height: 50px;
 }
 .video .get-video .navbar .navbar-center .dropdown-toggle {
+  width: 160px;
   font-size: 16px;
+}
+.video .get-video .navbar .navbar-center .open > a,
+.video .get-video .navbar .navbar-center .open > a:focus,
+.video .get-video .navbar .navbar-center .open > a:hover {
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
 }
 .video .get-video .navbar .navbar-center .dropdown-menu {
   width: 100%;
@@ -1832,7 +1915,7 @@ footer a {
   line-height: 30px;
 }
 .video .get-video .navbar .navbar-center .dropdown-menu li {
-  width: auto;
+  width: 100%;
 }
 .video .get-video .navbar .navbar-center .dropdown-menu li a {
   line-height: 40px;
