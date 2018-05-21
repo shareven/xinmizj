@@ -1567,7 +1567,7 @@ footer a {
 }
 @media (max-width: 768px) {
   .daochang {
-    padding: 0 50px;
+    padding: 0 10px;
   }
   .daochang .pics > div.col-md-4 {
     margin: 0 auto;
@@ -1579,6 +1579,20 @@ footer a {
   }
   .daochang .content {
     margin: 40px auto;
+  }
+  .daochang .contactme .left-item {
+    padding: 0;
+  }
+  .daochang .contactme .left-item .media {
+    padding-left: 25px;
+  }
+  .daochang .contactme .left-item .media.qq {
+    width: 100%;
+    height: 213px;
+    border-bottom: 1px solid #EEEEEE;
+  }
+  .daochang .query .m-btn {
+    width: 100%;
   }
 }
 /* 道场介绍 end */
