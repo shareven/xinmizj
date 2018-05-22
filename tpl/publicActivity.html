@@ -10,7 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="/static/lib/cropper/cropper.min.css">
+  <link rel="stylesheet" href="/static/font/iconfont.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 
@@ -92,42 +92,51 @@
       </ol>
     </section>
 
+    <section class="main-form">
+      <form action="" method="POST" role="form">
+        <h3>选择主题分类</h3>
+        <div class="radio">
+          <label>
+            <a class="btn btn-default active">灌顶报名</a>
+            <input class="hide" type="radio" name="signupType" value="" checked="checked">
+          </label>
+          <label>
+            <a class="btn btn-default">打七报名</a>
+            <input class="hide" type="radio" name="signupType" value="">
+          </label>
+          <label>
+            <a class="btn btn-default">打九报名</a>
+            <input class="hide" type="radio" name="signupType" value="">
+          </label>
+          <label>
+            <a class="btn btn-default">其他报名</a>
+            <input class="hide" type="radio" name="signupType" value="">
+          </label>
+        </div>
 
-    <form action="" method="POST" role="form">
-      <h3>选择主题分类</h3>
-      <div class="radio">
-        <label>
-          <a  class="btn btn-default active">灌顶报名</a>
-          <input class="hide" type="radio" name="signupType"  value="" checked="checked">
-        </label>
-        <label>
-          <a  class="btn btn-default">打七报名</a>
-          <input class="hide" type="radio" name="signupType"  value="" >
-        </label>
-        <label>
-          <a  class="btn btn-default">打九报名</a>
-          <input class="hide" type="radio" name="signupType"  value="" >
-        </label>
-        <label>
-          <a  class="btn btn-default">其他报名</a>
-          <input class="hide" type="radio" name="signupType"  value="" >
-        </label>
-      </div>
-      
-      
-      <div class="form-group">
-        <input type="text" class="form-control" name="" placeholder="标题（可不填）">
-      </div>
-      <div class="form-group">
-        <textarea type="text" class="form-control" name="" placeholder="输入内容"></textarea>
-      </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="" placeholder="标题（可不填）">
+        </div>
+        <div class="form-group content-box">
+          <textarea type="text" id="content" rows="8" class="form-control" name="" placeholder="输入内容"></textarea>
+          <div>
+            <div class="img-preview">
+              <img src="/static/images/activity_img2.png" class="img-responsive" alt="图片">
+            </div>
 
+            <label class="add-img">
+              <input type="file" class="hide">
+              <i class="iconfont icon-icon--"></i>
+              <span>添加图片</span>
+            </label>
+            <i id="emoji" class=" iconfont icon-xiaoliansmiley40"></i>
+          </div>
+        </div>
 
-
-      <button type="submit" class="btn btn-m-bg">发布</button>
-      <button type="reset" class="btn btn-default">取消</button>
-    </form>
-
+        <button type="submit" class="btn btn-m-bg">发布</button>
+        <button type="reset" class="btn btn-default">取消</button>
+      </form>
+    </section>
 
 
   </div>
@@ -160,12 +169,60 @@
 
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/lib/jquery.emoji.js"></script>
   <script>
+    $('.radio .btn').on('click', function () {
+      $('.radio .btn').removeClass('active');
+      $(this).addClass('active');
+    })
 
-  $('.radio .btn').on('click',function () {
-    $('.radio .btn').removeClass('active');
-    $(this).addClass('active');
-  })
+
+    /*表情初始化
+      content_el: 输入框的位置
+        list: 下的属性详解
+          name		-- 分类名称
+          code 		-- 分类的表情编码，与其他分类不可重复
+          path 		-- 图片路径
+          suffix		-- 图片的后缀
+          max_number	-- 图片的最大个数
+    */
+    $("#emoji").emoji({
+      content_el: "#content",
+      list: [{
+          name: "QQ表情",
+          code: "qq_",
+          path: "/static/images/emoji/",
+          suffix: ".gif",
+          max_number: 25
+        },
+        {
+          name: "emoji",
+          code: "em_",
+          path: "/static/images/emoji/",
+          suffix: ".png",
+          max_number: 22
+        }
+      ]
+    });
+
+    var $comments = $(".comments .comment-emoji"),
+      commentsLength = $(".comments .comment-emoji").length;
+    for (var index = 0; index < commentsLength; index++) {
+      $comments[index].innerHTML = replace_em($comments[index].innerHTML);
+    }
+
+    //表情格式替换
+    function replace_em(str) {
+      if (str) {
+        str = str.replace(/\</g, '&lt;');
+        str = str.replace(/\>/g, '&gt;');
+        str = str.replace(/\n/g, '<br/>');
+        str = str.replace(/\[qq_([0-9]*)\]/g, "<img src='/static/images/emoji/$1.gif' />");
+        str = str.replace(/\[em_([0-9]*)\]/g, "<img src='/static/emoji/$1.png'  />");
+        return str;
+      }
+
+    }
   </script>
 </body>
 

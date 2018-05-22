@@ -1565,36 +1565,6 @@ footer a {
 .daochang .query .m-btn {
   width: 100px;
 }
-@media (max-width: 768px) {
-  .daochang {
-    padding: 0 10px;
-  }
-  .daochang .pics > div.col-md-4 {
-    margin: 0 auto;
-    text-align: center;
-  }
-  .daochang .pics > div.col-md-4 img {
-    margin: 0 auto;
-    border-radius: 15px;
-  }
-  .daochang .content {
-    margin: 40px auto;
-  }
-  .daochang .contactme .left-item {
-    padding: 0;
-  }
-  .daochang .contactme .left-item .media {
-    padding-left: 25px;
-  }
-  .daochang .contactme .left-item .media.qq {
-    width: 100%;
-    height: 213px;
-    border-bottom: 1px solid #EEEEEE;
-  }
-  .daochang .query .m-btn {
-    width: 100%;
-  }
-}
 /* 道场介绍 end */
 /* 书库 start */
 .book .book-type > div {
@@ -2473,9 +2443,8 @@ footer a {
 }
 .activitydetail .comments .write {
   margin-bottom: 35px;
-  /*下面是表情的一些样式，可自行修改*/
 }
-.activitydetail .comments .write #content {
+.activitydetail .comments .write textarea#content {
   margin: 5px 0;
   width: 100%;
   height: 58px;
@@ -2512,63 +2481,6 @@ footer a {
   min-height: 50px;
   padding-top: 30px;
 }
-.activitydetail .comments .write .emoji-box {
-  overflow: hidden;
-  width: 20%;
-  position: absolute;
-  border: 1px solid #ccc;
-  z-index: 9998;
-  background: #fff;
-  border-radius: 5px;
-}
-.activitydetail .comments .write em.tip {
-  content: '';
-  width: 0px;
-  height: 0px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #ccc transparent;
-  position: absolute;
-  z-index: 99999;
-}
-.activitydetail .comments .write em.tip2 {
-  content: '';
-  width: 0px;
-  height: 0px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #fff transparent;
-  position: absolute;
-  z-index: 99999;
-}
-.activitydetail .comments .write .emoji-box > .emoji-btn-box {
-  border-bottom: 1px solid #ccc;
-}
-.activitydetail .comments .write .emoji-box > .emoji-btn-box > span {
-  min-width: 50px;
-  text-align: center;
-  height: 30px;
-  line-height: 30px;
-  display: inline-block;
-  padding: 2px 10px;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: bold;
-  color: #ccc;
-}
-.activitydetail .comments .write .emoji-box > ul.emoji-ul {
-  padding: 0px;
-  margin: 0px;
-  width: 100%;
-}
-.activitydetail .comments .write .emoji-box > ul.emoji-ul > li.emoji-li {
-  border: 1px solid #fff;
-  list-style: none;
-  float: left;
-}
-.activitydetail .comments .write .emoji-box > ul.emoji-ul > li.emoji-li:HOVER {
-  border: 1px solid #4E8500;
-}
 .activitydetail .comments .media-list {
   border-top: 1px solid #aaa;
 }
@@ -2580,9 +2492,69 @@ footer a {
   border-radius: 50%;
 }
 /* 活动详情 end */
+/* 表情 start*/
+/*下面是表情的一些样式，可自行修改*/
+.emoji-box {
+  overflow: hidden;
+  width: 166px;
+  position: absolute;
+  border: 1px solid #ccc;
+  z-index: 9998;
+  background: #fff;
+  border-radius: 5px;
+}
+em.tip {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ccc transparent;
+  position: absolute;
+  z-index: 99999;
+}
+em.tip2 {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  z-index: 99999;
+}
+.emoji-box > .emoji-btn-box {
+  border-bottom: 1px solid #ccc;
+}
+.emoji-box > .emoji-btn-box > span {
+  min-width: 50px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  padding: 2px 10px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ccc;
+}
+.emoji-box > ul.emoji-ul {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+.emoji-box > ul.emoji-ul > li.emoji-li {
+  border: 1px solid #fff;
+  list-style: none;
+  float: left;
+}
+.emoji-box > ul.emoji-ul > li.emoji-li:HOVER {
+  border: 1px solid #4E8500;
+}
+/* 表情 end*/
 /* 活动发布 start */
 .publicActivity {
-  margin: 0 50px;
+  padding: 0 50px;
 }
 .publicActivity .radio {
   margin: 30px 0;
@@ -2599,6 +2571,39 @@ footer a {
   background: #fff;
   color: #4E8500;
   box-shadow: none;
+}
+.publicActivity .main-form .content-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.publicActivity .main-form .add-img {
+  margin-left: 10px;
+  margin-right: 30px;
+  line-height: 30px;
+  color: #7d7c7cb3;
+  color: inherit;
+  cursor: pointer;
+  font-weight: normal;
+}
+.publicActivity .main-form .add-img:hover {
+  color: #4E8500;
+}
+.publicActivity .main-form i {
+  font-size: 20px;
+  color: inherit;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.publicActivity .main-form i:hover {
+  color: #4E8500;
+}
+.publicActivity .main-form #content {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+.publicActivity .main-form .img-preview img {
+  margin: 10px;
 }
 /* 活动发布 end */
 @media (min-width: 1376px) and (max-width: 2000px) {
@@ -2745,5 +2750,47 @@ footer a {
   }
   .audiodetail .audiojs .right-item {
     margin-right: 0px;
+  }
+  .publicActivity {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  .daochang {
+    padding: 0 10px;
+  }
+  .daochang .pics > div.col-md-4 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .daochang .pics > div.col-md-4 img {
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  .daochang .content {
+    margin: 40px auto;
+  }
+  .daochang .contactme .left-item {
+    padding: 0;
+  }
+  .daochang .contactme .left-item .media {
+    padding-left: 25px;
+  }
+  .daochang .contactme .left-item .media.qq {
+    width: 100%;
+    height: 213px;
+    border-bottom: 1px solid #EEEEEE;
+  }
+  .daochang .query .m-btn {
+    width: 100%;
+  }
+  .publicActivity {
+    padding: 0 10px;
+  }
+  .publicActivity .radio .btn {
+    margin-right: 2px;
+  }
+  .publicActivity .main-form .img-preview img {
+    margin: 0px;
   }
 }
