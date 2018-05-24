@@ -11,9 +11,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/font/iconfont.css">
+  <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/lib/bootsnav/bootsnav.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
-
+  <style>
+  
+		.navbar-brand{
+		    padding: 29px 15px;
+		    height: auto;
+		}
+		nav.navbar.bootsnav{
+		    border: none;
+		    margin-bottom: 150px;
+		}
+		.navbar-nav{
+		    float: left;
+		}
+		nav.navbar.bootsnav ul.nav > li > a{
+		    color: #474747;
+		    text-transform: uppercase;
+		    padding: 30px;
+		}
+		nav.navbar.bootsnav ul.nav > li:hover{
+		    background: #f4f4f4;
+		}
+		.nav > li:after{
+		    content: "";
+		    width: 0;
+		    height: 5px;
+		    background: #34c9dd;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    transition: all 0.5s ease 0s;
+		}
+		.nav > li:hover:after{
+		    width: 100%;
+		}
+		nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+		    content: "+";
+		    font-family: 'FontAwesome';
+		    font-size: 16px;
+		    font-weight: 500;
+		    position: absolute;
+		    top: 35%;
+		    right: 10%;
+		    transition: all 0.4s ease 0s;
+		}
+		nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after{
+		    content: "\f105";
+		    transform: rotate(90deg);
+		}
+		.dropdown-menu.multi-dropdown{
+		    position: absolute;
+		    left: -100% !important;
+		}
+		nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		    border: none;
+		}
+		@media only screen and (max-width:990px){
+		    nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after,
+		    nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after{ content: " "; }
+		    .dropdown-menu.multi-dropdown{ left: 0 !important; }
+		    nav.navbar.bootsnav ul.nav > li:hover{ background: transparent; }
+		    nav.navbar.bootsnav ul.nav > li > a{ margin: 0; }
+		}
+	
+  </style>
 </head>
 
 <body>
@@ -97,13 +163,13 @@
         </div>
       </div>
 
-
+<!-- 
       <div class="btn-group ">
         <a class="btn btn-default active">热门</a>
         <a class="btn btn-default">最新</a>
-      </div>
+      </div> -->
 
-      <div class="submenu dropdown ">
+      <!-- <div class="submenu dropdown ">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">基本教理
           <b class="caret"></b>
         </a>
@@ -115,7 +181,75 @@
             <a href="#">心经</a>
           </li>
         </ul>
-      </div>
+      </div> -->
+
+      <!-- <div class="container "> -->
+        <!-- <div class="row"> -->
+          <div class="col-md-8">
+            <nav class="navbar navbar-default navbar-mobile bootsnav on">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                  <i class="fa fa-bars"></i>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                  
+                  <li>
+                    <a href="#">认识心中心法</a>
+                  </li>
+                  <li>
+                    <a href="#">六字大明咒</a>
+                  </li>
+                  <li class="dropdown">
+                    <a  class="dropdown-toggle" data-toggle="dropdown">心中心法</a>
+                    <ul class="dropdown-menu animated">
+
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">座上用功</a>
+                        <ul class="dropdown-menu animated">
+                          <li>
+                            <a href="#">百座</a>
+                          </li>
+                          <li>
+                            <a href="#">千坐</a>
+                          </li>
+                          <li>
+                            <a href="#">打七与打九</a>
+                          </li>
+                          <li>
+                            <a href="#">方便与其他</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">座下观照</a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">宗趣归宿</a>
+                        <ul class="dropdown-menu animated">
+                          <li>
+                            <a href="#">明心见性</a>
+                          </li>
+                          <li>
+                            <a href="#">除习与妙用</a>
+                          </li>
+                          <li>
+                            <a href="#">关于净土</a>
+                          </li>
+                          <li>
+                            <a href="#">以禅为体</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        <!-- </div> -->
+      <!-- </div> -->
 
 
 
@@ -126,9 +260,77 @@
 
     </section>
 
-    <section class="audio-list">
-      <ul>
-        <li>
+    <section class="audio-list ">
+      <ul class="row">
+        <li class="col-sm-6 col-md-4 ">
+          <span class="name">彼岸（听即解脱咒吟唱版）</span>
+          <span class="pull-right">
+            <a href="audiodetail.html" title="播放">
+              <i class="iconfont icon-bofang"></i>
+            </a>
+            <a href="" title="下载">
+              <i class="iconfont icon-xiazai"></i>
+            </a>
+          </span>
+        </li>
+        <li class="col-sm-6 col-md-4 ">
+          <span class="name">彼岸（听即解脱咒吟唱版）</span>
+          <span class="pull-right">
+            <a href="audiodetail.html" title="播放">
+              <i class="iconfont icon-bofang"></i>
+            </a>
+            <a href="" title="下载">
+              <i class="iconfont icon-xiazai"></i>
+            </a>
+          </span>
+        </li>
+        <li class="col-sm-6 col-md-4 ">
+          <span class="name">彼岸（听即解脱咒吟唱版）</span>
+          <span class="pull-right">
+            <a href="audiodetail.html" title="播放">
+              <i class="iconfont icon-bofang"></i>
+            </a>
+            <a href="" title="下载">
+              <i class="iconfont icon-xiazai"></i>
+            </a>
+          </span>
+        </li>
+        <li class="col-sm-6 col-md-4 ">
+          <span class="name">彼岸（听即解脱咒吟唱版）</span>
+          <span class="pull-right">
+            <a href="audiodetail.html" title="播放">
+              <i class="iconfont icon-bofang"></i>
+            </a>
+            <a href="" title="下载">
+              <i class="iconfont icon-xiazai"></i>
+            </a>
+          </span>
+        </li>
+        <li class="col-sm-6 col-md-4 ">
+          <span class="name">彼岸（听即解脱咒吟唱版）</span>
+          <span class="pull-right">
+            <a href="audiodetail.html" title="播放">
+              <i class="iconfont icon-bofang"></i>
+            </a>
+            <a href="" title="下载">
+              <i class="iconfont icon-xiazai"></i>
+            </a>
+          </span>
+        </li>
+        <li class="col-sm-6 col-md-4 ">
+          <span class="name">彼岸（听即解脱咒吟唱版）</span>
+          <span class="pull-right">
+            <a href="audiodetail.html" title="播放">
+              <i class="iconfont icon-bofang"></i>
+            </a>
+            <a href="" title="下载">
+              <i class="iconfont icon-xiazai"></i>
+            </a>
+          </span>
+        </li>
+
+
+        <!-- <li>
           <div class="media">
             <a class="pull-left" href="#">
               <img class="media-object" src="/static/images/draftbox_avatar.png" alt="Image">
@@ -155,7 +357,7 @@
             </div>
             <span class="time pull-right">2018-03-26</span>
           </div>
-        </li>
+        </li> -->
       </ul>
     </section>
 
@@ -219,6 +421,7 @@
 
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/lib/bootsnav/bootsnav.js"></script>
   <script src="/static/lib/jquery.lazyload.min.js"></script>
   <script>
     ;
@@ -228,15 +431,15 @@
         placeholder: "/static/images/loading.svg",
         effects: "fadeIn"
       });
-/* 第一篇 佛教常识篇 第一节、因果与业力 第二节、出离与解脱 第三节、佛法在世间，不离世间觉（佛法看世界，修行与生活） 
-第二篇 佛经学习篇 第一节、基本教理（基本名相，包括禅宗名相） 第二节、心经 第三节、金刚经 第四节、楞严经 第五节、佛心经
-第三篇 心中心法 第一节、认识心中心法（宗旨、传承、灌顶、传法） 第二节、六字大明咒 
-   第三节、心中心法 一、座上用功 （一）百座 （二）、千坐 （三）、打七与打九 （四）、方便与其他 
-                 二、座下观照 
-                 三、宗趣归宿 （一）、明心见性 （二）、除习与妙用
-                           （三）、关于净土（最后的结尾，一定是个了义净土） （四）、以禅为体 */
+      /* 第一篇 佛教常识篇 第一节、因果与业力 第二节、出离与解脱 第三节、佛法在世间，不离世间觉（佛法看世界，修行与生活） 
+      第二篇 佛经学习篇 第一节、基本教理（基本名相，包括禅宗名相） 第二节、心经 第三节、金刚经 第四节、楞严经 第五节、佛心经
+      第三篇 心中心法 第一节、认识心中心法（宗旨、传承、灌顶、传法） 第二节、六字大明咒 
+         第三节、心中心法 一、座上用功 （一）百座 （二）、千坐 （三）、打七与打九 （四）、方便与其他 
+                       二、座下观照 
+                       三、宗趣归宿 （一）、明心见性 （二）、除习与妙用
+                                 （三）、关于净土（最后的结尾，一定是个了义净土） （四）、以禅为体 */
 
-      var date=[{
+      var date = [{
 
       }]
     })()
