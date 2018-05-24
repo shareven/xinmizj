@@ -134,14 +134,14 @@
             if( getNav.hasClass("navbar-mobile")){
                 // Add Class to body
                 $('.navbar-collapse').on('shown.bs.collapse', function() {
-                    $("body").addClass("side-right");
+                    $("body .main").addClass("side-right");
                 });
                 $('.navbar-collapse').on('hide.bs.collapse', function() {
-                    $("body").removeClass("side-right");
+                    $("body .main").removeClass("side-right");
                 });
                 
                 $(window).on("resize", function(){
-                    $("body").removeClass("side-right");
+                    $("body .main").removeClass("side-right");
                 });
             }
             

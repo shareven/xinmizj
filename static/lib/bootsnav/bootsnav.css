@@ -47,7 +47,7 @@ nav.navbar.bootsnav{
     border-radius: 0px;
     background-color: #fff;
     border: none;
-    border-bottom: solid 1px #e0e0e0;
+    /* border-bottom: solid 1px #e0e0e0; */
     z-index: 9;
 }
 
@@ -1302,6 +1302,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         margin-left: 280px;
         margin-right: -280px !important;
     }
+    
     
     nav.navbar.bootsnav.navbar-mobile .navbar-collapse{
         position: fixed;

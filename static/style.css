@@ -425,68 +425,71 @@ header .navbar .navbar-brand img {
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .navbar ul {
+  header .navbar ul {
     height: 132px;
   }
-  .navbar ul li {
+  header .navbar ul li {
     width: 70px;
   }
-  .navbar ul li a {
+  header .navbar ul li a {
     font-size: 14px;
   }
-  .navbar ul.nvabar-center {
+  header .navbar ul.nvabar-center {
     margin-left: 10px;
   }
-  .copyright {
+  header .navbar .navbar-right li {
+    width: 100px;
+  }
+  header .copyright {
     text-align: center;
   }
 }
 @media (max-width: 768px) {
-  .navbar {
+  header .navbar {
     height: auto;
     background: #eee;
   }
-  .navbar .navbar-collapse.collapse {
+  header .navbar .navbar-collapse.collapse {
     z-index: 1;
     background: #eee;
   }
-  .navbar {
+  header .navbar {
     line-height: 32px;
   }
-  .navbar .navbar-brand {
+  header .navbar .navbar-brand {
     display: none;
   }
-  .navbar .navbar-nav {
+  header .navbar .navbar-nav {
     margin: 0;
   }
-  .navbar ul {
+  header .navbar ul {
     height: auto;
     width: 100%;
   }
-  .navbar ul li {
+  header .navbar ul li {
     position: relative;
     width: 100%;
     text-align: center;
   }
-  .navbar ul li a {
+  header .navbar ul li a {
     padding: 0;
     height: 100%;
     color: #404040;
     line-height: 30px;
     font-size: 16px;
   }
-  .navbar ul li a:hover,
-  .navbar ul li a:focus {
+  header .navbar ul li a:hover,
+  header .navbar ul li a:focus {
     background: none;
     color: #4E8500;
   }
-  .navbar ul li.active:before {
+  header .navbar ul li.active:before {
     display: none;
   }
-  .navbar ul li.active:after {
+  header .navbar ul li.active:after {
     display: none;
   }
-  .navbar .navbar-right li {
+  header .navbar .navbar-right li {
     width: 100%;
   }
   .main {
@@ -1947,16 +1950,20 @@ footer a {
 /* 视频 end */
 /* 视频详情 start */
 .videodetail .videowrap {
-  padding: 0 50px;
+  padding: 0;
   width: 100%;
+}
+.videodetail .videowrap .video-js {
+  border: 1px solid #fff;
+  background: #111;
+  color: #fff;
 }
 .videodetail .videowrap #html5Video {
   margin: 0 auto;
   width: 100%;
-  height: 500px;
 }
 .videodetail .video-info {
-  margin: 0 50px;
+  margin: 0;
   position: relative;
   padding: 10px 0 40px;
   border-bottom: 1px solid #DCDCDC;
@@ -1965,9 +1972,7 @@ footer a {
   color: #797979;
 }
 .videodetail .video-info .item-right {
-  position: absolute;
-  top: 20px;
-  right: 15px;
+  margin-top: 10px;
 }
 .videodetail .video-info .item-right i {
   margin: 0 20px;
@@ -1978,7 +1983,7 @@ footer a {
   color: #ec4f4f;
 }
 .videodetail .all-episode {
-  margin: 40px 50px 130px 50px;
+  margin: 40px 0px 130px 0px;
 }
 .videodetail .all-episode h4 {
   font-size: 16px;
@@ -2008,41 +2013,29 @@ footer a {
 }
 /* 视频详情 end */
 /* 音频 start */
+body .main.side-right > .wrapper {
+  margin-left: 280px;
+  margin-right: -280px !important;
+}
+body .main.side-right .navbar-header {
+  margin-left: 280px;
+}
 .audio .top-pic {
   width: 100%;
 }
 .audio .audio-type {
   position: relative;
-  margin: 0 50px;
+  margin: 0;
 }
 .audio .audio-type .row {
-  position: relative;
-  top: -60px;
-  width: 480px;
-  height: 60px;
-  line-height: 60px;
-  background: url('/static/images/audio_bg.png');
-  font-size: 16px;
-  color: #797979;
-  border-radius: 30px 30px 0 0;
+  background: #fff;
 }
 .audio .audio-type .row > div {
-  height: 18px;
-  text-align: center;
+  height: 63px;
 }
-.audio .audio-type .row > div a {
-  color: inherit;
-  cursor: pointer;
-}
-.audio .audio-type .row > div a:hover {
-  color: #4E8500;
-}
-.audio .audio-type .row > div.active a {
-  color: #4E8500;
-}
-.audio .audio-type .row > div.border2 {
-  border-left: 1px solid #E5E5E5;
-  border-right: 1px solid #E5E5E5;
+.audio .audio-type .row nav.navbar.bootsnav li.active,
+.audio .audio-type .row nav.navbar.bootsnav li:hover {
+  background: #eee;
 }
 .audio .audio-type .btn-group .btn-default {
   background: #EEEEEE;
@@ -2064,7 +2057,7 @@ footer a {
 }
 .audio .audio-type .search-group {
   position: relative;
-  width: 180px;
+  line-height: 78px;
 }
 .audio .audio-type .search-group .search {
   border: none;
@@ -2706,7 +2699,7 @@ em.tip2 {
     overflow-y: visible;
   }
   .book .book-type > div {
-    margin: 0 ;
+    margin: 0;
     min-width: 257px;
   }
   .book .book-type > div .tab-content ul > li.active::after {
@@ -2725,6 +2718,9 @@ em.tip2 {
 @media (max-width: 768px) {
   .book .book-type {
     font-size: 12px;
+  }
+  .audio .audio-list {
+    margin: 30px 0;
   }
   .daochang {
     padding: 0 10px;
@@ -2762,5 +2758,11 @@ em.tip2 {
   }
   .publicActivity .main-form .img-preview img {
     margin: 0px;
+  }
+  .videodetail .video-info h3 {
+    font-size: 18px;
+  }
+  .videodetail .video-info .item-right i {
+    font-size: 20px;
   }
 }

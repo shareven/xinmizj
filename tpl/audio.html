@@ -16,69 +16,86 @@
   <link rel="stylesheet" href="/static/style.css">
   <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
   <style>
-  
-		.navbar-brand{
-		    padding: 29px 15px;
-		    height: auto;
-		}
-		nav.navbar.bootsnav{
-		    border: none;
-		    margin-bottom: 150px;
-		}
-		.navbar-nav{
-		    float: left;
-		}
-		nav.navbar.bootsnav ul.nav > li > a{
-		    color: #474747;
-		    text-transform: uppercase;
-		    padding: 30px;
-		}
-		nav.navbar.bootsnav ul.nav > li:hover{
-		    background: #f4f4f4;
-		}
-		.nav > li:after{
-		    content: "";
-		    width: 0;
-		    height: 5px;
-		    background: #34c9dd;
-		    position: absolute;
-		    bottom: 0;
-		    left: 0;
-		    transition: all 0.5s ease 0s;
-		}
-		.nav > li:hover:after{
-		    width: 100%;
-		}
-		nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
-		    content: "+";
-		    font-family: 'FontAwesome';
-		    font-size: 16px;
-		    font-weight: 500;
-		    position: absolute;
-		    top: 35%;
-		    right: 10%;
-		    transition: all 0.4s ease 0s;
-		}
-		nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after{
-		    content: "\f105";
-		    transform: rotate(90deg);
-		}
-		.dropdown-menu.multi-dropdown{
-		    position: absolute;
-		    left: -100% !important;
-		}
-		nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
-		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-		    border: none;
-		}
-		@media only screen and (max-width:990px){
-		    nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after,
-		    nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after{ content: " "; }
-		    .dropdown-menu.multi-dropdown{ left: 0 !important; }
-		    nav.navbar.bootsnav ul.nav > li:hover{ background: transparent; }
-		    nav.navbar.bootsnav ul.nav > li > a{ margin: 0; }
-		}
-	
+    .navbar-brand {
+      padding: 29px 15px;
+      height: auto;
+    }
+
+    nav.navbar.bootsnav {
+      border: none;
+      margin-bottom: 150px;
+    }
+
+    .navbar-nav {
+      float: left;
+    }
+
+    nav.navbar.bootsnav ul.nav>li>a {
+      color: #474747;
+      text-transform: uppercase;
+      padding: 30px;
+    }
+
+    nav.navbar.bootsnav ul.nav>li:hover {
+      background: #f4f4f4;
+    }
+
+    .nav>li:after {
+      content: "";
+      width: 0;
+      height: 5px;
+      background: #34c9dd;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.5s ease 0s;
+    }
+
+    .nav>li:hover:after {
+      width: 100%;
+    }
+
+    nav.navbar.bootsnav ul.nav>li.dropdown>a.dropdown-toggle:after {
+      content: "+";
+      font-family: 'FontAwesome';
+      font-size: 16px;
+      font-weight: 500;
+      position: absolute;
+      top: 35%;
+      right: 10%;
+      transition: all 0.4s ease 0s;
+    }
+
+    nav.navbar.bootsnav ul.nav>li.dropdown.on>a.dropdown-toggle:after {
+      content: "\f105";
+      transform: rotate(90deg);
+    }
+
+    .dropdown-menu.multi-dropdown {
+      position: absolute;
+      left: -100% !important;
+    }
+
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border: none;
+    }
+
+    @media only screen and (max-width:990px) {
+      nav.navbar.bootsnav ul.nav>li.dropdown>a.dropdown-toggle:after,
+      nav.navbar.bootsnav ul.nav>li.dropdown.on>a.dropdown-toggle:after {
+        content: " ";
+      }
+      .dropdown-menu.multi-dropdown {
+        left: 0 !important;
+      }
+      nav.navbar.bootsnav ul.nav>li:hover {
+        background: transparent;
+      }
+      nav.navbar.bootsnav ul.nav>li>a {
+        margin: 0;
+      }
+    }
   </style>
 </head>
 
@@ -88,7 +105,7 @@
     <nav class="navbar" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -99,7 +116,7 @@
         </a>
       </div>
 
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id="ex1-collapse">
         <ul class="nav navbar-nav nvabar-center">
           <li>
             <a href="/index.html">首页</a>
@@ -144,6 +161,7 @@
     </nav>
   </header>
 
+
   <!-- head -->
   <div class="main audio">
     <section class="top-pic1">
@@ -151,7 +169,7 @@
     </section>
 
     <section class="audio-type">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-xs-4 active">
           <a>心中心</a>
         </div>
@@ -161,103 +179,127 @@
         <div class="col-xs-4">
           <a>佛教常识</a>
         </div>
-      </div>
-
-<!-- 
-      <div class="btn-group ">
-        <a class="btn btn-default active">热门</a>
-        <a class="btn btn-default">最新</a>
       </div> -->
 
-      <!-- <div class="submenu dropdown ">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">基本教理
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">金刚经</a>
-          </li>
-          <li>
-            <a href="#">心经</a>
-          </li>
-        </ul>
-      </div> -->
 
-      <!-- <div class="container "> -->
-        <!-- <div class="row"> -->
-          <div class="col-md-8">
-            <nav class="navbar navbar-default navbar-mobile bootsnav on">
+      <div class="container-flu ">
+        <div class="row clearfix">
+          <div class="col-md-8 col-sm-8 col-xs-3 ">
+            <nav class="navbar navbar-default navbar-mobile bootsnav ">
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu2">
                   <i class="fa fa-bars"></i>
                 </button>
               </div>
-              <div class="collapse navbar-collapse" id="navbar-menu">
+              <div class="collapse navbar-collapse" id="navbar-menu2">
                 <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
-                  
-                  <li>
-                    <a href="#">认识心中心法</a>
-                  </li>
-                  <li>
-                    <a href="#">六字大明咒</a>
-                  </li>
-                  <li class="dropdown">
-                    <a  class="dropdown-toggle" data-toggle="dropdown">心中心法</a>
-                    <ul class="dropdown-menu animated">
 
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">座上用功</a>
-                        <ul class="dropdown-menu animated">
-                          <li>
-                            <a href="#">百座</a>
-                          </li>
-                          <li>
-                            <a href="#">千坐</a>
-                          </li>
-                          <li>
-                            <a href="#">打七与打九</a>
-                          </li>
-                          <li>
-                            <a href="#">方便与其他</a>
-                          </li>
-                        </ul>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">佛教常识篇</a>
+                    <ul class="dropdown-menu animated">
+                      <li>
+                        <a href="#">因果与业力</a>
                       </li>
                       <li>
-                        <a href="#">座下观照</a>
+                        <a href="#">出离与解脱</a>
+                      </li>
+                      <li>
+                        <a href="#">佛法在世间，不离世间觉</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">佛经学习篇</a>
+                    <ul class="dropdown-menu animated">
+                      <li>
+                        <a href="#">基本教理</a>
+                      </li>
+                      <li>
+                        <a href="#">心经</a>
+                      </li>
+                      <li>
+                        <a href="#">金刚经</a>
+                      </li>
+                      <li>
+                        <a href="#">楞严经</a>
+                      </li>
+                      <li>
+                        <a href="#">佛心经</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">心中心法</a>
+                    <ul class="dropdown-menu animated">
+                      <li>
+                        <a href="#">认识心中心法</a>
+                      </li>
+                      <li>
+                        <a href="#">六字大明咒</a>
                       </li>
                       <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">宗趣归宿</a>
+                        <a class="dropdown-toggle" data-toggle="dropdown">心中心法</a>
                         <ul class="dropdown-menu animated">
-                          <li>
-                            <a href="#">明心见性</a>
+
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">座上用功</a>
+                            <ul class="dropdown-menu animated">
+                              <li>
+                                <a href="#">百座</a>
+                              </li>
+                              <li>
+                                <a href="#">千坐</a>
+                              </li>
+                              <li>
+                                <a href="#">打七与打九</a>
+                              </li>
+                              <li>
+                                <a href="#">方便与其他</a>
+                              </li>
+                            </ul>
                           </li>
                           <li>
-                            <a href="#">除习与妙用</a>
+                            <a href="#">座下观照</a>
                           </li>
-                          <li>
-                            <a href="#">关于净土</a>
-                          </li>
-                          <li>
-                            <a href="#">以禅为体</a>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">宗趣归宿</a>
+                            <ul class="dropdown-menu animated">
+                              <li>
+                                <a href="#">明心见性</a>
+                              </li>
+                              <li>
+                                <a href="#">除习与妙用</a>
+                              </li>
+                              <li>
+                                <a href="#">关于净土</a>
+                              </li>
+                              <li>
+                                <a href="#">以禅为体</a>
+                              </li>
+                            </ul>
                           </li>
                         </ul>
                       </li>
                     </ul>
                   </li>
+
+
+
+
+
                 </ul>
               </div>
             </nav>
           </div>
-        <!-- </div> -->
-      <!-- </div> -->
 
 
-
-      <div class="form-group pull-right search-group">
-        <input type="text" class="search" placeholder="搜索所有音频">
-        <i class="iconfont icon-iconss"></i>
+          <div class="form-group  search-group col-md-3 col-sm-3  col-xs-8 ">
+            <input type="text" class="search" placeholder="搜索所有音频">
+            <i class="iconfont icon-iconss"></i>
+          </div>
+        </div>
       </div>
-
     </section>
 
     <section class="audio-list ">

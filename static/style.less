@@ -532,73 +532,80 @@ header {
 }
 
 @media (min-width: 768px) and (max-width:992px) {
-    .navbar ul {
-        height: 132px;
-        li {
-            width: 70px;
-            a {
-                font-size: 14px;
+    header {
+        .navbar ul {
+            height: 132px;
+            li {
+                width: 70px;
+                a {
+                    font-size: 14px;
+                }
+            }
+            &.nvabar-center {
+                margin-left: 10px;
             }
         }
-        &.nvabar-center {
-            margin-left: 10px;
+        .navbar .navbar-right li {
+            width: 100px;
         }
-    }
-    .copyright {
-        text-align: center;
-    }
-    .main {
-        // padding: 0 20px;
+        .copyright {
+            text-align: center;
+        }
+        .main {
+            // padding: 0 20px;
+        }
     }
 }
 
 @media (max-width:768px) {
-    .navbar {
-        height: auto;
-        background: #eee;
-    }
-    .navbar .navbar-collapse.collapse {
-        z-index: 1;
-        background: #eee;
-    }
-    .navbar {
-        line-height: 32px;
-        .navbar-brand {
-            display: none;
-        }
-        .navbar-nav {
-            margin: 0;
-        }
-        ul {
+    header {
+        .navbar {
             height: auto;
-            width: 100%;
-            li {
-                position: relative;
+            background: #eee;
+        }
+        .navbar .navbar-collapse.collapse {
+            z-index: 1;
+            background: #eee;
+        }
+        .navbar {
+            line-height: 32px;
+            .navbar-brand {
+                display: none;
+            }
+            .navbar-nav {
+                margin: 0;
+            }
+            ul {
+                height: auto;
                 width: 100%;
-                text-align: center;
-                a {
-                    padding: 0;
-                    height: 100%;
-                    color: #404040;
-                    line-height: 30px;
-                    font-size: 16px;
-                    &:hover,
-                    &:focus {
-                        background: none;
-                        .m-color;
+                li {
+                    position: relative;
+                    width: 100%;
+                    text-align: center;
+                    a {
+                        padding: 0;
+                        height: 100%;
+                        color: #404040;
+                        line-height: 30px;
+                        font-size: 16px;
+                        &:hover,
+                        &:focus {
+                            background: none;
+                            .m-color;
+                        }
                     }
                 }
+                li.active:before {
+                    display: none;
+                }
+                li.active:after {
+                    display: none;
+                }
             }
-            li.active:before {
-                display: none;
-            }
-            li.active:after {
-                display: none;
-            }
-        }
-        .navbar-right {
-            li {
-                width: 100%;
+            .navbar-right {
+                li {
+                    width: 100%;
+                }
             }
         }
     }
@@ -1814,16 +1821,20 @@ footer {
 
 .videodetail {
     .videowrap {
-        padding: 0 50px;
+        padding: 0;
         width: 100%;
+        .video-js {
+            border: 1px solid #fff;
+            background: #111;
+            color: #fff;
+        }
         #html5Video {
             margin: 0 auto;
-            .size(100%,
-            500px);
+            width: 100%;
         }
     }
     .video-info {
-        margin: 0 50px;
+        margin: 0;
         position: relative;
         padding: 10px 0 40px;
         border-bottom: 1px solid #DCDCDC;
@@ -1831,9 +1842,10 @@ footer {
             color: #797979;
         }
         .item-right {
-            position: absolute;
-            top: 20px;
-            right: 15px;
+            // position: absolute;
+            // top: 20px;
+            // right: 15px;
+            margin-top: 10px;
             i {
                 margin: 0 20px;
                 font-size: 30px;
@@ -1845,7 +1857,7 @@ footer {
         }
     }
     .all-episode {
-        margin: 40px 50px 130px 50px;
+        margin: 40px 0px 130px 0px;
         h4 {
             font-size: 16px;
         }
@@ -1877,6 +1889,15 @@ footer {
 
 /* 音频 start */
 
+body .main.side-right>.wrapper {
+    margin-left: 280px;
+    margin-right: -280px !important;
+}
+
+body .main.side-right .navbar-header {
+    margin-left: 280px;
+}
+
 .audio {
     .top-pic {
         width: 100%; // height: 500px;
@@ -1884,29 +1905,18 @@ footer {
     }
     .audio-type {
         position: relative;
-        margin: 0 50px;
+        margin: 0;
         .row {
-            position: relative;
-            top: -60px;
-            .size-lh(480px,
-            60px);
-            background: url('/static/images/audio_bg.png');
-            font-size: 16px;
-            color: #797979;
-            border-radius: 30px 30px 0 0;
+            background: #fff;
             &>div {
-                height: 18px;
-                text-align: center;
-                a {
-                    cursor: pointer;
-                    .m-color-hover;
-                }
-                &.active a {
-                    .m-color;
-                }
-                &.border2 {
-                    border-left: 1px solid #E5E5E5;
-                    border-right: 1px solid #E5E5E5;
+                height: 63px;
+            }
+            nav.navbar.bootsnav {
+                li{
+                    &.active,
+                  &:hover  {
+                      background: #eee;
+                  }
                 }
             }
         }
@@ -1932,7 +1942,7 @@ footer {
         }
         .search-group {
             position: relative;
-            width: 180px;
+            line-height: 78px;
             .search {
                 border: none;
                 border-bottom: 1px solid #DCDCDC;
@@ -2600,7 +2610,7 @@ em.tip2 {
     .book {
         .book-type {
             &>div {
-                margin: 0 ;
+                margin: 0;
                 min-width: 257px;
                 .tab-content ul>li {
                     &.active::after {
@@ -2624,9 +2634,14 @@ em.tip2 {
 }
 
 @media (max-width:768px) {
-    .book{
-        .book-type{
+    .book {
+        .book-type {
             font-size: 12px;
+        }
+    }
+    .audio {
+        .audio-list {
+            margin: 30px 0;
         }
     }
     .daochang {
@@ -2670,6 +2685,18 @@ em.tip2 {
         }
         .main-form .img-preview img {
             margin: 0px;
+        }
+    }
+    .videodetail {
+        .video-info {
+            h3 {
+                font-size: 18px;
+            }
+            .item-right {
+                i {
+                    font-size: 20px;
+                }
+            }
         }
     }
 }
