@@ -1568,7 +1568,6 @@ footer a {
 /* 道场介绍 end */
 /* 书库 start */
 .book .book-type > div {
-  margin: 0 24px;
   min-width: 257px;
 }
 .book .book-type > div .tab-content ul > li {
@@ -1592,8 +1591,8 @@ footer a {
   top: 0;
   bottom: 0;
   margin: auto 0;
-  left: 200px;
-  width: 100%;
+  right: 0;
+  width: 50px;
   height: 41px;
   line-height: 41px;
   color: #4E7319;
@@ -2739,7 +2738,7 @@ em.tip2 {
     overflow-y: visible;
   }
   .book .book-type > div {
-    margin: 0 24px;
+    margin: 0 ;
     min-width: 257px;
   }
   .book .book-type > div .tab-content ul > li.active::after {
@@ -2756,6 +2755,9 @@ em.tip2 {
   }
 }
 @media (max-width: 768px) {
+  .book .book-type {
+    font-size: 12px;
+  }
   .daochang {
     padding: 0 10px;
   }

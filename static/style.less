@@ -1416,7 +1416,7 @@ footer {
 .book {
     .book-type {
         &>div {
-            margin: 0 24px;
+            // margin-left:20px;
             min-width: 257px;
             .tab-content ul>li {
                 position: relative;
@@ -1434,8 +1434,8 @@ footer {
                     display: block;
                     content: "—>";
                     .center-y;
-                    left: 200px;
-                    .size-lh(100%,
+                    right: 0;
+                    .size-lh(50px,
                     41px);
                     color: #4E7319;
                 }
@@ -2591,7 +2591,7 @@ em.tip2 {
     .book {
         .book-type {
             &>div {
-                margin: 0 24px;
+                margin: 0 ;
                 min-width: 257px;
                 .tab-content ul>li {
                     &.active::after {
@@ -2615,6 +2615,11 @@ em.tip2 {
 }
 
 @media (max-width:768px) {
+    .book{
+        .book-type{
+            font-size: 12px;
+        }
+    }
     .daochang {
         padding: 0 10px;
         .pics {
