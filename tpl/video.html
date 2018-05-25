@@ -10,8 +10,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/font/iconfont.css ">
+  <link rel="stylesheet" href="/static/lib/bootsnav/bootsnav.css">
   <link rel="stylesheet" href="/static/style.css">
 <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 
@@ -117,7 +118,7 @@
       </div>
     </section>
     <section class="get-video clearfix">
-
+<!-- 
       <nav class="navbar navbar-default" role="navigation">
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -156,36 +157,85 @@
 
         </div>
         
-      </nav>
+      </nav> -->
 
+      <div class="container-flu ">
+        <div class="row clearfix">
+          <div class="col-md-8 col-sm-8 col-xs-3 ">
+            <nav class="navbar navbar-default navbar-mobile bootsnav ">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu2">
+                  <i class="fa fa-bars"></i>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-menu2">
+                <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+      
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">排序</a>
+                    <ul class="dropdown-menu animated">
+                      <li>
+                        <a href="#">热门</a>
+                      </li>
+                      <li>
+                        <a href="#">最新</a>
+                      </li>
+                    </ul>
+                  </li>
+      
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">元音老人视频</a>
+                    <ul class="dropdown-menu animated">
+                      <li>
+                        <a href="#">讲经</a>
+                      </li>
+                      <li>
+                        <a href="#">随缘问答</a>
+                      </li>
+                    </ul>
+                  </li>
+      
+                </ul>
+              </div>
+            </nav>
+          </div>
+      
+      
+          <div class="form-group  search-group col-md-3 col-sm-3  col-xs-8 ">
+            <input type="text" class="search" placeholder="搜索所有视频">
+            <i class="iconfont icon-iconss"></i>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="video-list ">
       <ul class="row">
-        <li class="col-md-3 col-xs-6">
+      
+        <li class="col-md-3 col-sm-6 ">
           <a href="videodetail.html">
-            <img data-original="/static/images/pic.png" alt="">
+            <img data-original="/static/images/pic.png" class="img-responsive" alt="">
             <h5>药师七佛经浅释</h5>
           </a>
           <p class="ellip">尔时即有十金刚藏菩萨前整衣服</p>
         </li>
-        <li class="col-md-3 col-xs-6">
+        <li class="col-md-3 col-sm-6 ">
           <a href="videodetail.html">
-            <img data-original="/static/images/pic.png" alt="">
+            <img data-original="/static/images/pic.png" class="img-responsive" alt="">
             <h5>药师七佛经浅释</h5>
           </a>
           <p class="ellip">尔时即有十金刚藏菩萨前整衣服</p>
         </li>
-        <li class="col-md-3 col-xs-6">
+        <li class="col-md-3 col-sm-6 ">
           <a href="videodetail.html">
-            <img data-original="/static/images/pic.png" alt="">
+            <img data-original="/static/images/pic.png" class="img-responsive" alt="">
             <h5>药师七佛经浅释</h5>
           </a>
           <p class="ellip">尔时即有十金刚藏菩萨前整衣服</p>
         </li>
-        <li class="col-md-3 col-xs-6">
+        <li class="col-md-3 col-sm-6 ">
           <a href="videodetail.html">
-            <img data-original="/static/images/pic.png" alt="">
+            <img data-original="/static/images/pic.png" class="img-responsive" alt="">
             <h5>药师七佛经浅释</h5>
           </a>
           <p class="ellip">尔时即有十金刚藏菩萨前整衣服</p>
@@ -255,6 +305,7 @@
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
   <script src="/static/lib/jquery.lazyload.min.js"></script>
+  <script src="/static/lib/bootsnav/bootsnav.js"></script>
   <script>
     ;
     (function () {
