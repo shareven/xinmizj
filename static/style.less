@@ -1119,11 +1119,15 @@ footer {
 }
 
 .my {
+    // min-width: 1201px;
+    .container-fluid {
+        padding: 0 50px;
+    }
     .slide-nav {
-        margin: 15px 20px 30px 50px;
-        width: 160px;
+        // margin: 15px 20px 30px 50px;
+        // width: 160px;
         .head {
-            .size-q(160px);
+            .size-q(100%);
             text-align: center;
             padding: 30px 0;
             background: #fff;
@@ -1178,8 +1182,8 @@ footer {
         }
     }
     .main-content {
-        margin: 30px 50px 50px 230px;
-        min-height: 300px;
+        // margin: 30px 50px 50px 230px;
+        // min-height: 300px;
         .navbar-nav {
             float: none;
             .size-lh(100%,
@@ -1239,41 +1243,44 @@ footer {
             }
         }
     }
-    #uploadModal {
-        #user-photo {
-            width: 300px;
-            height: 300px;
-            margin-top: 10px;
-        }
-        #photo {
-            max-width: 100%;
-            max-height: 350px;
-        }
-        .img-container {
-            height: 150px;
-        }
-        .img-preview-box {
-            text-align: center;
-        }
-        .img-preview-box>div {
-            display: inline-block;
-            ;
-            margin-right: 10px;
-        }
-        .img-preview {
-            overflow: hidden;
-        }
-        .img-preview-box .img-preview-md {
-            width: 70px;
-            height: 70px;
-            .border(#aaaaaa);
-        }
-        .img-preview-box .img-preview-round {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            .border(#aaaaaa);
-        }
+}
+
+#uploadModal {
+    #user-photo {
+        width: 300px;
+        height: 300px;
+        margin-top: 10px;
+    }
+    #photo {
+        max-width: 100%;
+        max-height: 350px;
+    }
+    .img-container {
+        margin: 0 auto;
+        width: 400px;
+        height: 200px;
+    }
+    .img-preview-box {
+        text-align: center;
+    }
+    .img-preview-box>div {
+        display: inline-block;
+        ;
+        margin-right: 10px;
+    }
+    .img-preview {
+        overflow: hidden;
+    }
+    .img-preview-box .img-preview-md {
+        width: 70px;
+        height: 70px;
+        .border(#aaaaaa);
+    }
+    .img-preview-box .img-preview-round {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        .border(#aaaaaa);
     }
 }
 
@@ -1732,6 +1739,9 @@ footer {
             &>div {
                 height: 63px;
             }
+            .form-group {
+                line-height: 65px;
+            }
             nav.navbar.bootsnav {
                 li {
                     &.active,
@@ -1742,8 +1752,7 @@ footer {
             }
         }
         .search-group {
-            position: relative;
-            line-height: 78px;
+            position: relative; // line-height: 78px;
             .search {
                 border: none;
                 border-bottom: 1px solid #DCDCDC;
@@ -1756,6 +1765,15 @@ footer {
                 .center-y;
                 right: 10px;
                 .m-color-hover;
+            }
+        }
+        .btn-default {
+            background: #EEEEEE;
+            color: #999999;
+            border: none;
+            &.active {
+                .m-bgcolor;
+                color: #ffffff;
             }
         }
     } // .get-video {
@@ -2014,6 +2032,9 @@ body .main.side-right .navbar-header {
             &>div {
                 height: 63px;
             }
+            .form-group {
+                line-height: 65px;
+            }
             nav.navbar.bootsnav {
                 li {
                     &.active,
@@ -2044,8 +2065,7 @@ body .main.side-right .navbar-header {
             width: 200px;
         }
         .search-group {
-            position: relative;
-            line-height: 78px;
+            position: relative; // line-height: 68px;
             .search {
                 border: none;
                 border-bottom: 1px solid #DCDCDC;
@@ -2058,6 +2078,15 @@ body .main.side-right .navbar-header {
                 .center-y;
                 right: 10px;
                 .m-color-hover;
+            }
+        }
+        .btn-default {
+            background: #EEEEEE;
+            color: #999999;
+            border: none;
+            &.active {
+                .m-bgcolor;
+                color: #ffffff;
             }
         }
     }
@@ -2818,6 +2847,17 @@ em.tip2 {
             }
         }
     }
+    .my {
+        .container-fluid {
+            padding: 0;
+        }
+        .slide-nav {
+            margin: 0;
+        }
+        .main-content {
+            margin: 0px;
+        }
+    }
 }
 
 @media (max-width:768px) {
@@ -2955,6 +2995,7 @@ em.tip2 {
     .daochang {
         padding: 0 10px;
         .pics {
+            padding: 0;
             &>div.col-md-4 {
                 margin: 0 auto;
                 text-align: center;
@@ -2966,6 +3007,7 @@ em.tip2 {
         }
         .content {
             margin: 40px auto;
+            padding: 0;
         }
         .contactme {
             .left-item {
@@ -2986,6 +3028,44 @@ em.tip2 {
             }
         }
     }
+    .shoplink {
+        padding: 0;
+    }
+    .activity {
+        padding: 0;
+    }
+    .activitydetail {
+        .content {
+            margin: 0;
+            padding: 10px;
+            .author {
+                position: absolute;
+                top: 60px;
+                left: 10px;
+            }
+            .right-group {
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                height: 35px;
+                line-height: 35px;
+            }
+            h5 {
+                margin: 23px auto 30px;
+                text-align: center;
+                color: #777;
+            }
+        }
+        .comments {
+            padding: 0;
+        }
+        #setting form .form-group label {
+            text-align: left;
+        }
+        .modal-header .close {
+            float: none;
+        }
+    }
     .publicActivity {
         padding: 0 10px;
         .radio .btn {
@@ -2996,6 +3076,10 @@ em.tip2 {
         }
     }
     .video {
+        .top-video>div a {
+            margin: 5px ;
+            height: auto;
+        }
         .video-list {
             ul {
                 li {
@@ -3017,6 +3101,24 @@ em.tip2 {
             .item-right {
                 i {
                     font-size: 20px;
+                }
+            }
+        }
+    }
+    .my {
+        .container-fluid {
+            padding: 0;
+        }
+        .slide-nav {
+            margin: 0;
+        }
+        .main-content {
+            margin: 0;
+            .navbar-nav {
+                margin: 0;
+                height: 70px;
+                li {
+                    float: left;
                 }
             }
         }
