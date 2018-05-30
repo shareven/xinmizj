@@ -384,6 +384,7 @@ header {
         // width: 100%;
         height: 132px;
         line-height: 132px; // font-family: 'FZKTJW--GB1-0';
+        z-index: 199;
         .navbar-brand {
             width: 100px;
         }
@@ -470,8 +471,30 @@ header {
             margin-left: 50px;
         }
         .navbar-right {
-            li {
-                width: 150px;
+            &>li {
+                .person {
+                    cursor: pointer;
+                } // width: 150px;
+                .dropdown-menu {
+                    min-width: 90px;
+                    .size(90px,
+                    83px);
+                    li {
+                        margin: 5px 0;
+                        .size-lh(100%,
+                        30px);
+                        a {
+                            .size-lh(100%,
+                            30px);
+                        }
+                        &:hover {
+                            .m-bgcolor;
+                            a {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
             }
         }
         .navbar-brand {
@@ -570,8 +593,8 @@ header {
             height: auto;
             background: #eee;
             position: absolute;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
             width: 100%;
             opacity: .8;
         }
@@ -707,7 +730,8 @@ footer {
         position: relative;
         width: 100%;
         padding: 0 134px;
-        margin-bottom: 80px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid #DCDCDC;
         h1 {
             padding: 47px 20px;
             text-align: left;
@@ -767,10 +791,10 @@ footer {
     .home-video {
         position: relative;
         .size(100%,
-        440px);
+        566px);
         min-width: 1100px;
         h1 {
-            padding: 47px 50px;
+            padding: 27px 50px;
             text-align: center;
             .showmore {
                 .my-btn;
@@ -778,7 +802,7 @@ footer {
         }
         #swiper-container3 {
             position: relative;
-            height: 100%;
+            height: 440px;
             .swiper-wrapper {
                 height: 100%;
                 overflow: hidden;
@@ -2774,8 +2798,12 @@ em.tip2 {
         .home-video {
             position: relative;
             .size(100%,
-            300px);
+            425px);
             min-width: 768px;
+            #swiper-container3 {
+                position: relative;
+                height: 300px;
+            }
             .arrow {
                 position: absolute;
                 left: 25%;
@@ -3161,7 +3189,7 @@ em.tip2 {
             }
         }
         .home-library {
-            padding: 0 ;
+            padding: 0;
             margin-bottom: 0px;
             h1 {
                 padding: 17px 20px;
@@ -3184,7 +3212,7 @@ em.tip2 {
                         &>a {
                             .size(285px,
                             376px);
-                            p{
+                            p {
                                 padding: 0;
                             }
                         }
@@ -3237,7 +3265,7 @@ em.tip2 {
                             h4 {
                                 position: absolute;
                                 top: 80%;
-                                right: 0;
+                                right: 5px;
                                 width: 100%;
                                 text-align: right;
                                 font-size: 20px;
@@ -3259,8 +3287,8 @@ em.tip2 {
             }
             .arrow {
                 position: absolute;
-                top: 80%;
-                left: 40%;
+                top: 90%;
+                left: 6%;
                 z-index: 4;
                 .swiper-pagination3 {
                     text-align: right;
@@ -3326,9 +3354,7 @@ em.tip2 {
             }
             .slide-left {
                 position: relative; // margin: 0 50px;
-                
             }
-            
             .activity-list {
                 height: 312px;
                 overflow-y: hidden;

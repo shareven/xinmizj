@@ -292,6 +292,7 @@ body {
 header .navbar {
   height: 132px;
   line-height: 132px;
+  z-index: 199;
 }
 header .navbar .navbar-brand {
   width: 100px;
@@ -377,8 +378,32 @@ header .navbar ul .login-btn .line {
 header .navbar .nvabar-center {
   margin-left: 50px;
 }
-header .navbar .navbar-right li {
-  width: 150px;
+header .navbar .navbar-right > li .person {
+  cursor: pointer;
+}
+header .navbar .navbar-right > li .dropdown-menu {
+  min-width: 90px;
+  width: 90px;
+  height: 83px;
+}
+header .navbar .navbar-right > li .dropdown-menu li {
+  margin: 5px 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+header .navbar .navbar-right > li .dropdown-menu li a {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+header .navbar .navbar-right > li .dropdown-menu li:hover {
+  background: #4E8500;
+  border-color: #4E8500;
+  color: #ffffff;
+}
+header .navbar .navbar-right > li .dropdown-menu li:hover a {
+  color: #ffffff;
 }
 header .navbar .navbar-brand {
   height: 100%;
@@ -585,7 +610,8 @@ footer a {
   position: relative;
   width: 100%;
   padding: 0 134px;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #DCDCDC;
 }
 .home .home-library h1 {
   padding: 47px 20px;
@@ -665,11 +691,11 @@ footer a {
 .home .home-video {
   position: relative;
   width: 100%;
-  height: 440px;
+  height: 566px;
   min-width: 1100px;
 }
 .home .home-video h1 {
-  padding: 47px 50px;
+  padding: 27px 50px;
   text-align: center;
 }
 .home .home-video h1 .showmore {
@@ -690,7 +716,7 @@ footer a {
 }
 .home .home-video #swiper-container3 {
   position: relative;
-  height: 100%;
+  height: 440px;
 }
 .home .home-video #swiper-container3 .swiper-wrapper {
   height: 100%;
@@ -2745,8 +2771,12 @@ em.tip2 {
   .home .home-video {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 425px;
     min-width: 768px;
+  }
+  .home .home-video #swiper-container3 {
+    position: relative;
+    height: 300px;
   }
   .home .home-video .arrow {
     position: absolute;
@@ -3125,7 +3155,7 @@ em.tip2 {
     padding: 0 10px;
   }
   .home .home-library {
-    padding: 0 ;
+    padding: 0;
     margin-bottom: 0px;
   }
   .home .home-library h1 {
@@ -3205,7 +3235,7 @@ em.tip2 {
   .home .home-video #swiper-container3 .swiper-wrapper .swiper-slide .info h4 {
     position: absolute;
     top: 80%;
-    right: 0;
+    right: 5px;
     width: 100%;
     text-align: right;
     font-size: 20px;
@@ -3223,8 +3253,8 @@ em.tip2 {
   }
   .home .home-video .arrow {
     position: absolute;
-    top: 80%;
-    left: 40%;
+    top: 90%;
+    left: 6%;
     z-index: 4;
   }
   .home .home-video .arrow .swiper-pagination3 {

@@ -70,10 +70,18 @@
             <!-- 登录注册按钮 -->
 
             <!-- 登录后显示个人头像 -->
-            <a href="my.html" title="进入个人中心" class="person">
+            <a class="person dropdown-toggle" data-toggle="dropdown">
               <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
+              <b class="caret"></b>
             </a>
-            <a href="" id="logout-btn">登出</a>
+            <ul class="dropdown-menu ">
+              <li>
+                <a href="my.html">个人中心</a>
+              </li>
+              <li>
+                <a href="" id="logout-btn">登出</a>
+              </li>
+            </ul>
             <!-- 登录后显示个人头像 -->
           </li>
         </ul>
@@ -82,7 +90,7 @@
   </header>
   <!-- head -->
   <div class="main video">
-    <section class="top-video clearfix">
+    <section class="top-video hidden-xs clearfix">
       <div class="col-md-4 col-sm-4 col-xs-12 padding0">
         <a href="videodetail.html" class="go">
           <img data-original="/static/images/pic.png" alt="">

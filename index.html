@@ -61,18 +61,26 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             <!-- 登录注册按钮 -->
-            <div class="login-btn ">
+            <div class="login-btn hide">
               <a class="login" href="login.html">登录</a>
               <div class="line"></div>
               <a href="register.html">注册</a>
             </div>
             <!-- 登录注册按钮 -->
-
+        
             <!-- 登录后显示个人头像 -->
-            <a href="my.html" class="person hide" title="进入个人中心">
+            <a class="person dropdown-toggle" data-toggle="dropdown">
               <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
+              <b class="caret"></b>
             </a>
-            <a href="" id="logout-btn" class="hide">登出</a>
+            <ul class="dropdown-menu ">
+              <li>
+                <a href="my.html">个人中心</a>
+              </li>
+              <li>
+                <a href="" id="logout-btn">登出</a>
+              </li>
+            </ul>
             <!-- 登录后显示个人头像 -->
           </li>
         </ul>
