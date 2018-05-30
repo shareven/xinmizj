@@ -569,10 +569,16 @@ header {
         .navbar {
             height: auto;
             background: #eee;
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            opacity: .8;
         }
         .navbar .navbar-collapse.collapse {
             z-index: 1;
-            background: #eee;
+            padding-bottom: 10px;
+            background: none;
         }
         .navbar {
             line-height: 32px;
@@ -617,6 +623,7 @@ header {
         }
     }
     .main {
+        margin-top: 50px;
         padding: 0 10px;
     }
     .copyright {
@@ -680,6 +687,7 @@ footer {
     }
     .home-introduction {
         // height: 274px;
+        margin-top: 50px;
         padding-bottom: 50px;
         border-bottom: 1px solid #DCDCDC;
         p {
@@ -761,6 +769,13 @@ footer {
         .size(100%,
         440px);
         min-width: 1100px;
+        h1 {
+            padding: 47px 50px;
+            text-align: center;
+            .showmore {
+                .my-btn;
+            }
+        }
         #swiper-container3 {
             position: relative;
             height: 100%;
@@ -3132,7 +3147,12 @@ em.tip2 {
     }
     .home {
         h1.title {
-            padding-top: 30px;
+            padding: 20px 10px 15px;
+            text-align: center;
+            .showmore {
+                margin-top: 30px;
+                .my-btn;
+            }
         }
         .home-introduction {
             padding-bottom: 30px;
@@ -3141,7 +3161,7 @@ em.tip2 {
             }
         }
         .home-library {
-            padding: 0 34px;
+            padding: 0 ;
             margin-bottom: 0px;
             h1 {
                 padding: 17px 20px;
@@ -3150,6 +3170,7 @@ em.tip2 {
                 display: none;
             }
             #swiper-container2 {
+                padding: 0 34px;
                 .swiper-wrapper {
                     height: 404px;
                     overflow: hidden;
@@ -3161,8 +3182,11 @@ em.tip2 {
                             324px);
                         }
                         &>a {
-                            .size(265px,
-                            366px);
+                            .size(285px,
+                            376px);
+                            p{
+                                padding: 0;
+                            }
                         }
                     }
                 }
@@ -3248,6 +3272,7 @@ em.tip2 {
             }
         }
         .home-audio {
+            margin-top: 60px;
             h1 {
                 padding: 27px 10px;
                 text-align: center;
@@ -3292,9 +3317,6 @@ em.tip2 {
             h1 {
                 padding: 27px 10px;
                 text-align: center;
-                .showmore {
-                    .my-btn;
-                }
             }
             .row {
                 margin: 0;
@@ -3304,58 +3326,9 @@ em.tip2 {
             }
             .slide-left {
                 position: relative; // margin: 0 50px;
-                #swiper-container4 {
-                    // overflow: hidden;
-                    // .size(473px,
-                    // 311px);
-                    width: 100%; // margin-left: 50px;
-                    height: 311px;
-                    .swiper-wrapper {
-                        .size(100%,
-                        311px);
-                    }
-                    .swiper-slide {
-                        position: relative;
-                        img {
-                            border: 0;
-                            .size(100%,
-                            100%);
-                        }
-                        a {
-                            position: absolute;
-                            bottom: 0px;
-                            .size(100%,
-                            60px);
-                            padding: 10px 5px;
-                            font-size: 12px;
-                            p {
-                                line-height: 16px;
-                                width: 60px;
-                                color: #fff;
-                                font-size: 12px;
-                            }
-                        }
-                    }
-                }
+                
             }
-            .arrow1 {
-                position: absolute;
-                bottom: 15px;
-                right: 10px;
-                z-index: 1;
-                .arrow {
-                    display: inline-block;
-                    .size-lh(31px,
-                    31px);
-                    color: #fff;
-                    text-align: center;
-                    .m-bgcolor;
-                    &.swiper-button-disabled {
-                        color: #B5B5B5;
-                        background: #fff;
-                    }
-                }
-            }
+            
             .activity-list {
                 height: 312px;
                 overflow-y: hidden;
