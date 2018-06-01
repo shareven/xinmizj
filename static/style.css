@@ -3144,6 +3144,11 @@ em.tip2 {
   .my .slide-nav {
     margin: 0;
   }
+  .my .slide-nav .list-group-item {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 12px;
+  }
   .my .main-content {
     margin: 0;
   }

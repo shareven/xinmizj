@@ -80,8 +80,9 @@
             </div> \
           </div> \
           <div class="right-item pull-right "> \
+          <a data-toggle="modal" href=""  class=" iconfont icon-shoucang1 pull-right" title="收藏"></a>\
           <a data-toggle="modal" href="#share"  class=" iconfont icon-fenxiang pull-right" title="分享"></a>\
-          <a class=" iconfont icon-xiazai pull-right" title="下载"></a>\
+          <a href="" class="iconfont icon-xiazai pull-right" title="下载"></a>\
           </div> \
           <div class="error-message"></div>',
                 playPauseClass: 'play-pause',
