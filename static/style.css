@@ -292,7 +292,7 @@ body {
 header .navbar {
   height: 132px;
   line-height: 132px;
-  z-index: 199;
+  z-index: 19;
 }
 header .navbar .navbar-brand {
   width: 100px;
@@ -478,6 +478,9 @@ header .navbar #logout-btn {
   header .copyright {
     text-align: center;
   }
+  nav.navbar.bootsnav.navbar-mobile ul.nav {
+    margin-top: 120px;
+  }
 }
 @media (max-width: 767px) {
   header .navbar {
@@ -539,6 +542,9 @@ header .navbar #logout-btn {
   }
   .copyright {
     text-align: center;
+  }
+  nav.navbar.bootsnav.navbar-mobile ul.nav {
+    margin-top: 50px;
   }
 }
 footer {
