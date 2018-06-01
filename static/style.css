@@ -3102,6 +3102,20 @@ em.tip2 {
   .publicActivity .main-form .img-preview img {
     margin: 0px;
   }
+  .manageActivity .main-content {
+    margin: 30px 0 50px 0;
+  }
+  .manageActivity .main-content .navbar-nav {
+    margin: 0;
+  }
+  .manageActivity .main-content .navbar-nav li {
+    float: left;
+    width: 20%;
+    font-size: 12px;
+  }
+  .manageActivity .main-content .navbar-nav li a {
+    padding: 10px 0;
+  }
   .video .top-video > div a {
     margin: 5px;
     height: auto;
