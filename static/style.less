@@ -471,7 +471,7 @@ header {
             margin-left: 50px;
         }
         .navbar-right {
-            margin-right:5px;
+            margin-right: 5px;
             &>li {
                 .person {
                     cursor: pointer;
@@ -1770,6 +1770,10 @@ footer {
                 position: relative;
                 height: 350px;
                 width: 100%;
+                background-color: #ddd;
+                background-repeat: no;
+                background-size: cover;
+                background-position: center;
                 img {
                     width: 100%;
                     height: 100%;
@@ -1792,7 +1796,7 @@ footer {
                 display: inline-block;
                 margin: 0 5px;
                 .size-q(10px);
-                border-radius: 10px; 
+                border-radius: 10px;
                 background: rgba(0, 0, 0, .25);
                 cursor: pointer;
                 &.swiper-visible-switch.swiper-active-switch {
@@ -2792,6 +2796,37 @@ em.tip2 {
                                 color: #4E7319;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    .video {
+        .top-video {
+            &>div {
+                a {
+                    display: block;
+                    position: relative;
+                    height: 516px;
+                    width: 100%;
+                    background-size: cover;
+                }
+            }
+            .item-middle a {
+                height: 200px;
+            }
+            .swiper-pagination-video {
+                .center-x;
+                bottom: 10px;
+                .swiper-pagination-switch {
+                    display: inline-block;
+                    margin: 0 5px;
+                    .size-q(10px);
+                    border-radius: 10px;
+                    background: rgba(0, 0, 0, .25);
+                    cursor: pointer;
+                    &.swiper-visible-switch.swiper-active-switch {
+                        .m-bgcolor;
                     }
                 }
             }

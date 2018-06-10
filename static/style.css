@@ -1879,6 +1879,10 @@ footer a {
   position: relative;
   height: 350px;
   width: 100%;
+  background-color: #ddd;
+  background-repeat: no;
+  background-size: cover;
+  background-position: center;
 }
 .video .top-video > div a img {
   width: 100%;
@@ -2783,6 +2787,38 @@ em.tip2 {
   .audiodetail .audio-info .media .media-body .wrap .btn-default:hover {
     background: inherit;
     color: #4E7319;
+  }
+  .video .top-video > div a {
+    display: block;
+    position: relative;
+    height: 516px;
+    width: 100%;
+    background-size: cover;
+  }
+  .video .top-video .item-middle a {
+    height: 200px;
+  }
+  .video .top-video .swiper-pagination-video {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    bottom: 10px;
+  }
+  .video .top-video .swiper-pagination-video .swiper-pagination-switch {
+    display: inline-block;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  .video .top-video .swiper-pagination-video .swiper-pagination-switch.swiper-visible-switch.swiper-active-switch {
+    background: #4E8500;
+    border-color: #4E8500;
+    color: #ffffff;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
