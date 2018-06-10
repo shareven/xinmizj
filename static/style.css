@@ -1724,9 +1724,8 @@ footer a {
   padding: 50px 0;
 }
 .bookdetail .book-catalog .tab-content > div .book-catalog-list li {
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
+  padding: 15px;
+  text-align: left;
   border-bottom: 1px solid #E5E5E5;
 }
 .bookdetail .book-catalog .tab-content > div .book-catalog-list li a:hover {
@@ -1788,7 +1787,6 @@ footer a {
   color: #aaa;
 }
 .bookdetail .content p {
-  text-indent: 2em;
   line-height: 30px;
   font-size: 16px;
   margin: 10px 0;
@@ -1850,9 +1848,9 @@ footer a {
     padding: 50px 0;
   }
   .bookdetail .book-catalog .tab-content > div .book-catalog-list li {
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
+    padding: 15px;
+    text-align: left;
+    font-size: 12px;
     border-bottom: 1px solid #E5E5E5;
   }
   .bookdetail .book-catalog .tab-content > div .book-catalog-list li a:hover {
