@@ -400,7 +400,7 @@ header {
             height: 132px;
             li {
                 position: relative;
-                width: 90px;
+                width: 100px;
                 text-align: center;
                 a {
                     padding: 0;
@@ -471,6 +471,7 @@ header {
             margin-left: 50px;
         }
         .navbar-right {
+            margin-right:5px;
             &>li {
                 .person {
                     cursor: pointer;
@@ -585,7 +586,6 @@ header {
             // padding: 0 20px;
         }
     }
-    
     nav.navbar.bootsnav.navbar-mobile ul.nav {
         margin-top: 120px;
     }
@@ -656,7 +656,6 @@ header {
     .copyright {
         text-align: center;
     }
-    
     nav.navbar.bootsnav.navbar-mobile ul.nav {
         margin-top: 50px;
     }
@@ -1769,7 +1768,8 @@ footer {
             a {
                 display: block;
                 position: relative;
-                height: 400px;
+                height: 350px;
+                width: 100%;
                 img {
                     width: 100%;
                     height: 100%;
@@ -1784,6 +1784,21 @@ footer {
         }
         .item-middle a {
             height: 200px;
+        }
+        .swiper-pagination-video {
+            .center-x;
+            bottom: 10px;
+            .swiper-pagination-switch {
+                display: inline-block;
+                margin: 0 5px;
+                .size-q(10px);
+                border-radius: 10px; 
+                background: rgba(0, 0, 0, .25);
+                cursor: pointer;
+                &.swiper-visible-switch.swiper-active-switch {
+                    .m-bgcolor;
+                }
+            }
         }
     }
     .get-video {
@@ -3144,11 +3159,11 @@ em.tip2 {
             margin: 30px 0 50px 0;
             .navbar-nav {
                 margin: 0;
-                li{
+                li {
                     float: left;
                     width: 20%;
                     font-size: 12px;
-                    a{
+                    a {
                         padding: 10px 0;
                     }
                 }

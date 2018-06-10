@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/font/iconfont.css ">
   <link rel="stylesheet" href="/static/lib/bootsnav/bootsnav.css">
+  <link rel="stylesheet" href="/static/lib/swiper/swiper22.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 
@@ -62,7 +63,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             <!-- 登录注册按钮 -->
-            <div class="login-btn hide">
+            <div class="login-btn">
               <a class="login" href="login.html">登录</a>
               <div class="line"></div>
               <a href="register.html">注册</a>
@@ -70,7 +71,7 @@
             <!-- 登录注册按钮 -->
 
             <!-- 登录后显示个人头像 -->
-            <a class="person dropdown-toggle" data-toggle="dropdown">
+            <a class="person dropdown-toggle hide" data-toggle="dropdown">
               <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
               <b class="caret"></b>
             </a>
@@ -90,7 +91,7 @@
   </header>
   <!-- head -->
   <div class="main video">
-    <section class="top-video hidden-xs clearfix">
+    <!-- <section class="top-video hidden-xs clearfix">
       <div class="col-md-4 col-sm-4 col-xs-12 padding0">
         <a href="videodetail.html" class="go">
           <img data-original="/static/images/pic.png" alt="">
@@ -125,10 +126,37 @@
           <p class="name">药师七佛经浅释</p>
         </a>
       </div>
-    </section>
+    </section> -->
+    <section class="top-video hidden-xs clearfix">
+      <div id="swiper-container-video" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide clearfix">
+              <a href="videodetail.html" class="go"
+              style="background:#ddd url(/static/images/video_banner01.png)no-repeat center center">
+                <p class="name">药师七1111111释</p>
+              </a>
+            </div>
+            <div class="swiper-slide clearfix">
+              <a href="videodetail.html" class="go"
+               style="background:#ddd url(/static/images/video_banner02.png)no-repeat center center">
+                <p class="name">药师七22222释</p>
+              </a>
+            </div>
+            <div class="swiper-slide clearfix">
+              <a href="videodetail.html" class="go"
+               style="background:#ddd url(/static/images/video_banner03.png)no-repeat center center">
+                <p class="name">药师七佛333333333释</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination-video"></div>
+      </div> 
+    </section> 
+
+    
     <section class="get-video clearfix">
 
-      <div class="container-flu ">
+      <div class="container-fluid ">
         <div class="row clearfix">
           <div class="form-group pull-right  search-group col-md-3 col-sm-3  col-xs-12 ">
             <input type="text" class="search" placeholder="搜索所有视频">
@@ -189,7 +217,7 @@
       </div>
     </section>
 
-    <section class="video-list ">
+    <section class="video-list container-fluid">
       <ul class="row">
 
         <li class="col-md-3 col-sm-6 ">
@@ -286,6 +314,7 @@
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
   <script src="/static/lib/jquery.lazyload.min.js"></script>
   <script src="/static/lib/bootsnav/bootsnav.js"></script>
+  <script src="/static/lib/swiper/swiper.min22.js"></script>
   <script>
     ;
     (function () {
@@ -294,6 +323,17 @@
         placeholder: "/static/images/loading.svg",
         effects: "fadeIn"
       });
+
+      //轮播
+
+     var mySwiper2 = new Swiper('#swiper-container-video', {
+         autoplay: 5000,
+          loop: true,
+         paginationClickable: true,
+         resizeReInit: true,
+         pagination:'.swiper-pagination-video'
+         
+     });
     })()
   </script>
 </body>
