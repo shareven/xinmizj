@@ -1,0 +1,32 @@
+Arguments: 
+  /home/xy/soft/node-v8.10.0-linux-x64/bin/node /usr/share/yarn/bin/yarn.js run start
+
+PATH: 
+  /opt/jdk1.8.0_161/bin:/opt/jdk1.8.0_161/jre/bin:/opt/jdk1.8.0_161/bin:/opt/jdk1.8.0_161/jre/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/usr/sbin:/home/xy/.yarn/bin/:/opt/google/chrome:/opt/sublime_text_3/sublime_text:/home/xy/.yarn/bin/:/opt/google/chrome:/opt/sublime_text_3/sublime_text
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.10.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "/home/xy/project/xinmizhijia/xinmizj"
+      at new MessageError (/usr/share/yarn/lib/cli.js:186:110)
+      at /usr/share/yarn/lib/cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:98:30)
+      at /usr/share/yarn/lib/cli.js:109:13
+      at <anonymous>

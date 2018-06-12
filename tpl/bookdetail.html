@@ -10,74 +10,74 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/font/iconfont.css">
   <link rel="stylesheet" href="/static/style.css">
-<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 
 </head>
 
 <body>
   <!-- head -->
-<header>
-  <nav class="navbar" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/index.html">
-        <img src="/static/images/logo.png" width="70" height="73" alt="">
-      </a>
-    </div>
+  <header>
+    <nav class="navbar" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">
+          <img src="/static/images/logo.png" width="70" height="73" alt="">
+        </a>
+      </div>
 
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav nvabar-center">
-        <li>
-          <a href="/index.html">首页</a>
-        </li>
-        <li  class="active">
-          <a href="book.html">心密书库</a>
-        </li>
-        <li>
-          <a href="video.html">心密视频</a>
-        </li>
-        <li>
-          <a href="audio.html">心密音频</a>
-        </li>
-        <li>
-          <a href="daochang.html">道场简介</a>
-        </li>
-        <li>
-          <a href="shoplink.html">法物流通</a>
-        </li>
-        <li>
-          <a href="activity.html">活动报名</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <!-- 登录注册按钮 -->
-          <div class="login-btn hide">
-            <a class="login" href="login.html">登录</a>
-            <div class="line"></div>
-            <a href="register.html">注册</a>
-          </div>
-          <!-- 登录注册按钮 -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav nvabar-center">
+          <li>
+            <a href="/index.html">首页</a>
+          </li>
+          <li class="active">
+            <a href="book.html">心密书库</a>
+          </li>
+          <li>
+            <a href="video.html">心密视频</a>
+          </li>
+          <li>
+            <a href="audio.html">心密音频</a>
+          </li>
+          <li>
+            <a href="daochang.html">道场简介</a>
+          </li>
+          <li>
+            <a href="shoplink.html">法物流通</a>
+          </li>
+          <li>
+            <a href="activity.html">活动报名</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <!-- 登录注册按钮 -->
+            <div class="login-btn hide">
+              <a class="login" href="login.html">登录</a>
+              <div class="line"></div>
+              <a href="register.html">注册</a>
+            </div>
+            <!-- 登录注册按钮 -->
 
-          <!-- 登录后显示个人头像 -->
-          <a href="my.html" title="进入个人中心" class="person">
-            <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
-          </a>
-          <!-- 登录后显示个人头像 -->
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-
+            <!-- 登录后显示个人头像 -->
+            <a href="my.html" title="进入个人中心" class="person">
+              <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
+            </a>
+            <!-- 登录后显示个人头像 -->
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <!-- head -->
   <div class="main bookdetail clearfix">
     <section class="top-nav text-right">
@@ -94,10 +94,10 @@
 
 
     <section class="book-catalog ">
-      <div role="tabpanel" class="clearfix row">
+      <div role="tabpanel" class="clearfix ">
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs nav-stacked col-md-1 col-xs-3" role="tablist">
-          <li role="presentation" >
+        <ul class="nav nav-tabs nav-stacked " role="tablist">
+          <li role="presentation">
             <a href="#catalog" aria-controls="catalog" role="tab" data-toggle="tab">
               <i class="iconfont icon-liebiao"></i>
               <div>目录</div>
@@ -112,30 +112,11 @@
         </ul>
 
         <!-- Tab panes -->
-        <div class="tab-content col-md-11 col-xs-12 ">
+        <div class="tab-content  ">
           <div role="tabpanel" class="tab-pane" id="catalog">
             <a href="javascript:;" class="close iconfont icon-shanchuguanbiquxiaowubiankuang"></a>
+            <div id="tree"></div>
 
-            <ul class="book-catalog-list">
-              <li class="col-md-4 col-sm-4 col-xs-6">
-                <a href="" class="show-book">第一章 佛说因果</a>
-              </li>
-              <li class="col-md-4 col-sm-4 col-xs-6">
-                <a href="" class="show-book">第二章 佛说因果</a>
-              </li>
-              <li class="col-md-4 col-sm-4 col-xs-6">
-                <a href="" class="show-book">第三章 佛说因果</a>
-              </li>
-              <li class="col-md-4 col-sm-4 col-xs-6">
-                <a href="" class="show-book">第四章 佛说因果</a>
-              </li>
-              <li class="col-md-4 col-sm-4 col-xs-6">
-                <a href="" class="show-book">第五章 佛说因果</a>
-              </li>
-              <li class="col-md-4 col-sm-4 col-xs-6">
-                <a href="" class="show-book">第六章 佛说因果</a>
-              </li>
-            </ul>
           </div>
           <div role="tabpanel" class="tab-pane " id="setting">
             <form role="form">
@@ -168,7 +149,7 @@
                 </div>
                 <span class="input-group-btn col-sm-4 col-xs-6">
                   <button type="button" id="fontSizeAdd" class="btn btn-default">A+</button>
-                  <button type="button" id="fontSizeReduce"class="btn btn-default">A-</button>
+                  <button type="button" id="fontSizeReduce" class="btn btn-default">A-</button>
                 </span>
               </div>
 
@@ -197,7 +178,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="content">
       <h3>佛法的真精神</h3>
       <h5>
@@ -205,7 +186,7 @@
         <span class="line">|</span>
         <span class="time">2018-03-24</span>
       </h5>
-          
+
       <p>人生的悲欢苦乐只是心的作用，一切造作也是心的作用，佛度众生，只是要人觉悟，心上再来个心，了解人生的所以然。觉是感觉环境的幻化，悟是悟到自心的缘妄，外不被环境所惑诱，内不被妄心所转辗，明白自己天然有个自主独立性体，虽然一时糊涂妄作，一觉便回到本来。所谓悲欢苦乐，和一切一切，都是梦幻泡影，不再上当，这是个自主独立的伟大精神。佛不自称是佛的功能，是一切人无贤无愚无大无小自有的功能。佛法的真精神就在此。</p>
       <p>人生欲解决这个大问题，籍佛的导力是一二，靠自己的努力是八九，若全然想靠佛或定要靠自己不依佛法，这都是大迷信，不是佛子。</p>
       <p>佛说因果，不是有了佛才有因果。佛说平等，不是有了佛才有平等。佛说众生与佛，本来不二，不二即是平等，是众生自己本来平等，非特地做来不平等。论到外相，自然有大小高下美丑种种的不同，不同就不平等了，但一切相是缘生缘灭，幻起幻落，同一不实，这是平等的，所以平等是实，不平等是幻，而世人总是执取有相，久久成为习惯，于平等的真理，忘之久矣。独有觉悟的人，不受这个束缚，自己能别具见解，由理想上推出这个真理来，觉知一切众生，性体与我不二，何以我一定是好是对，他人就一定是坏是不对呢？那不明这个平等真理的人，先立了个人我之见，我要好，你不必要好，我有钱是阔，你没钱是贫，不知是钱的问题，于人有什么相关，我的钱给了你，我就贫，你就阔了，就是我不给你，我用完了，我也就贫了。本来钱是外相，根本靠不住的，但是患得患失的习性已久，要永久保持它，忘记了因果和平等的真理，所以多争，以至残杀抢夺，枉受诸苦，佛法的真精神，就是要打破你这个迷见。</p>
@@ -219,8 +200,8 @@
 
     <section class="frame-btn">
       <a href="" class="btn btn-default ">
-          <i class="iconfont icon-shoucang2"></i>
-          收藏
+        <i class="iconfont icon-shoucang2"></i>
+        收藏
       </a>
       <a href="" class="btn btn-defaullt">上一章</a>
       <a href="" class="btn btn-defaullt">目录</a>
@@ -228,7 +209,7 @@
     </section>
 
   </div>
-  
+
   <div id="toTop">顶部</div>
 
   <!-- footer -->
@@ -258,9 +239,64 @@
 
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/lib/bootstrap/bootstrap-treeview.min.js"></script>
   <script src="/static/js/bookdetail.js"></script>
   <script>
-   //回到顶部
+    //目录
+    var tree = [{
+        text: "Parent 1",
+        href: 'javascript:void(0);',
+        color: '#545454',
+        nodes: [{
+            text: "Child 1",
+            state: {
+              expanded: true
+            },
+            nodes: [{
+                text: "Grandchild 1",
+                href: '/aaaaa'
+              },
+              {
+                text: "Grandchild 2",
+                href: '/aa23'
+              }
+            ]
+          },
+          {
+            text: "Child 2",
+            href: '/aaa34'
+          }
+        ]
+      },
+      {
+        text: "Parent 2",
+        href: '/aaa565',
+        color: '#545454',
+      },
+      {
+        text: "Parent 3",
+        href: '/aaaa66',
+        color: '#545454',
+        nodes: [{
+            text: "Grandchild 1",
+            href: '/aaaaa'
+          },
+          {
+            text: "Grandchild 2",
+            href: '/aa23'
+          }
+        ]
+      }
+    ];
+
+    $('#tree').treeview({
+      data: tree,
+      enableLinks: true,
+      selectedBackColor: '#EEFFD5',
+      selectedColor: '#4E7319',
+    });
+
+    //回到顶部
     $(function () {
       var scrollTrigger = 150; // px
 
@@ -277,7 +313,9 @@
           scrollTop: 0
         }, 500);
       });
+
     })
+
   </script>
 </body>
 

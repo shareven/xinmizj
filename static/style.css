@@ -157,6 +157,21 @@ a:hover {
   outline: none;
   color: inherit;
 }
+.treeview .list-group-item {
+  cursor: pointer;
+}
+.treeview span.indent {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.treeview span.icon {
+  width: 12px;
+  margin-right: 5px;
+}
+.treeview .node-disabled {
+  color: silver;
+  cursor: not-allowed;
+}
 /* 定义 */
 .m-color {
   color: #4E8500;
@@ -1666,13 +1681,15 @@ footer a {
 .bookdetail .book-catalog {
   position: fixed;
   padding: 0 50px;
-  width: 100%;
+  width: 550px;
 }
 .bookdetail .book-catalog .row {
   width: 100%;
 }
 .bookdetail .book-catalog .nav-tabs {
+  float: left;
   padding: 0;
+  width: 100px;
   border: none;
   z-index: 2;
 }
@@ -1683,7 +1700,6 @@ footer a {
   margin: 0;
   padding: 0;
   border: 1px solid #ddd;
-  border-right: 0;
 }
 .bookdetail .book-catalog .nav-tabs > li a {
   margin: 0;
@@ -1691,23 +1707,24 @@ footer a {
   height: 65px;
   text-align: center;
   border-radius: 3px;
-  border-right: 1px solid #ddd;
 }
 .bookdetail .book-catalog .nav-tabs > li.active {
   margin: 1px 0 0 0;
   width: 100%;
   background: #fff;
+  border: none;
 }
 .bookdetail .book-catalog .nav-tabs > li.active > a {
   border: none;
-  border-bottom: 1px solid #ddd;
-  border-right-color: transparent;
 }
 .bookdetail .book-catalog .tab-content {
+  float: left;
   position: relative;
   padding-left: 0;
+  margin-bottom: 15px;
   z-index: 1;
   margin-left: -1px;
+  background: #fff;
 }
 .bookdetail .book-catalog .tab-content .close {
   position: absolute;
@@ -1732,16 +1749,20 @@ footer a {
   color: #4E8500;
 }
 .bookdetail .book-catalog #catalog {
-  position: relative;
-  height: 400px;
-  overflow: auto;
-  border: 1px solid #ddd;
+  width: 350px;
+  height: auto;
+}
+.bookdetail .book-catalog #catalog .treeview {
+  width: 290px;
+  margin: 30px auto;
+}
+.bookdetail .book-catalog #catalog .treeview .list-group .list-group-item {
+  color: #999999;
 }
 .bookdetail .book-catalog #setting {
   position: relative;
   width: 350px;
   height: auto;
-  border: 1px solid #ddd;
 }
 .bookdetail .book-catalog #setting form {
   padding: 40px 20px 40px 0;
@@ -1839,7 +1860,6 @@ footer a {
   }
   .bookdetail .book-catalog .tab-content > div {
     width: 100%;
-    min-height: 300px;
   }
   .bookdetail .book-catalog .tab-content > div.active {
     background: #fff;
