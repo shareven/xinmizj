@@ -253,6 +253,15 @@
                         $(this).closest("li.dropdown").first().toggleClass("on");                        
                         return false;
                     });   
+
+                    // Dropdown Fade Toggle
+                    $("a.dropdown-toggle", this).off('touchstart');
+                    $("a.dropdown-toggle", this).on('touchstart', function (e) {
+                        e.stopPropagation();
+                        $(this).closest("li.dropdown").find(".dropdown-menu").first().stop().fadeToggle().toggleClass(getIn);
+                        $(this).closest("li.dropdown").first().toggleClass("on");
+                        return false;
+                    });  
                     
                     // Hidden dropdown action
                     $('li.dropdown', this).each(function () {
