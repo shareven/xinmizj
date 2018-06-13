@@ -3218,6 +3218,9 @@ em.tip2 {
   .videodetail .video-info .item-right i {
     font-size: 20px;
   }
+  .videodetail .video-info .item-right i:hover {
+    color: rgba(0, 0, 0, 0.4);
+  }
   .my .container-fluid {
     padding: 0;
   }
