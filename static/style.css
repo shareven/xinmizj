@@ -1779,6 +1779,9 @@ footer a {
   border: 1px solid #ccc;
   background: #fff;
 }
+.bookdetail .book-catalog #setting form .form-group .btn-main:hover {
+  color: #4E8500;
+}
 .bookdetail .book-catalog #setting form .form-group .btn-main.active {
   background: #4E8500;
   border-color: #4E8500;
