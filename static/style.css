@@ -157,9 +157,6 @@ a:hover {
   outline: none;
   color: inherit;
 }
-.treeview .list-group-item {
-  cursor: pointer;
-}
 .treeview span.indent {
   margin-left: 10px;
   margin-right: 10px;
@@ -1756,6 +1753,12 @@ footer a {
   width: 290px;
   margin: 30px auto;
 }
+.bookdetail .book-catalog #catalog .treeview .list-group {
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  overflow: auto;
+}
 .bookdetail .book-catalog #catalog .treeview .list-group .list-group-item {
   color: #999999;
 }
@@ -1837,7 +1840,6 @@ footer a {
     height: 80px;
   }
   .bookdetail .book-catalog .nav-tabs {
-    width: 300px;
     padding: 0;
   }
   .bookdetail .book-catalog .nav-tabs > li {
@@ -1848,7 +1850,7 @@ footer a {
     text-align: center;
   }
   .bookdetail .book-catalog .nav-tabs > li.active {
-    width: 80px;
+    width: 100%;
     background: #fff;
   }
   .bookdetail .book-catalog .nav-tabs > li.active > a {
@@ -2975,6 +2977,51 @@ em.tip2 {
   }
   .book .book-type {
     font-size: 12px;
+  }
+  .bookdetail .nav-stacked > li {
+    float: left;
+  }
+  .bookdetail .book-catalog .nav-tabs {
+    width: 300px;
+    padding: 0;
+  }
+  .bookdetail .book-catalog .nav-tabs > li.active {
+    width: 70px;
+  }
+  .bookdetail .book-catalog .tab-content {
+    width: 95%;
+    padding-left: 0;
+  }
+  .bookdetail .book-catalog .tab-content > div {
+    width: 100%;
+  }
+  .bookdetail .book-catalog .tab-content > div.active {
+    background: #fff;
+  }
+  .bookdetail .book-catalog .tab-content > div .book-catalog-list {
+    padding: 50px 0;
+  }
+  .bookdetail .book-catalog .tab-content > div .book-catalog-list li {
+    padding: 15px;
+    text-align: left;
+    font-size: 12px;
+    border-bottom: 1px solid #E5E5E5;
+  }
+  .bookdetail .book-catalog .tab-content > div .book-catalog-list li a:hover {
+    color: #4E8500;
+  }
+  .bookdetail .book-catalog .tab-content #setting,
+  .bookdetail .book-catalog .tab-content #catalog {
+    width: 100%;
+  }
+  .bookdetail .book-catalog .tab-content #setting .form-group label,
+  .bookdetail .book-catalog .tab-content #catalog .form-group label {
+    text-align: left;
+  }
+  .bookdetail .book-catalog .tab-content #setting .treeview,
+  .bookdetail .book-catalog .tab-content #catalog .treeview {
+    width: 90%;
+    margin: 30px auto;
   }
   .audio .audio-list {
     margin: 30px 0;
