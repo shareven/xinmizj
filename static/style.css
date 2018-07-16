@@ -3231,27 +3231,9 @@ em.tip2 {
     font-size: 12px;
   }
   .activity .activity-list ul li .media .content .foot .goto {
-    display: block;
     margin-left: 0;
     margin-top: 5px;
     text-align: center;
-    border: 1px solid #DDDDDD;
-    border-radius: 4px;
-    color: #999999;
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
-    background: #4E8500;
-    border-color: #4E8500;
-    color: #ffffff;
-    border: 1px solid #4E8500;
-  }
-  .activity .activity-list ul li .media .content .foot .goto:hover {
-    background: #4E8500;
-    border-color: #4E8500;
-    color: #ffffff;
-    color: #fff;
-    border: 1px solid #4E7319;
   }
   .activitydetail .content {
     margin: 0;
