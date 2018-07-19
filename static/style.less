@@ -535,9 +535,12 @@ header {
 
 .page-navation {
     position: relative;
+    width: 572px;
     text-align: center;
+    margin: 0 auto;
     .pagination {
-        margin: 20px auto;
+        float: left;
+        margin: 0;
         li {
             a {
                 .size-q(34px);
@@ -556,6 +559,21 @@ header {
             color: #fff;
         }
     }
+    .form{
+        float: left;
+        margin: 24px 0;
+        font-size: 12px;
+        color: #999;
+        input{
+            padding-left:5px; 
+            width: 45px;
+        }
+        .btn-default{
+            padding:3px 5px;
+            font-size: 12px;
+            color: #999;
+        }
+    }
 }
 
 /* 分页 */
@@ -568,7 +586,7 @@ header {
         position: relative;
         text-align: center;
         .pagination {
-            margin: 20px auto;
+            
             li {
                 a {
                     margin: 20px 5px;
@@ -674,6 +692,23 @@ header {
     }
     nav.navbar.bootsnav.navbar-mobile ul.nav {
         margin-top: 50px;
+    }
+    
+    .page-navation {
+        width: auto;
+        .pagination{
+            float:none;
+            margin: 5px 0;
+            li {
+                a {
+                    margin: 20px 2px;
+                }
+            }
+        }
+        .form{
+            float: none;
+            margin: 0;
+        }
     }
 }
 
@@ -1885,82 +1920,10 @@ footer {
                 color: #ffffff;
             }
         }
-    } // .get-video {
-    //     .navbar {
-    //         margin: 0;
-    //         height: 60px;
-    //         line-height: 60px;
-    //         background: inherit;
-    //         border: none;
-    //         .breadcrumb {
-    //             border: none;
-    //             margin-bottom: 0;
-    //         }
-    //         .navbar-center {
-    //             .center-x;
-    //             padding: 8px;
-    //             width: 160px;
-    //             .dropdown {
-    //                 width: 100%;
-    //                 height: 50px;
-    //             }
-    //             .dropdown-toggle {
-    //                 width: 160px;
-    //                 font-size: 16px;
-    //             }
-    //             .open>a,
-    //             .open>a:focus,
-    //             .open>a:hover {
-    //                 .m-bgcolor;
-    //             }
-    //             .dropdown-menu {
-    //                 width: 100%;
-    //                 height: auto;
-    //                 line-height: 30px;
-    //                 li {
-    //                     width: 100%;
-    //                     a {
-    //                         line-height: 40px;
-    //                         &:hover {
-    //                             background: #eee;
-    //                         }
-    //                         h5 {
-    //                             color: #222222;
-    //                         }
-    //                     }
-    //                     p {
-    //                         color: #999999;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //         .search {
-    //             .form-group {
-    //                 margin-right: 30px;
-    //                 position: relative;
-    //                 input {
-    //                     width: 180px;
-    //                     padding-right: 26px;
-    //                 }
-    //                 i {
-    //                     .center-y;
-    //                     right: 10px;
-    //                 }
-    //             }
-    //             .btn-default {
-    //                 background: #EEEEEE;
-    //                 color: #999999;
-    //                 border: none;
-    //                 &.active {
-    //                     .m-bgcolor;
-    //                     color: #ffffff;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    } 
     .video-list {
         ul {
+            margin-bottom:20px;
             li {
                 text-align: center;
                 a {
@@ -2508,7 +2471,7 @@ body .main.side-right .navbar-header {
                                 margin: 0 8px;
                             }
                             .goto {
-                                margin-left: 20px;
+                                // margin-left: 20px;
                                 .m-color;
                             }
                         }
