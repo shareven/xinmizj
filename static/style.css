@@ -3258,6 +3258,10 @@ em.tip2 {
     width: 40px;
     height: 40px;
   }
+  .activity .activity-list .btn-main {
+    padding: 4px 5px;
+    font-size: 12px;
+  }
   .activity .activity-list ul li .media .content .foot {
     font-size: 12px;
   }
