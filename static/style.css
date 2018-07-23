@@ -3141,7 +3141,7 @@ em.tip2 {
     width: 50px;
     height: 80px;
     line-height: 80px;
-    margin: 0 13%;
+    margin: 0 12%;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
@@ -3150,7 +3150,7 @@ em.tip2 {
     position: relative;
     float: left;
     background: none;
-    width: 60%;
+    width: 50%;
     height: 80px;
     line-height: 80px;
     margin: 0;
@@ -3194,14 +3194,14 @@ em.tip2 {
     cursor: pointer;
   }
   .audiodetail .player .audiojs .right-item {
-    margin-right: 20px;
+    margin-right: 0px;
     z-index: 2;
   }
   .audiodetail .player .audiojs .right-item > a {
     width: 50px;
     height: 80px;
     line-height: 80px;
-    margin: 0 13%;
+    margin: 0 12%;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
