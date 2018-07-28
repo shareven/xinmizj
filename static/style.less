@@ -186,7 +186,6 @@ a:hover {
     color: inherit;
 }
 
-
 .treeview span.indent {
     margin-left: 10px;
     margin-right: 10px
@@ -1550,8 +1549,9 @@ footer {
             .media-heading {
                 margin-top: 12px;
             }
-            .panel-body img{
-                .size(100px,145px);
+            .panel-body img {
+                .size(100px,
+                145px);
             }
         }
     }
@@ -1673,7 +1673,7 @@ footer {
                     .btn-main {
                         .border(#ccc);
                         background: #fff;
-                        &:hover{
+                        &:hover {
                             .m-color;
                         }
                         &.active {
@@ -3088,7 +3088,7 @@ em.tip2 {
                     .wrap {
                         margin: 40px 0px;
                         h2 {
-                            font-size: 28px;
+                            font-size: 20px;
                             color: #222;
                         }
                         h5,
@@ -3133,16 +3133,17 @@ em.tip2 {
             .next {
                 .size-lh(50px,
                 80px);
-                margin: 0 13%;
+                margin: 0 12%;
                 font-size: 30px;
                 color: #fff;
                 cursor: pointer;
             }
             .audiojs .scrubber {
+                display: inline-block;
                 position: relative;
-                float: left;
+                float: none;
                 background: none;
-                .size-lh(60%,
+                .size-lh(40%,
                 80px);
                 margin: 0;
                 border: 0px;
@@ -3179,7 +3180,7 @@ em.tip2 {
                 cursor: pointer;
             }
             .audiojs .right-item {
-                margin-right: 20px;
+                margin-right: 2%;
                 z-index: 2;
                 &>a {
                     .next;

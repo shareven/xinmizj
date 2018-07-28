@@ -3053,7 +3053,7 @@ em.tip2 {
     margin: 40px 0px;
   }
   .audiodetail .audio-info .media .media-body .wrap h2 {
-    font-size: 28px;
+    font-size: 20px;
     color: #222;
   }
   .audiodetail .audio-info .media .media-body .wrap h5,
@@ -3095,16 +3095,17 @@ em.tip2 {
     width: 50px;
     height: 80px;
     line-height: 80px;
-    margin: 0 13%;
+    margin: 0 12%;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
   }
   .audiodetail .player .audiojs .scrubber {
+    display: inline-block;
     position: relative;
-    float: left;
+    float: none;
     background: none;
-    width: 60%;
+    width: 40%;
     height: 80px;
     line-height: 80px;
     margin: 0;
@@ -3148,14 +3149,14 @@ em.tip2 {
     cursor: pointer;
   }
   .audiodetail .player .audiojs .right-item {
-    margin-right: 20px;
+    margin-right: 2%;
     z-index: 2;
   }
   .audiodetail .player .audiojs .right-item > a {
     width: 50px;
     height: 80px;
     line-height: 80px;
-    margin: 0 13%;
+    margin: 0 12%;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
