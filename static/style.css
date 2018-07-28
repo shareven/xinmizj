@@ -434,16 +434,18 @@ header .navbar #logout-btn {
   bottom: 0;
   margin: auto 0;
   right: 0;
-  height: 12px;
   line-height: 12px;
 }
 /* 分页 */
 .page-navation {
   position: relative;
+  width: 572px;
   text-align: center;
+  margin: 0 auto;
 }
 .page-navation .pagination {
-  margin: 20px auto;
+  float: left;
+  margin: 0;
 }
 .page-navation .pagination li a {
   width: 34px;
@@ -461,14 +463,26 @@ header .navbar #logout-btn {
   background: #999999;
   color: #fff;
 }
+.page-navation .form {
+  float: left;
+  margin: 24px 0;
+  font-size: 12px;
+  color: #999;
+}
+.page-navation .form input {
+  padding-left: 5px;
+  width: 45px;
+}
+.page-navation .form .btn-default {
+  padding: 3px 5px;
+  font-size: 12px;
+  color: #999;
+}
 /* 分页 */
 @media (max-width: 992px) {
   .page-navation {
     position: relative;
     text-align: center;
-  }
-  .page-navation .pagination {
-    margin: 20px auto;
   }
   .page-navation .pagination li a {
     margin: 20px 5px;
@@ -560,6 +574,20 @@ header .navbar #logout-btn {
   }
   nav.navbar.bootsnav.navbar-mobile ul.nav {
     margin-top: 50px;
+  }
+  .page-navation {
+    width: auto;
+  }
+  .page-navation .pagination {
+    float: none;
+    margin: 5px 0;
+  }
+  .page-navation .pagination li a {
+    margin: 20px 2px;
+  }
+  .page-navation .form {
+    float: none;
+    margin: 0;
   }
 }
 footer {
@@ -1993,6 +2021,9 @@ footer a {
   border-color: #4E8500;
   color: #ffffff;
 }
+.video .video-list ul {
+  margin-bottom: 20px;
+}
 .video .video-list ul li {
   text-align: center;
 }
@@ -2465,6 +2496,11 @@ body .main.side-right .navbar-header {
 .activity .activity-list {
   margin-top: 20px;
 }
+.activity .activity-list .pull-left img {
+  border-radius: 50%;
+  width: 76px;
+  height: 76px;
+}
 .activity .activity-list ul li {
   margin: 20px 0;
   padding: 20px;
@@ -2488,7 +2524,6 @@ body .main.side-right .navbar-header {
   margin: 0 8px;
 }
 .activity .activity-list ul li .media .content .foot .goto {
-  margin-left: 20px;
   color: #4E8500;
 }
 /* 活动 end */
@@ -2499,6 +2534,7 @@ body .main.side-right .navbar-header {
   margin-right: 50px;
   padding: 40px;
   border: 1px solid #dddddd;
+  overflow: hidden;
 }
 .activitydetail .content .author {
   position: absolute;
@@ -2556,6 +2592,15 @@ body .main.side-right .navbar-header {
 .activitydetail .content h5 .line {
   margin: 0 20px;
   color: #aaa;
+}
+.activitydetail .content .img-wrap {
+  display: block;
+  margin: 0 20px 10px 0px;
+  float: left;
+  overflow: hidden;
+  clear: both;
+  padding: 4px;
+  width: 300px;
 }
 .activitydetail .content p {
   text-indent: 2em;
@@ -3053,7 +3098,7 @@ em.tip2 {
     margin: 40px 0px;
   }
   .audiodetail .audio-info .media .media-body .wrap h2 {
-    font-size: 20～px;
+    font-size: 20px;
     color: #222;
   }
   .audiodetail .audio-info .media .media-body .wrap h5,
@@ -3200,9 +3245,30 @@ em.tip2 {
   .activity {
     padding: 0;
   }
+  .activity .activity-nav .col-xs-3 {
+    width: 20%;
+  }
   .activity .list-group-item {
     text-align: center;
     font-size: 12px;
+    padding: 10px 6px;
+  }
+  .activity .activity-list .pull-left img {
+    margin-top: 12px;
+    width: 40px;
+    height: 40px;
+  }
+  .activity .activity-list .btn-main {
+    padding: 4px 5px;
+    font-size: 12px;
+  }
+  .activity .activity-list ul li .media .content .foot {
+    font-size: 12px;
+  }
+  .activity .activity-list ul li .media .content .foot .goto {
+    margin-left: 0;
+    margin-top: 5px;
+    text-align: center;
   }
   .activitydetail .content {
     margin: 0;
@@ -3224,6 +3290,10 @@ em.tip2 {
     margin: 23px auto 30px;
     text-align: center;
     color: #777;
+  }
+  .activitydetail .content .img-wrap {
+    margin: 0 ;
+    width: 100%;
   }
   .activitydetail .comments {
     padding: 0;
