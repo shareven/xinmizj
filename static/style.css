@@ -723,6 +723,7 @@ footer a {
 .home .home-library #swiper-container2 .swiper-wrapper .swiper-slide img {
   width: 180px;
   height: 261px;
+  border: 1px solid #ddd;
 }
 .home .home-library #swiper-container2 .swiper-wrapper .swiper-slide > a {
   display: block;
