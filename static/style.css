@@ -3030,6 +3030,18 @@ em.tip2 {
   .book .book-type {
     font-size: 12px;
   }
+  .book .book-list .panel .media-heading {
+    padding-left: 15px;
+    margin-top: 8px;
+    font-size: 12px;
+    height: 25px;
+    overflow: hidden;
+  }
+  .book .book-list .panel .panel-body img {
+    width: 100px;
+    height: 145px;
+    margin: 0 15px;
+  }
   .bookdetail .nav-stacked > li {
     float: left;
   }
@@ -3292,7 +3304,7 @@ em.tip2 {
     color: #777;
   }
   .activitydetail .content .img-wrap {
-    margin: 0 ;
+    margin: 0;
     width: 100%;
   }
   .activitydetail .comments {
