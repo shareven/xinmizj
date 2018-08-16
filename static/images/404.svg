@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1366px" height="768px" viewBox="0 0 1366 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>404</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="4.30439841%" x2="46.6794421%" y2="97.3673712%" id="linearGradient-1">
+            <stop stop-color="#F0F0F0" offset="0%"></stop>
+            <stop stop-color="#F3F3F3" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-6.11422679%" y1="42.0662677%" x2="93.0207061%" y2="20.5864503%" id="linearGradient-2">
+            <stop stop-color="#F2F2F2" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="41.6383105%" x2="98.1109697%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#F3F2F2" offset="0%"></stop>
+            <stop stop-color="#E2E1E1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="404">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="1366" height="768"></rect>
+            <g id="Group" transform="translate(525.000000, 142.000000)">
+                <polygon id="Rectangle-24" fill="url(#linearGradient-1)" transform="translate(153.000000, 249.500000) rotate(17.000000) translate(-153.000000, -249.500000) " points="104.27798 124 201.72202 124 274 375 32 375"></polygon>
+                <path d="M202.731235,27.7919098 C203.094265,22.3235696 207.665265,18.0000001 213.250754,18.0000001 C219.073359,18.0000001 223.793513,22.6984514 223.793513,28.4942849 C223.793513,28.5152853 223.793451,28.5362712 223.793328,28.5572426 C244.144937,33.486431 260.405579,50.3157285 263.485153,72.2280357 C267.518274,100.92518 247.416675,127.473404 218.586976,131.525154 C189.757276,135.576904 154.412593,113.171326 150.379472,84.4741817 C146.404671,56.1919987 174.325859,32.3539088 202.731235,27.7919098 Z" id="Combined-Shape" fill="url(#linearGradient-2)" transform="translate(207.000000, 75.000001) rotate(23.000000) translate(-207.000000, -75.000001) "></path>
+                <path d="M198.021466,145 C258.693603,145 302.476335,128.945911 307.878088,104.138279 C311.164121,78.5040533 247.558485,54.2684856 173.065058,58.4790116 C99.7385307,64.4013031 86.4011867,92.3678951 86,103.163648 C88.2048059,127.267298 137.349329,145 198.021466,145 Z" id="Oval" fill="#B8B8B8" transform="translate(197.000000, 101.500000) rotate(18.000000) translate(-197.000000, -101.500000) "></path>
+                <ellipse id="Oval" fill="url(#linearGradient-3)" transform="translate(197.000000, 106.000000) rotate(18.000000) translate(-197.000000, -106.000000) " cx="197" cy="106" rx="110" ry="42"></ellipse>
+                <ellipse id="Oval" fill="#FFFFFF" transform="translate(192.500000, 121.500000) rotate(18.000000) translate(-192.500000, -121.500000) " cx="192.5" cy="121.5" rx="47.5" ry="17.5"></ellipse>
+                <ellipse id="Oval-2" fill="#FFFFFF" cx="181" cy="81.5" rx="9" ry="7.5"></ellipse>
+                <ellipse id="Oval-2-Copy" fill="#FFFFFF" transform="translate(227.000000, 96.500000) rotate(19.000000) translate(-227.000000, -96.500000) " cx="227" cy="96.5" rx="8" ry="6.5"></ellipse>
+                <ellipse id="Oval-3" fill="#FFFFFF" transform="translate(133.000000, 85.500000) rotate(-17.000000) translate(-133.000000, -85.500000) " cx="133" cy="85.5" rx="9" ry="6.5"></ellipse>
+                <ellipse id="Oval-3-Copy" fill="#FFFFFF" transform="translate(264.000000, 127.500000) rotate(23.000000) translate(-264.000000, -127.500000) " cx="264" cy="127.5" rx="8" ry="6.5"></ellipse>
+            </g>
+            <text font-family="PingFang-SC-Bold, PingFang SC" font-size="100" font-weight="bold" fill="#B8B8B8">
+                <tspan x="593" y="434">404</tspan>
+            </text>
+            <text id="Error：页面飞走了，我们正在努力寻找" font-family="PingFang-SC-Bold, PingFang SC" font-size="14" font-weight="bold" fill="#B8B8B8">
+                <tspan x="555" y="483">Error：页面飞走了，我们正在努力寻找…</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
