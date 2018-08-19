@@ -1993,6 +1993,8 @@ footer a {
   position: relative;
 }
 .video .get-video .search-group .search {
+  margin-top: 20px;
+  text-indent: 1em;
   border: none;
   border-bottom: 1px solid #DCDCDC;
   background: none;
@@ -2220,6 +2222,8 @@ body .main.side-right .navbar-header {
   position: relative;
 }
 .audio .audio-type .search-group .search {
+  margin-top: 20px;
+  text-indent: 1em;
   border: none;
   border-bottom: 1px solid #DCDCDC;
   background: none;
