@@ -314,7 +314,7 @@ header .navbar .navbar-collapse.collapse {
 }
 header .navbar .navbar-toggle .icon-bar,
 header .navbar .navbar-toggle .icon-bar + .icon-bar {
-  background: #3a3737;
+  background: #f5f2f2;
 }
 header .navbar ul {
   height: 132px;
@@ -514,12 +514,11 @@ header .navbar #logout-btn {
 @media (max-width: 767px) {
   header .navbar {
     height: auto;
-    background: #eee;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    opacity: .8;
+    opacity: .9;
   }
   header .navbar .navbar-collapse.collapse {
     z-index: 1;
@@ -532,24 +531,29 @@ header .navbar #logout-btn {
   header .navbar .navbar-brand {
     display: none;
   }
+  header .navbar .navbar-header {
+    background: #0a0101;
+  }
   header .navbar .navbar-nav {
-    margin: 0;
+    margin: auto;
+    margin-left: 60%;
   }
   header .navbar ul {
     height: auto;
-    width: 100%;
+    margin-left: 60%;
+    width: 40%;
+    background: #0a0101;
   }
   header .navbar ul li {
     position: relative;
     width: 100%;
-    text-align: left;
   }
   header .navbar ul li a {
     padding: 0;
     height: 100%;
-    color: #404040;
+    color: #c7bfbf;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 15px;
   }
   header .navbar ul li a:hover,
   header .navbar ul li a:focus {
@@ -562,8 +566,22 @@ header .navbar #logout-btn {
   header .navbar ul li.active:after {
     display: none;
   }
+  header .navbar .navbar-right {
+    border-radius: 0 0 5px 5px;
+  }
   header .navbar .navbar-right li {
+    padding: 10px 0;
     width: 100%;
+  }
+  header .navbar .navbar-right li .person:hover {
+    background: none;
+  }
+  header .navbar .navbar-right li .dropdown-menu {
+    width: auto;
+    margin-left: 0;
+  }
+  header .navbar .navbar-right li .dropdown-menu li {
+    height: auto;
   }
   .main {
     margin-top: 50px;

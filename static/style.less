@@ -408,7 +408,7 @@ header {
         }
         .navbar-toggle .icon-bar,
         .navbar-toggle .icon-bar+.icon-bar {
-            background: rgb(58, 55, 55);
+            background: rgb(245, 242, 242);
         }
         ul {
             // width: 60%;
@@ -620,12 +620,11 @@ header {
     header {
         .navbar {
             height: auto;
-            background: #eee;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            opacity: .8;
+            opacity: .9;
         }
         .navbar .navbar-collapse.collapse {
             z-index: 1;
@@ -637,22 +636,27 @@ header {
             .navbar-brand {
                 display: none;
             }
+            .navbar-header {
+                background: #0a0101;
+            }
             .navbar-nav {
-                margin: 0;
+                margin: auto;
+                margin-left: 60%; // margin: 0;
             }
             ul {
                 height: auto;
-                width: 100%;
+                margin-left: 60%;
+                width: 40%;
+                background: #0a0101;
                 li {
                     position: relative;
-                    width: 100%;
-                    text-align: left;
+                    width: 100%; // text-align: right;
                     a {
                         padding: 0;
                         height: 100%;
-                        color: #404040;
+                        color: #c7bfbf;
                         line-height: 30px;
-                        font-size: 16px;
+                        font-size: 15px;
                         &:hover,
                         &:focus {
                             background: none;
@@ -668,8 +672,20 @@ header {
                 }
             }
             .navbar-right {
+                border-radius: 0 0 5px 5px;
                 li {
+                    padding: 10px 0;
                     width: 100%;
+                    .person:hover {
+                        background: none;
+                    }
+                    .dropdown-menu {
+                        width: auto;
+                        margin-left: 0;
+                        li {
+                            height: auto;
+                        }
+                    }
                 }
             }
         }
