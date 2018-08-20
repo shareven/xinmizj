@@ -637,7 +637,8 @@ header {
                 display: none;
             }
             .navbar-header {
-                background: #0a0101;
+                .m-bgcolor;
+                // background: #777;
             }
             .navbar-nav {
                 margin: auto;
@@ -646,21 +647,22 @@ header {
             ul {
                 height: auto;
                 margin-left: 60%;
-                width: 40%;
-                background: #0a0101;
+                width: 40%; 
+                .m-bgcolor;
                 li {
                     position: relative;
                     width: 100%; // text-align: right;
                     a {
                         padding: 0;
                         height: 100%;
-                        color: #c7bfbf;
+                        color: #e4e0e0;
                         line-height: 30px;
                         font-size: 15px;
                         &:hover,
                         &:focus {
                             background: none;
-                            .m-color;
+                            // .m-color;
+                            color: #eee;
                         }
                     }
                 }
@@ -3074,7 +3076,7 @@ em.tip2 {
     }
     .audio {
         .audio-list {
-            margin: 30px 0;
+            margin: 0 10px;
         }
         nav.navbar.bootsnav .navbar-header {
             line-height: 54px;
