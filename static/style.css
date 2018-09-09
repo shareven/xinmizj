@@ -487,6 +487,17 @@ header .navbar #logout-btn {
   .page-navation .pagination li a {
     margin: 20px 5px;
   }
+  nav.navbar.bootsnav .navbar-toggle[aria-expanded="true"]::before {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 280px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   header .navbar ul {
@@ -2195,13 +2206,6 @@ footer a {
 }
 /* 视频详情 end */
 /* 音频 start */
-body .main.side-right > .wrapper {
-  margin-left: 280px;
-  margin-right: -280px !important;
-}
-body .main.side-right .navbar-header {
-  margin-left: 280px;
-}
 .audio .top-pic {
   width: 100%;
 }
@@ -3385,6 +3389,24 @@ em.tip2 {
   }
   .videodetail .video-info .item-right i:hover {
     color: rgba(0, 0, 0, 0.4);
+  }
+  .videodetail .all-episode {
+    margin: 40px 0px 130px 0px;
+  }
+  .videodetail .all-episode h4 {
+    font-size: 16px;
+  }
+  .videodetail .all-episode .list {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .videodetail .all-episode .list li {
+    float: none;
+    width: 20%;
+    margin: 0 6px;
+    margin-bottom: 10px;
   }
   .my .container-fluid {
     padding: 0;

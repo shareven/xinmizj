@@ -588,6 +588,18 @@ header {
             }
         }
     }
+    nav.navbar.bootsnav .navbar-toggle[aria-expanded="true"]::before {
+        // nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in::before{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 280px;
+        content: "";
+        .size(100%,
+        100%);
+        background: rgba(0, 0, 0, .45);
+        z-index: 1;
+    }
 }
 
 @media (min-width: 768px) and (max-width:992px) {
@@ -637,8 +649,7 @@ header {
                 display: none;
             }
             .navbar-header {
-                .m-bgcolor;
-                // background: #777;
+                .m-bgcolor; // background: #777;
             }
             .navbar-nav {
                 margin: auto;
@@ -647,7 +658,7 @@ header {
             ul {
                 height: auto;
                 margin-left: 60%;
-                width: 40%; 
+                width: 40%;
                 .m-bgcolor;
                 li {
                     position: relative;
@@ -660,8 +671,7 @@ header {
                         font-size: 15px;
                         &:hover,
                         &:focus {
-                            background: none;
-                            // .m-color;
+                            background: none; // .m-color;
                             color: #eee;
                         }
                     }
@@ -2096,12 +2106,12 @@ footer {
 /* 音频 start */
 
 body .main.side-right>.wrapper {
-    margin-left: 280px;
-    margin-right: -280px !important;
+    // margin-left: 280px;
+    // margin-right: -280px !important;
 }
 
 body .main.side-right .navbar-header {
-    margin-left: 280px;
+    // margin-left: 280px;
 }
 
 .audio {
@@ -3358,6 +3368,24 @@ em.tip2 {
                     &:hover {
                         color: rgba(0, 0, 0, .4);
                     }
+                }
+            }
+        }
+        .all-episode {
+            margin: 40px 0px 130px 0px;
+            h4 {
+                font-size: 16px;
+            }
+            .list {
+                margin: 0 auto;
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap; // justify-content: center;
+                li {
+                    float: none;
+                    width: 20%;
+                    margin: 0 6px;
+                    margin-bottom: 10px;
                 }
             }
         }
