@@ -630,6 +630,7 @@ header {
 
 @media (max-width:767px) {
     header {
+        height: 50px;
         .navbar {
             height: auto;
             position: absolute;
@@ -1478,6 +1479,37 @@ footer {
     .content {
         margin: 40px auto;
         padding: 0 50px;
+        .title {
+            color: #6B7DEB;
+            font-size: 28px;
+        }
+        .card-title {
+            margin: 26px 35px 6px;
+            font-weight: bold;
+        }
+        .col-md-8.col-sm-12 .card .ml40 {
+            padding-left: 45px;
+        }
+        .col-md-8.col-sm-12 .card .mr40 {
+            padding-right: 45px;
+        }
+        .card {
+            padding: 20px 30px;
+            background: #fff;
+            .content-word {
+                vertical-align: middle;
+                h5 {
+                    font-weight: bold;
+                }
+                .word {
+                    color: #999;
+                    font-size: 12px;
+                    .large {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
     }
     .contactme {
         &>h4 {
@@ -1531,6 +1563,9 @@ footer {
                 }
                 p {
                     line-height: 42px;
+                }
+                p.tel {
+                    line-height: 22px;
                 }
             }
         }
@@ -3224,6 +3259,12 @@ em.tip2 {
         .content {
             margin: 40px auto;
             padding: 0;
+            .col-md-8.col-sm-12 .card .ml40 {
+                padding-left: 15px;
+            }
+            .col-md-8.col-sm-12 .card .mr40 {
+                padding-right: 15px;
+            }
         }
         .contactme {
             .left-item {

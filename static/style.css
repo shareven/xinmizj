@@ -523,6 +523,9 @@ header .navbar #logout-btn {
   }
 }
 @media (max-width: 767px) {
+  header {
+    height: 50px;
+  }
   header .navbar {
     height: auto;
     position: absolute;
@@ -1605,6 +1608,37 @@ footer a {
   margin: 40px auto;
   padding: 0 50px;
 }
+.daochang .content .title {
+  color: #6B7DEB;
+  font-size: 28px;
+}
+.daochang .content .card-title {
+  margin: 26px 35px 6px;
+  font-weight: bold;
+}
+.daochang .content .col-md-8.col-sm-12 .card .ml40 {
+  padding-left: 45px;
+}
+.daochang .content .col-md-8.col-sm-12 .card .mr40 {
+  padding-right: 45px;
+}
+.daochang .content .card {
+  padding: 20px 30px;
+  background: #fff;
+}
+.daochang .content .card .content-word {
+  vertical-align: middle;
+}
+.daochang .content .card .content-word h5 {
+  font-weight: bold;
+}
+.daochang .content .card .content-word .word {
+  color: #999;
+  font-size: 12px;
+}
+.daochang .content .card .content-word .word .large {
+  font-size: 24px;
+}
 .daochang .contactme > h4 {
   width: 100%;
   height: 88px;
@@ -1661,6 +1695,9 @@ footer a {
 }
 .daochang .contactme .right-item .media p {
   line-height: 42px;
+}
+.daochang .contactme .right-item .media p.tel {
+  line-height: 22px;
 }
 .daochang .query {
   margin-top: 40px;
@@ -3268,6 +3305,12 @@ em.tip2 {
   .daochang .content {
     margin: 40px auto;
     padding: 0;
+  }
+  .daochang .content .col-md-8.col-sm-12 .card .ml40 {
+    padding-left: 15px;
+  }
+  .daochang .content .col-md-8.col-sm-12 .card .mr40 {
+    padding-right: 15px;
   }
   .daochang .contactme .left-item {
     padding: 0;
