@@ -120,7 +120,7 @@
 
     <section class="player">
       <!-- <div class="audiojs  "  id="audiojs_wrapper11"> -->
-        <audio class="music" id="myAudio">
+<audio class="music" id="myAudio">
           <source src="/static/media/红豆.mp3" type="audio/mp3">
           <!-- <p class="myAudiohide">你的浏览器不支持<code>audio</code>标签.</p> -->
         </audio>
@@ -197,6 +197,25 @@
         //播放下一首
 
       })
+        //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+        document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+var audio = document.getElementById('myAudio');
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+        }, false);
+        }
+        audioAutoPlay();
+        });
+        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+        document.addEventListener('touchstart', function () {
+        function audioAutoPlay() {
+var audio = document.getElementById('myAudio');
+        audio.play();
+        }
+        audioAutoPlay();
+        });
     }(window, window.videojs));
 
   </script>
