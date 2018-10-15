@@ -13,7 +13,7 @@
   <!-- <link rel="stylesheet" href="/static/lib/video/video-js.css"> -->
   <link href="https://cdn.bootcss.com/video.js/7.0.0-rc.1/alt/video-js-cdn.css" rel="stylesheet">
   <link rel="stylesheet" href="/static/style.css">
-<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -33,7 +33,7 @@
           <img src="/static/images/logo.png" width="70" height="73" alt="">
         </a>
       </div>
-  
+
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav nvabar-center">
           <li>
@@ -67,7 +67,7 @@
               <a href="register.html">注册</a>
             </div>
             <!-- 登录注册按钮 -->
-  
+
             <!-- 登录后显示个人头像 -->
             <a href="my.html" title="进入个人中心" class="person">
               <img src="/static/images/signup_avatar.png" width="66" height="66" alt="我的头像">
@@ -97,7 +97,7 @@
       <div class="content">
         <div class="media">
           <a class="pull-left" href="javascript:;">
-            <img class="media-object" src="/static/images/musicdetails_pic_bg.png"  alt="Image">
+            <img class="media-object" src="/static/images/musicdetails_pic_bg.png" alt="Image">
           </a>
           <div class="media-body">
             <div class="wrap">
@@ -108,8 +108,8 @@
                 <span class="time">2018-03-24</span>
               </h5>
               <p>介绍：如是我闻。一时佛住俱焰弥国金刚山顶，遍观十方，皆如火色。尔时如来即嘘长叹，普视众生都无差途。 善哉众生当何所救？思惟已讫，一切诸佛世界及诸菩萨境界</p>
-              
-             
+
+
             </div>
           </div>
         </div>
@@ -120,48 +120,48 @@
 
     <section class="player">
       <!-- <div class="audiojs  "  id="audiojs_wrapper11"> -->
-<audio class="music" id="myAudio">
-          <source src="/static/media/红豆.mp3" type="audio/mp3">
-          <!-- <p class="myAudiohide">你的浏览器不支持<code>audio</code>标签.</p> -->
-        </audio>
-        
+      <audio class="music" id="myAudio">
+        <source src="/static/media/红豆.mp3" type="audio/mp3">
+        <!-- <p class="myAudiohide">你的浏览器不支持<code>audio</code>标签.</p> -->
+      </audio>
+
       <!-- </div> -->
     </section>
   </div>
-<!-- 分享 -->
+  <!-- 分享 -->
 
-<div class="modal fade" id="share">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">分享到：</h4>
-      </div>
-      <div class="modal-body">
-        <div class="container1">
-          <div class="row text-center">
-            <div class="share-wrap col-sm-6">
-              <a href="javascript:;" class="share-weixin">
-                <img src="/static/images/share_weixin.png">
-                <div id="qrcode"></div>
-              </a>
-              <p>微信分享</p>
-            </div>
-            <div class="share-wrap col-sm-6">
-              <a href="" class="share-qq" target="_blank">
-                <img src="/static/images/share_qq.png">
-              </a>
-              <p>QQ分享</p>
+  <div class="modal fade" id="share">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">分享到：</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container1">
+            <div class="row text-center">
+              <div class="share-wrap col-sm-6">
+                <a href="javascript:;" class="share-weixin">
+                  <img src="/static/images/share_weixin.png">
+                  <div id="qrcode"></div>
+                </a>
+                <p>微信分享</p>
+              </div>
+              <div class="share-wrap col-sm-6">
+                <a href="" class="share-qq" target="_blank">
+                  <img src="/static/images/share_qq.png">
+                </a>
+                <p>QQ分享</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- footer -->
-  
+
   <!-- footer -->
 
   <script src="/static/lib/jquery.min.js"></script>
@@ -169,15 +169,15 @@
   <script src="/static/lib/jquery.qrcode.min.js"></script>
   <script src="/static/js/share.js"></script>
   <!-- <script src="/static/lib/html5media/html5media.min.js"></script> -->
-  
+
   <!-- <script src="/static/lib/video/videojs-ie8.min.js"></script>
   <script src="/static/lib/video/video.min.js"></script> -->
-  
+
   <!-- <script src="https://cdn.bootcss.com/video.js/7.0.0-rc.1/video.js"></script> -->
   <!-- <script src="https://cdn.bootcss.com/audiojs/1.0.1/audio.min.js"></script> -->
-<script src="/static/js/audiodetail.js"></script>
-  <script> 
-  (function (window, videojs) {
+  <script src="/static/js/audiodetail.js"></script>
+  <script>
+    (function (window, videojs) {
       // var audioObj = videojs('myAudio', {
       // }); 
 
@@ -190,32 +190,36 @@
 
       $('.play .pre').click(function () {
         //播放上一首
-        
+
       })
 
       $('.play .next').click(function () {
         //播放下一首
 
       })
-        //--创建页面监听，等待微信端页面加载完毕 触发音频播放
-        document.addEventListener('DOMContentLoaded', function () {
+
+      
+      //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+      document.addEventListener('DOMContentLoaded', function () {
         function audioAutoPlay() {
-var audio = document.getElementById('myAudio');
-        audio.play();
-        document.addEventListener("WeixinJSBridgeReady", function () {
-        audio.play();
-        }, false);
+          var audio = document.getElementById('myAudio');
+          audio.play();
+          document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+          }, false);
         }
         audioAutoPlay();
-        });
-        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-        document.addEventListener('touchstart', function () {
+      });
+      //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+      document.addEventListener('touchstart', function () {
         function audioAutoPlay() {
-var audio = document.getElementById('myAudio');
-        audio.play();
+          var audio = document.getElementById('myAudio');
+          audio.play();
         }
         audioAutoPlay();
-        });
+      });
+
+
     }(window, window.videojs));
 
   </script>
