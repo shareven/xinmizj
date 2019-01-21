@@ -3459,7 +3459,7 @@ em.tip2 {
   .videodetail .password-wrap .password-box .form-inline .form-group,
   .videodetail .password-wrap .password-box .form-inline .form-control {
     display: inline-block;
-    width: auto;
+    width: 100px;
     margin-bottom: 0;
     vertical-align: middle;
   }
