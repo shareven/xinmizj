@@ -2071,6 +2071,7 @@ footer {
 
 .videodetail {
     .videowrap {
+        position: relative;
         padding: 0;
         width: 100%;
         .video-js {
@@ -2081,6 +2082,31 @@ footer {
         #html5Video {
             margin: 0 auto;
             width: 100%;
+        }
+        .col-sm-7 {
+            position: relative;
+        }
+        .password-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            .size-q(100%);
+            color: #ffffff;
+            background: #000000;
+            .password-box {
+                .center;
+                height: 80px;
+                text-align: center;
+                .orange {
+                    color: rgb(245, 70, 7);
+                }
+                form {
+                    margin-top: 10px;
+                    input {
+                        width: 100px;
+                    }
+                }
+            }
         }
     }
     .video-info {
@@ -3399,6 +3425,19 @@ em.tip2 {
         }
     }
     .videodetail {
+        .password-wrap {
+            .password-box {
+                .form-inline {
+                    .form-group,
+                    .form-control {
+                        display: inline-block;
+                        width: auto;
+                        margin-bottom: 0;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
         .video-info {
             h3 {
                 font-size: 18px;

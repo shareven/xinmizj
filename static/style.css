@@ -2179,6 +2179,7 @@ footer a {
 /* 视频 end */
 /* 视频详情 start */
 .videodetail .videowrap {
+  position: relative;
   padding: 0;
   width: 100%;
 }
@@ -2190,6 +2191,37 @@ footer a {
 .videodetail .videowrap #html5Video {
   margin: 0 auto;
   width: 100%;
+}
+.videodetail .videowrap .col-sm-7 {
+  position: relative;
+}
+.videodetail .videowrap .password-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: #000000;
+}
+.videodetail .videowrap .password-wrap .password-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 80px;
+  text-align: center;
+}
+.videodetail .videowrap .password-wrap .password-box .orange {
+  color: #f54607;
+}
+.videodetail .videowrap .password-wrap .password-box form {
+  margin-top: 10px;
+}
+.videodetail .videowrap .password-wrap .password-box form input {
+  width: 100px;
 }
 .videodetail .video-info {
   margin: 0;
@@ -3423,6 +3455,13 @@ em.tip2 {
   }
   .video .video-list ul li a img {
     width: 100%;
+  }
+  .videodetail .password-wrap .password-box .form-inline .form-group,
+  .videodetail .password-wrap .password-box .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0;
+    vertical-align: middle;
   }
   .videodetail .video-info h3 {
     font-size: 18px;
