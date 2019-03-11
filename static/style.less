@@ -401,7 +401,8 @@ header {
         line-height: 132px; // font-family: 'FZKTJW--GB1-0';
         z-index: 19;
         .navbar-brand {
-            width: 100px;
+            // width: 100px;
+            line-height: 132px;
         }
         .navbar-collapse.collapse {
             position: relative;
@@ -574,6 +575,23 @@ header {
     }
 }
 
+@media (max-width: 1100px) {
+    header .navbar ul {
+      height: 132px;
+    }
+    header .navbar ul li {
+      width: 70px;
+    }
+    header .navbar ul li a {
+      font-size: 14px;
+    }
+    header .navbar ul.nvabar-center {
+      margin-left: 10px;
+    }
+    header .navbar .navbar-right li {
+      width: 100px;
+    }
+  }
 /* 分页 */
 
 @media (max-width: 992px) {
