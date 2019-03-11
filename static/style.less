@@ -524,6 +524,7 @@ header {
         #logout-btn {
             display: inline;
             .center-y;
+            top: 10px;
             right: 0;
             line-height: 12px;
         }
@@ -575,7 +576,7 @@ header {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1130px) {
     header .navbar ul {
       height: 132px;
     }
@@ -585,9 +586,9 @@ header {
     header .navbar ul li a {
       font-size: 14px;
     }
-    header .navbar ul.nvabar-center {
-      margin-left: 10px;
-    }
+    // header .navbar ul.nvabar-center {
+    //   margin-left: 10px;
+    // }
     header .navbar .navbar-right li {
       width: 100px;
     }
@@ -621,13 +622,17 @@ header {
 }
 
 @media (min-width: 768px) and (max-width:992px) {
+    header .navbar .navbar-brand img {
+        margin-top: 30px;
+        height: 30px;
+      }
     header {
         .navbar ul {
             height: 132px;
             li {
                 width: 70px;
                 a {
-                    font-size: 14px;
+                    font-size: 13px;
                 }
             }
             &.nvabar-center {
