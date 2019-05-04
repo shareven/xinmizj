@@ -170,8 +170,14 @@ a:hover {
   cursor: not-allowed;
 }
 /* 定义 */
+.m-border {
+  border: 1px solid #4E8500;
+}
 .m-color {
   color: #4E8500;
+}
+.colorfff {
+  color: #ffffff;
 }
 .m-color-hover {
   color: inherit;
@@ -306,6 +312,9 @@ header .navbar {
   line-height: 132px;
   z-index: 19;
 }
+header .navbar .navbar-brand {
+  line-height: 132px;
+}
 header .navbar .navbar-collapse.collapse {
   position: relative;
 }
@@ -342,7 +351,7 @@ header .navbar ul li.active:before {
   content: '';
   width: 72px;
   height: 7px;
-  background: url('images/nav.png');
+  background: url('./images/nav.png');
 }
 header .navbar ul li.active:after {
   display: block;
@@ -354,7 +363,7 @@ header .navbar ul li.active:after {
   content: '';
   width: 72px;
   height: 7px;
-  background: url('images/nav2.png');
+  background: url('./images/nav2.png');
 }
 header .navbar ul .login-btn {
   position: relative;
@@ -427,9 +436,10 @@ header .navbar .navbar-brand img {
 header .navbar #logout-btn {
   display: inline;
   position: absolute;
-  top: 12px;
+  top: 0;
   bottom: 0;
   margin: auto 0;
+  top: 10px;
   right: 0;
   line-height: 12px;
 }
@@ -485,9 +495,6 @@ header .navbar #logout-btn {
   header .navbar ul li a {
     font-size: 14px;
   }
-  /* header .navbar ul.nvabar-center {
-    margin-left: 10px;
-  } */
   header .navbar .navbar-right li {
     width: 100px;
   }
@@ -550,7 +557,7 @@ header .navbar #logout-btn {
     top: 0;
     left: 0;
     width: 100%;
-    opacity: .9;
+    opacity: 0.9;
   }
   header .navbar .navbar-collapse.collapse {
     z-index: 1;
@@ -1225,7 +1232,7 @@ footer a {
   border: none;
   text-align: center;
   color: #fff;
-  opacity: .7;
+  opacity: 0.7;
 }
 .login-wrap footer .copyright > a {
   color: #fff;
@@ -1616,11 +1623,70 @@ footer a {
 }
 /* 法物流通 end */
 /* 道场介绍 start */
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
+}
+@-o-keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
+}
+@-moz-keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
+}
+@-webkit-keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
+}
+.move-up {
+  animation: moveUp 40s linear 1s infinite;
+}
 .daochang .pics {
   padding: 0 50px;
 }
 .daochang .pics > div.col-md-4 {
   padding: 15px 3px;
+}
+.daochang .donation .gongdedongtai {
+  background: url('/static/images/gongdedongtai.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+.daochang .donation .donation-box {
+  height: 150px;
+  overflow: hidden;
+}
+.daochang .donation .donation-box ul {
+  position: relative;
+}
+.daochang .donation .donation-box ul li {
+  margin: 8px;
+}
+.daochang .donation .donation-box ul li .pill {
+  border-radius: 15px;
+  padding: 7px 10px;
+  background: rgba(0, 0, 0, 0.25);
+}
+.daochang .donation .donation-box ul li .m-pill {
+  border-radius: 15px;
+  padding: 7px 10px;
+  background: rgba(77, 132, 0, 0.5);
 }
 .daochang .content {
   margin: 40px auto;

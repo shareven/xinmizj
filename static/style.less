@@ -223,8 +223,16 @@ a:hover {
     border: 1px solid @color;
 }
 
+.m-border {
+    border: 1px solid #4E8500;
+}
+
 .m-color {
     color: #4E8500;
+}
+
+.colorfff {
+    color: #ffffff;
 }
 
 .m-color-hover {
@@ -1492,11 +1500,71 @@ footer {
 
 /* 道场介绍 start */
 
+@keyframes moveUp{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-80%);
+    }
+}
+@-o-keyframes moveUp{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-80%);
+    }
+}
+@-moz-keyframes moveUp{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-80%);
+    }
+}
+@-webkit-keyframes moveUp{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-80%);
+    }
+}
+.move-up{
+    animation: moveUp 40s linear 1s infinite;
+}
 .daochang {
     .pics {
         padding: 0 50px;
         &>div.col-md-4 {
             padding: 15px 3px;
+        }
+    }
+    .donation{
+        .gongdedongtai{
+            background: url('/static/images/gongdedongtai.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+        .donation-box{
+            height:150px; 
+            overflow:hidden;
+            ul{
+                position: relative;
+                
+                li{
+                    margin: 8px;
+                    .pill{
+                        border-radius:15px;padding: 7px 10px;
+                        background: rgba(0, 0, 0, .25);
+                    }
+                    .m-pill{
+                        border-radius:15px;padding: 7px 10px;
+                        background: rgba(77, 132, 0,0.5);
+                    }
+                }
+            }
         }
     }
     .content {
