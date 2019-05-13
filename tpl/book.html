@@ -9,6 +9,7 @@
   <base href="/tpl/">
 
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/font/iconfont.css">
   <link rel="stylesheet" href="/static/lib/swiper/swiper.min.css">
   <link rel="stylesheet" href="/static/style.css">
@@ -156,8 +157,12 @@
               <span class="click-num active">总点击</span>
               <span class="updatetime">更新时间</span>
               <span class="text-muted">共3668本作品</span>
-              <a href="" target="_blanck" title="下载" class="text-muted">下载</a>
-
+              <span class="text-muted m-color-hover" id="open-dowload-box">下载</span>
+              <span class="hide" id="dowload-box">
+                <span class="text-info" id="select-all">全选</span>
+                <span class="text-default" id="cancel-dowload">取消</span>
+                <span class="text-success" id="dowload-action">下载</span>
+              </span>
             </div>
           </div>
         </div>
@@ -166,6 +171,8 @@
           <div class="row">
 
             <div class="media col-md-6 col-xs-6">
+              
+              <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
               </a>
@@ -179,6 +186,7 @@
             </div>
 
             <div class="media col-md-6 col-xs-6">
+                <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
               </a>
@@ -192,6 +200,7 @@
             </div>
 
             <div class="media col-md-6 col-xs-6">
+                <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
               </a>
@@ -205,6 +214,7 @@
             </div>
 
             <div class="media col-md-6 col-xs-6">
+                <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
               </a>
@@ -218,6 +228,7 @@
             </div>
 
             <div class="media col-md-6 col-xs-6">
+                <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
               </a>
@@ -231,6 +242,7 @@
             </div>
 
             <div class="media col-md-6 col-xs-6">
+                <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
               </a>
@@ -328,6 +340,28 @@
   <script>
     ;
     (function () {
+    // 选择下载
+    $("#open-dowload-box").on("click",function(){
+      $(this).addClass("hide");
+      $("#dowload-box").removeClass("hide");
+      $(".select-book").removeClass("hide");
+    });
+    // 取消下载
+    $("#cancel-dowload").on("click",function(){
+      $(".select-book").removeClass("fa-check-square").addClass("fa-square").addClass("hide");
+      $("#open-dowload-box").removeClass("hide");
+      $("#dowload-box").addClass("hide");
+    });
+    // 全选
+    $("#select-all").on("click",function(){
+      $(".select-book").removeClass("fa-square").addClass("fa-check-square");
+    });
+    // 点击选择书
+    $(".select-book").on("click",function(){
+      $(this).toggleClass("fa-square").toggleClass("fa-check-square");
+    });
+
+
       $('.main img').lazyload({
         threshold: 100,
         placeholder: "/static/images/loading.svg",
