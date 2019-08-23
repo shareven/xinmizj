@@ -521,6 +521,26 @@
   </footer>
   <!-- footer -->
 
+  <!-- 提醒用户查看分类 -->
+  <div class="modal" id="tipModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+         
+        <div class="modal-body text-center1">
+          点击可查看分类哦~
+        </div>
+           
+        <div class="modal-footer1 text-right" style="padding:0 15px;padding-bottom:10px;">
+            <span class="m-color" style="cursor: pointer;" id="know">知道了</span>
+        </div>
+      </div>
+      <div class="arrow" style="position: relative;left:35px;top:-2px;width:0;height:0;border-style: solid;border-width: 10px;border-bottom-width: 0;border-color: transparent;border-top-color: #fff;"></div>
+      <!-- <button type="button" id="popBtn" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover on 顶部
+        </button> -->
+    </div>
+  </div>
+
   <script src="/static/lib/jquery.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
   <script src="/static/lib/bootsnav/bootsnav.js"></script>
@@ -546,6 +566,17 @@
       }]
     })()
   </script>
+   <script>
+     //提示查看分类
+     var hasKnowTip=window.localStorage.getItem('hasKnowTip');
+     if(!hasKnowTip){
+      $('#tipModal').modal()
+      $('#know').click(function(){
+        $('#tipModal').modal('hide')
+        window.localStorage.setItem('hasKnowTip','yes');
+      });
+     }
+   </script>
 </body>
 
 </html>
