@@ -370,7 +370,7 @@ header .navbar ul li.active:before {
   content: '';
   width: 72px;
   height: 7px;
-  background: url('images/nav.png');
+  background: url('./images/nav.png');
 }
 header .navbar ul li.active:after {
   display: block;
@@ -382,7 +382,7 @@ header .navbar ul li.active:after {
   content: '';
   width: 72px;
   height: 7px;
-  background: url('images/nav2.png');
+  background: url('./images/nav2.png');
 }
 header .navbar ul .login-btn {
   position: relative;
@@ -504,7 +504,7 @@ header .navbar #logout-btn {
   font-size: 12px;
   color: #999;
 }
-@media (max-width: 1130px) {
+@media (max-width: 1330px) {
   header .navbar ul {
     height: 132px;
   }
@@ -519,7 +519,7 @@ header .navbar #logout-btn {
   }
 }
 /* 分页 */
-@media (max-width: 992px) {
+@media (max-width: 1060px) {
   .page-navation {
     position: relative;
     text-align: center;
@@ -539,22 +539,27 @@ header .navbar #logout-btn {
     z-index: 1;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1060px) {
   header .navbar .navbar-brand img {
-    margin-top: 30px;
-    height: 30px;
+    margin-top: 40px;
+    height: 24px;
   }
   header .navbar ul {
     height: 132px;
   }
   header .navbar ul li {
-    width: 70px;
+    width: 57px;
   }
   header .navbar ul li a {
     font-size: 13px;
   }
+  header .navbar ul li.active::before,
+  header .navbar ul li.active:after {
+    width: 57px;
+    height: 7px;
+  }
   header .navbar ul.nvabar-center {
-    margin-left: 10px;
+    margin-left: 0px;
   }
   header .navbar .navbar-right li {
     width: 100px;
