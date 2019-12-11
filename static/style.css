@@ -371,7 +371,7 @@ header .navbar ul li.active:before {
   content: '';
   width: 72px;
   height: 7px;
-  background: url('./images/nav.png');
+  background: url('images/nav.png');
 }
 header .navbar ul li.active:after {
   display: block;
@@ -383,7 +383,7 @@ header .navbar ul li.active:after {
   content: '';
   width: 72px;
   height: 7px;
-  background: url('./images/nav2.png');
+  background: url('images/nav2.png');
 }
 header .navbar ul .login-btn {
   position: relative;
@@ -1875,10 +1875,10 @@ footer a {
   z-index: 100;
 }
 .fullscreen:-ms-fullscreen {
-  width: 600px;
+  width: 100%;
 }
 .fullscreen:-moz-full-screen {
-  height: 400px;
+  height: 100%;
 }
 .fullscreen:-webkit-full-screen {
   height: 100%;
