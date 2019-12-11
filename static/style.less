@@ -603,7 +603,7 @@ header {
     }
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1330px) {
     header .navbar ul {
       height: 132px;
     }
@@ -622,7 +622,7 @@ header {
   }
 /* 分页 */
 
-@media (max-width: 992px) {
+@media (max-width: 1060px) {
     .page-navation {
         position: relative;
         text-align: center;
@@ -648,22 +648,28 @@ header {
     }
 }
 
-@media (min-width: 768px) and (max-width:992px) {
+@media (min-width: 768px) and (max-width:1060px) {
     header .navbar .navbar-brand img {
-        margin-top: 30px;
-        height: 30px;
+        margin-top: 40px;
+        height: 24px;
       }
     header {
         .navbar ul {
             height: 132px;
             li {
-                width: 70px;
+                width: 57px;
                 a {
                     font-size: 13px;
+                    
+                }
+                &.active::before,
+                &.active:after {
+                    width: 57px;
+                    height: 7px;
                 }
             }
             &.nvabar-center {
-                margin-left: 10px;
+                margin-left: 0px;
             }
         }
         .navbar .navbar-right li {
