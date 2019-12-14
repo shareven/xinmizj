@@ -293,6 +293,7 @@
 
         </ul>
         <div class="text-center my-15 loading">正在努力加载图片...</div>
+        <div class="text-center my-15 no-more hide">没有更多了</div>
       </section>
 
       <!-- 加载更多 -->
@@ -318,7 +319,7 @@
         <i class="fa fa-chevron-up" aria-hidden="true"></i>
         展开列表
       </div>
-      <div id="hide-list" >
+      <div id="hide-list">
         <i class="fa fa-chevron-down" aria-hidden="true"></i>
         收起列表
       </div>
@@ -435,19 +436,6 @@
 
 
   <script>
-    var initImgDate = [
-      { id: 1, url: '/static/images/u3.jpg' },
-      { id: 2, url: '/static/images/u4.jpg' },
-      { id: 3, url: '/static/images/u5.jpg' },
-      { id: 4, url: '/static/images/u6.jpg' },
-      { id: 5, url: '/static/images/daochang1.jpg' },
-      { id: 6, url: '/static/images/daochang2.jpg' },
-      { id: 7, url: '/static/images/daochang3.jpg' },
-      { id: 8, url: '/static/images/img1.jpg' },
-      { id: 9, url: '/static/images/img2.jpg' },
-    ];
-
-
     var $previewImg = $('#preview-img'),
       $bodyWidth = $(document.body).width(),
       isPhone = $bodyWidth < 768,
@@ -460,11 +448,11 @@
       $hidePreviewList = $('#hide-list');//收起列表按钮
 
     // 图片瀑布流
+    var fluid;
     imagesLoaded($('.x-wrap'), function () {
       $('.loading').addClass('hide');
-      var fluid = new $('.x-wrap').fluid({ col: isPhone ? 2 : 6, spacingX: 20, spacingY: 20 });
+      fluid = new $('.x-wrap').fluid({ col: isPhone ? 2 : 6, spacingX: 20, spacingY: 20 });
     });
-
     //提示查看分类
     var hasKnowTip = window.localStorage.getItem('hasKnowTip');
     if (!hasKnowTip) {
@@ -475,6 +463,34 @@
       });
     }
 
+    var search = location.search
+    var url = location.pathname + "?"
+    if (search.indexOf("?") != -1) {
+      var str = search.substr(1);
+      var strs = str.split("&");
+      for (var i = 0; i < strs.length; i++) {
+        var k = strs[i].split("=")[0], v = strs[i].split("=")[1]
+        if (k == "keyword" || k == "pageNo" || k == "orderCol") continue
+        url += k + "=" + v + "&"
+      }
+    }
+    var searchInput = $(".search-group .search").attr("placeholder", "从" + ($.trim($($(".navbar-nav a.active")[0]).text()) || "所有图文") + "中搜索").on("keypress", function (e) {
+      if (e.keyCode && e.keyCode != 13) return
+      var keyword = $.trim($(this).val())
+      e.preventDefault()
+      if (keyword.length > 20) {
+        alert("搜索关键词不可超过20个字符")
+        return
+      }
+      if (keyword.indexOf("%") > -1) {
+        alert("搜索关键词不可包含关键词'%'")
+        return
+      }
+      location.href = url + "orderCol=&keyword=" + encodeURIComponent(keyword)
+    })
+    $(".search-group i").click(function () {
+      searchInput.trigger("keypress")
+    })
 
     // 选择下载
     $("#open-dowload-box").on("click", function () {
@@ -483,11 +499,24 @@
       $(".select-pic").removeClass("hide");
     });
     // 开始下载勾选的图片
-    $("#dowload-action").on("click", function () {
-      /** 待完善 11111111111111111111111111111111111111111111111111111111111111111111111111*/
-
-      cancelDownload();
-    });
+    $("#dowload-action").click(function () {
+      var picIds = []
+      $(".fa-check-square").parent().prev().each(function () {
+        picIds.push($(this).attr("id"))
+      })
+      if (picIds.length < 1) {
+        alert("请选择您要下载的图片")
+        return
+      }
+      if (picIds.length > 10) {
+        alert("不可一次性下载超过10张图片")
+        return
+      }
+      window.open("/picture/download/" + picIds.join("-"), '_blank').location
+    })
+    $(".download-wrap").click(function () {
+      window.open("/picture/download/" + $(".swiper-slide.active").attr("id").replace("p_", ""), '_blank').location
+    })
     // 取消下载
     function cancelDownload() {
       $(".select-pic i").removeClass("fa-check-square").addClass("fa-square");
@@ -496,7 +525,6 @@
       $("#dowload-box").addClass("hide");
     }
     $("#cancel-dowload").on("click", cancelDownload);
-
     // 全选
     $("#select-all").on("click", function () {
       $(".select-pic i").removeClass("fa-square").addClass("fa-check-square");
@@ -513,7 +541,9 @@
         var src = $(e.target).attr('src');
         $previewImg.attr('src', src);
         $(".out-container .swiper-slide.active").removeClass('active');
-        $(".out-container .swiper-slide").find('img[src="' + src + '"]').parents('.swiper-slide').addClass('active');
+        //dev 
+        // $(".out-container .swiper-slide").find('img[src="' + src + '"]').parents('.swiper-slide').addClass('active');
+        $("#p_" + $(e.target).attr('id')).addClass('active')
         stayCenter();
         fullScreen()
       }
@@ -522,7 +552,14 @@
     $(".fullscreen .close").on("click", function () {
       $('.fullscreen').addClass('hide');
       $('.picture-main').removeClass('hide');
-      cancelFullScreen()
+      cancelFullScreen();
+      //修复退出全屏时，瀑布流异常
+      fluid = new $('.x-wrap').fluid({ col: isPhone ? 2 : 6, spacingX: 20, spacingY: 20 });
+
+      var src = $(".out-container .swiper-slide.active img").attr('src');
+      //dev 
+      // window.scrollTo(0, $(".picture-list .x-wrap").find('img[src="' + src + '"]').offset().top);
+      window.scrollTo(0, $("#" + $(".swiper-slide.active").attr("id").replace("p_", "")).offset().top);
     });
     // 点击选择预览图片
     $(".out-container .swiper-wrapper").on("click", function (e) {
@@ -540,12 +577,17 @@
     $(".next-pic").on("click", showNextPic);
     // 切换上一页预览图片
     $(".prev-page").on("click", function (e) {
+      if (isElementInViewport($(".swiper-wrapper").children(".swiper-slide:first-child")[0])) {
+        return;
+      }
       var left = parseFloat($(".out-container .swiper-wrapper").css('left').replace('px', ''));
-      if(left>=0) return;
       $('.out-container .swiper-wrapper').animate({ left: left + singelWidth * num + 'px' });
     });
     // 切换下一页预览图片
     $(".next-page").on("click", function (e) {
+      if (isElementInViewport($(".swiper-wrapper").children(".swiper-slide:last-child")[0]) && end) {
+        return;
+      }
       var left = parseFloat($(".out-container .swiper-wrapper").css('left').replace('px', ''));
       $('.out-container .swiper-wrapper').animate({ left: left - singelWidth * num + 'px' });
       var listWidth = $(".out-container .swiper-wrapper").children().length * singelWidth;
@@ -587,54 +629,93 @@
       $next.addClass('active');
       stayCenter()
     }
+
     //保持着选中框在中间位置
     function stayCenter() {
       var left = $(".out-container .swiper-slide.active").position().left;
       var listWidth = $(".out-container .swiper-wrapper").children().length * singelWidth;
-
       if (left > $bodyWidth / 2) {
         $('.out-container .swiper-wrapper').animate({ left: $bodyWidth / 2 - left - singelWidth + 'px' });
-
       } else {
         $('.out-container .swiper-wrapper').animate({ left: 0 + 'px' });
       }
-
       if (listWidth < 200 + left + ($bodyWidth / 2)) {
         loadMore();
+      }
+      mobileAutoLoadMore();
+    }
+    //手机预览 自动加载更多
+    function mobileAutoLoadMore() {
+      if (isPhone) {
+        var len = $('.picture-list .x-wrap').children().length;
+        // 总数小于10时自动加载更多
+        if (len < 10) {
+          loadMore()
+        } else {
+          var index = $(".out-container .swiper-slide.active").index();
+          // 距离最后一张还有8张时自动加载更多
+          if (index >= len - 8) {
+            loadMore()
+          }
+        }
       }
     }
 
     //加载更多
+    var loadFlag = false, end = false, pageNo = 2
     function loadMore() {
-      // addMoreData() 加载模拟数据
+      if (loadFlag || end) {
+        return
+      }
+      //dev
+      // let arr = [{ "id": "2c92ab8d6ef8f4cb016ef8f4cb660002", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cb660002.jpg", "keyword": "13、德山托钵", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cb750003", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cb750003.jpg", "keyword": "14、南泉斩猫", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cb860004", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cb860004.jpg", "keyword": "15、洞山三顿", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cb950005", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cb950005.jpg", "keyword": "16、钟声七条", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cba20006", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cba20006.jpg", "keyword": "17、国师三唤", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cbb30007", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cbb30007.jpg", "keyword": "18、洞山三斤", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cbc50008", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cbc50008.jpg", "keyword": "19、平常是道", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cbd40009", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cbd40009.jpg", "keyword": "20、大力量人.jpg", "sortTypeStr": "ASC" }, { "id": "47d0a8c04111e310b6b06a715fbf8bc0994a50b2", "url": "/2019/12/08/47d0a8c04111e310b6b06a715fbf8bc0994a50b2.jpg", "keyword": "1、赵州狗子.jpg", "sortTypeStr": "ASC" }, { "id": "4cbe762c2bc0b3d2d8c6833eec5cf04f4098d61c", "url": "/2019/12/08/4cbe762c2bc0b3d2d8c6833eec5cf04f4098d61c.jpg", "keyword": "10、清税孤贫.jpg", "sortTypeStr": "ASC" }, { "id": "521b3d225356e0d5188a581fae8813a85a6cae08", "url": "/2019/12/08/521b3d225356e0d5188a581fae8813a85a6cae08.jpg", "keyword": "2、百丈野狐.jpg", "sortTypeStr": "ASC" }, { "id": "5c991b594cf8a1630b05328c1a29efcba93a48c4", "url": "/2019/12/08/5c991b594cf8a1630b05328c1a29efcba93a48c4.jpg", "keyword": "3、俱脂竖指.jpg", "sortTypeStr": "ASC" }, { "id": "5ee241dcddc047d2d1d24ae2f9ef6eee59067900", "url": "/2019/12/08/5ee241dcddc047d2d1d24ae2f9ef6eee59067900.jpg", "keyword": "8、奚仲造车.jpg", "sortTypeStr": "ASC" }, { "id": "bb2fc9349b0bc3b3a7d097dee466e331788b6eb9", "url": "/2019/12/08/bb2fc9349b0bc3b3a7d097dee466e331788b6eb9.jpg", "keyword": "4、胡子无须.jpg", "sortTypeStr": "ASC" }, { "id": "c4a97f302856500788fa3ab3b529db76d31575ac", "url": "/2019/12/08/c4a97f302856500788fa3ab3b529db76d31575ac.jpg", "keyword": "6、世尊拈花.jpg", "sortTypeStr": "ASC" }, { "id": "c54214ab9826060ff0df83d9374df5e11fd1dd5d", "url": "/2019/12/08/c54214ab9826060ff0df83d9374df5e11fd1dd5d.jpg", "keyword": "7、赵州洗钵.jpg", "sortTypeStr": "ASC" }, { "id": "daf14baf1ad8e5d3277b0f3864a495d05baf831e", "url": "/2019/12/08/daf14baf1ad8e5d3277b0f3864a495d05baf831e.jpg", "keyword": "9、大通智胜.jpg", "sortTypeStr": "ASC" }, { "id": "fc8b38355df500f3892733f0e58b1575b6045c82", "url": "/2019/12/08/fc8b38355df500f3892733f0e58b1575b6045c82.jpg", "keyword": "5、香严上树.jpg", "sortTypeStr": "ASC" }]
+      // addMoreData(arr)
+      loadFlag = true
       $('.loading').removeClass('hide');
-      /** 待完善 11111111111111111111111111111111111111111111111111111111111111111111111111*/
-
-      // 这里分页请求的分页数据个数最好>=变量num
-      $.get('/url', function () {
-        $('.loading').addClass('hide');
-
+      $.ajax({
+          url:"/picture/list.do",
+          data:{pageNo:pageNo},
+          success:function(data) {
+              end = data.length < 1
+              end && $('.no-more').removeClass('hide')
+              $('.loading').addClass('hide')
+              pageNo += 1
+              addMoreData(data)
+          },
+          complete:function() {
+              loadFlag = false
+          }
       })
     }
-
-
-    function addMoreData() {
-      var list = '';
+    function addMoreData(imgData) {
+      var list = [];
       var listPreview = '';
-      initImgDate.map((v) => {
-        list += `<li class="">
-            <div class="img-box">
-              <img class="media-object cursor" width="100%" src="${v.url}" alt="">
-              <div class="select-pic hide" aria-hidden="true">
-                <i class="fa fa-square pull-left" aria-hidden="true"></i>
+      imgData.map((v) => {
+        list.push($(`<li class="item">
+              <div class="img-box">
+                <img id="` + v.id + `" class="media-object cursor" width="100%" src="https://www.xinmizj.com/res//picture/preview/` + v.url + `" alt="` + v.keyword + `">
+                <div class="select-pic hide" aria-hidden="true">
+                  <i class="fa fa-square pull-left" aria-hidden="true"></i>
+                </div>
               </div>
-            </div>
-          </li>`;
-        listPreview += `<div class="swiper-slide"><img class="cursor" src="${v.url}" alt=""></div>`;
-
+            </li>`))
+        listPreview += `<div id="p_` + v.id + `" class="swiper-slide"><img class="cursor" src="https://www.xinmizj.com/res//picture/preview/` + v.url + `" alt="` + v.keyword + `"></div>`;
       });
-      $('.picture-list .x-wrap').append($(list));
+      $('.picture-list .x-wrap').append(list);
+      imagesLoaded($('.x-wrap'), function () {
+        fluid.add(list);
+      });
       $('.out-container .swiper-wrapper').append($(listPreview));
+    }
+    // 是否于界面显示
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+      );
     }
 
     // 展开预览列表
@@ -675,7 +756,7 @@
       //手机端滑动切换图片
       isPhone && listenTouch();
       //pc端1.5s后隐藏预览列表
-      !isPhone && setTimeout(function() {
+      !isPhone && setTimeout(function () {
         $hidePreviewList.click();
       }, 1500);
     }
@@ -736,7 +817,13 @@
           this.callbackFun();
           break;
         case "touchmove":
-          event.preventDefault();
+          // event.preventDefault();
+          if (event.cancelable) {
+            // 判断默认行为是否已经被禁用
+            if (!event.defaultPrevented) {
+              event.preventDefault();
+            }
+          }
 
           clientX_end = event.changedTouches[0].clientX;
           //判断移动的方向
@@ -752,8 +839,6 @@
           break;
       }
     }
-
-
 
   </script>
 </body>
