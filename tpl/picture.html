@@ -581,7 +581,9 @@
         return;
       }
       var left = parseFloat($(".out-container .swiper-wrapper").css('left').replace('px', ''));
-      $('.out-container .swiper-wrapper').animate({ left: left + singelWidth * num + 'px' });
+      var newLeft = left + singelWidth * num;
+      if(newLeft >= 0) newLeft = 0;
+      $('.out-container .swiper-wrapper').animate({ left: newLeft + 'px' });
     });
     // 切换下一页预览图片
     $(".next-page").on("click", function (e) {
@@ -589,7 +591,9 @@
         return;
       }
       var left = parseFloat($(".out-container .swiper-wrapper").css('left').replace('px', ''));
-      $('.out-container .swiper-wrapper').animate({ left: left - singelWidth * num + 'px' });
+      var newLeft = left - singelWidth * num;
+      if(newLeft >= 0) newLeft = 0;
+      $('.out-container .swiper-wrapper').animate({ left: newLeft + 'px' });
       var listWidth = $(".out-container .swiper-wrapper").children().length * singelWidth;
       if (listWidth < 200 - left + $bodyWidth) {
         loadMore();
