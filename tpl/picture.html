@@ -298,7 +298,7 @@
 
       <!-- 加载更多 -->
       <div class="text-center">
-        <button class="btn-main my-15" onclick="loadMore()">查看更多</button>
+        <button class="btn-main my-15" id="view-more" onclick="loadMore()">查看更多</button>
       </div>
 
     </div>
@@ -679,6 +679,7 @@
               end = data.length < 1
               end && $('.no-more').removeClass('hide')
               $('.loading').addClass('hide')
+              $('#view-more').addClass('hide')
               pageNo += 1
               addMoreData(data)
           },
