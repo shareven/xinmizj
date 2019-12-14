@@ -682,8 +682,8 @@
           success:function(data) {
               end = data.length < 1
               end && $('.no-more').removeClass('hide')
+              end && $('#view-more').addClass('hide')
               $('.loading').addClass('hide')
-              $('#view-more').addClass('hide')
               pageNo += 1
               addMoreData(data)
           },
