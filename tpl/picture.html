@@ -30,7 +30,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/index.html">
-          <img src="/static/images/logo_20190311.png" alt="logo">
+          <img src="/static/images/logo_20191218.png" alt="logo">
         </a>
       </div>
 
@@ -52,7 +52,7 @@
             <a href="picture.html">心密图文</a>
           </li>
           <li>
-            <a href="daochang.html">道场募捐</a>
+            <a href="daochang.html">道场简介</a>
           </li>
           <li>
             <a href="shoplink.html">法物流通</a>
@@ -228,6 +228,14 @@
         <ul class="x-wrap">
           <li class="item">
             <div class="img-box">
+              <img class="media-object cursor" width="100%" src="https://www.xinmizj.com/res//picture/preview///2019/12/15/2c92ab8d6f091760016f092870580030.jpg" alt="">
+              <div class="select-pic hide" aria-hidden="true">
+                <i class="fa fa-square pull-left" aria-hidden="true"></i>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="img-box">
               <img class="media-object cursor" width="100%" src="/static/images/u3.jpg" alt="">
               <div class="select-pic hide" aria-hidden="true">
                 <i class="fa fa-square pull-left" aria-hidden="true"></i>
@@ -308,11 +316,12 @@
 
     <div class="preview-img-box">
       <i class="fa fa-chevron-left picture-arrow arrow-left cursor prev-pic" aria-hidden="true"></i>
-      <img id="preview-img" src="/static/images/u3.jpg" alt="">
+       <img id="preview-img" src="/static/images/u3.jpg" alt="">
       <i class="fa fa-chevron-right picture-arrow arrow-right cursor next-pic" aria-hidden="true"></i>
       <a href="" target="_blank" class="download-wrap">
         下载 <i class="fa fa-download" aria-hidden="true"></i>
       </a>
+      <button class="btn btn-light long-pic-btn">长图预览</button>
     </div>
     <div id="swiper-container5" class="swiper-container list-up">
       <div id="show-list" class="hide">
@@ -329,6 +338,9 @@
       <div class="out-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide active">
+            <img class="cursor" src="https://www.xinmizj.com/res//picture/preview///2019/12/15/2c92ab8d6f091760016f092870580030.jpg" alt="">
+          </div>
+          <div class="swiper-slide ">
             <img class="cursor" src="/static/images/u3.jpg" alt="">
           </div>
           <div class="swiper-slide">
@@ -741,8 +753,22 @@
       if (!isPhone) return;
       $('.download-wrap').toggleClass('hide')
       $(".fullscreen .close").toggleClass('hide')
+      $('.long-pic-btn').toggleClass('hide')
 
     });
+
+    // 电脑端双击预览图片，修改样式，可以实现预览长图
+    $previewImg.on('dblclick', previewLongPic);
+
+    // 点击预览长图按钮，修改样式，可以实现预览长图
+    $('.long-pic-btn').on('click', previewLongPic);
+
+    // 预览长图
+    function previewLongPic(e){
+     var word= $('.long-pic-btn').text()=='长图预览'?'取消':'长图预览';
+     $('.long-pic-btn').text(word);
+      $previewImg.toggleClass('long-pic');
+    }
 
 
     //全屏预览

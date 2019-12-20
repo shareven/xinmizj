@@ -430,6 +430,9 @@ header {
         .navbar-brand {
             // width: 100px;
             line-height: 132px;
+            img{
+                height: 75px;
+            }
         }
         .navbar-collapse.collapse {
             position: relative;
@@ -650,8 +653,8 @@ header {
 
 @media (min-width: 768px) and (max-width:1060px) {
     header .navbar .navbar-brand img {
-        margin-top: 40px;
-        height: 24px;
+        margin-top: 20px;
+        height: 54px;
       }
     header {
         .navbar ul {
@@ -724,7 +727,7 @@ header {
                         padding: 0;
                         height: 100%;
                         color: #e4e0e0;
-                        line-height: 30px;
+                        line-height: 40px;
                         font-size: 15px;
                         &:hover,
                         &:focus {
@@ -760,7 +763,7 @@ header {
         }
     }
     .main {
-        margin-top: 50px;
+        margin-top: 10px;
         padding: 0 10px;
     }
     .copyright {
@@ -828,6 +831,48 @@ footer {
         width: 100%; // height: 100px;
         // height: 100px;
         // background: url('/static/images/banner.png') center center no-repeat;
+    }
+    .top-video {
+        &>div {
+            a {
+                display: block;
+                position: relative;
+                height: 350px;
+                width: 100%;
+                background-color: #ddd;
+                background-repeat: no;
+                background-size: cover;
+                background-position: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .name {
+                    position: absolute;
+                    left: 10px;
+                    bottom: 20px;
+                    color: #fff;
+                }
+            }
+        }
+        .item-middle a {
+            height: 200px;
+        }
+        .swiper-pagination-video {
+            .center-x;
+            bottom: 10px;
+            .swiper-pagination-switch {
+                display: inline-block;
+                margin: 0 5px;
+                .size-q(10px);
+                border-radius: 10px;
+                background: rgba(0, 0, 0, .25);
+                cursor: pointer;
+                &.swiper-visible-switch.swiper-active-switch {
+                    .m-bgcolor;
+                }
+            }
+        }
     }
     h1.title {
         padding-top: 60px;
@@ -1786,22 +1831,27 @@ footer {
     .preview-img-box{
         position: relative;
         padding: 15px 5px;
-        // height: 330px;
         height: 100%;
         min-height:430px;
         text-align: center;
        z-index: 2;
+       overflow-y: scroll;
         #preview-img{
             .center;
             margin: auto;
             max-height: 100%;
-            max-width: 100%;
             cursor: pointer;
             z-index: 1;
+            &.long-pic{
+                position: relative;
+                max-width: 1000px;
+                width: 100%;
+                max-height: none;
+            }
         }
         
         .picture-arrow{
-            position: absolute;
+            position: fixed;
             top: 0;
             bottom:0;
             width: 90px;
@@ -1822,9 +1872,23 @@ footer {
                 right: 0;
             }
         }
+        .long-pic-btn{
+            position: fixed;
+            bottom: 155px;
+            right: 28px;
+            margin-left: 40px;
+            padding: 5px 8px;
+            background: #ddd;
+            color:#333;
+            z-index: 2;
+            outline: none;
+            &:hover{
+                background: #4E8500;
+                color: #fff;
+            }
+        }
         .download-wrap{
-            position: absolute;
-            // top: -45px;
+            position: fixed;
             bottom: 115px;
             right: 28px;
             margin-left: 40px;
@@ -1839,6 +1903,7 @@ footer {
             }
         }
     }
+    
     
     #swiper-container5 {
         position: relative;
@@ -1947,6 +2012,12 @@ footer {
                     color: #4E7319;
                 }
             }
+        }
+    }
+    .btn{
+        &.active,
+        &:hover {
+            .m-bgcolor;
         }
     }
     .book-list {
@@ -2226,50 +2297,9 @@ footer {
 /* 书库 end */
 
 /* 视频 start */
-
+.book,
 .video {
-    .top-video {
-        &>div {
-            a {
-                display: block;
-                position: relative;
-                height: 350px;
-                width: 100%;
-                background-color: #ddd;
-                background-repeat: no;
-                background-size: cover;
-                background-position: center;
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-                .name {
-                    position: absolute;
-                    left: 10px;
-                    bottom: 20px;
-                    color: #fff;
-                }
-            }
-        }
-        .item-middle a {
-            height: 200px;
-        }
-        .swiper-pagination-video {
-            .center-x;
-            bottom: 10px;
-            .swiper-pagination-switch {
-                display: inline-block;
-                margin: 0 5px;
-                .size-q(10px);
-                border-radius: 10px;
-                background: rgba(0, 0, 0, .25);
-                cursor: pointer;
-                &.swiper-visible-switch.swiper-active-switch {
-                    .m-bgcolor;
-                }
-            }
-        }
-    }
+    
     .get-video {
         .row {
             background: #fff;
@@ -2329,6 +2359,9 @@ footer {
                 }
             }
         }
+    }
+    .navbar-collapse{
+        background: #ffffff;
     }
     .navbar-brand {
         padding: 29px 15px;
@@ -3250,7 +3283,7 @@ em.tip2 {
             }
         }
     }
-    .video {
+    .home {
         .top-video {
             &>div {
                 a {
@@ -3771,10 +3804,7 @@ em.tip2 {
         }
     }
     .video {
-        .top-video>div a {
-            margin: 5px;
-            height: auto;
-        }
+        
         .video-list {
             ul {
                 li {
@@ -3858,6 +3888,10 @@ em.tip2 {
         }
     }
     .home {
+        .top-video>div a {
+            margin: 5px;
+            height: 230px;
+        }
         h1.title {
             padding: 20px 10px 15px;
             text-align: center;
@@ -4082,6 +4116,9 @@ em.tip2 {
     .fullscreen {
         .preview-img-box .download-wrap{
             bottom:15px;
+        }
+        .preview-img-box .long-pic-btn{
+            bottom: 55px;
         }
         .prev-pic,
         .next-pic,
