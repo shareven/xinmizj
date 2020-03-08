@@ -29,7 +29,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/index.html">
-          <img src="/static/images/logo_20190311.png"  alt="logo">
+          <img src="/static/images/logo_20191218.png"  alt="logo">
         </a>
       </div>
 
@@ -51,7 +51,7 @@
             <a href="picture.html">心密图文</a>
           </li>
           <li>
-            <a href="daochang.html">道场募捐</a>
+            <a href="daochang.html">道场简介</a>
           </li>
           <li>
             <a href="shoplink.html">法物流通</a>
@@ -96,9 +96,31 @@
 
   <!-- head -->
   <div class="main home">
-    <section class="top-pic">
-      <img src="/static/images/banner3.jpg" class="img-responsive" alt="Responsive image">
-    </section>
+    <section class="top-video hidden-xs1 clearfix">
+      <div id="swiper-container-video" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide clearfix">
+              <a href="videodetail.html" class="go"
+              style="background-image:url(/static/images/video_banner01.png)">
+                <p class="name">药师七1111111释</p>
+              </a>
+            </div>
+            <div class="swiper-slide clearfix">
+              <a href="videodetail.html" class="go"
+               style="background-image:url(/static/images/video_banner02.png)">
+                <p class="name">药师七22222释</p>
+              </a>
+            </div>
+            <div class="swiper-slide clearfix">
+              <a href="videodetail.html" class="go"
+               style="background-image:url(/static/images/video_banner03.png)">
+                <p class="name">药师七佛333333333释</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination-video"></div>
+      </div> 
+    </section> 
 
     <section class="home-introduction">
       
@@ -397,6 +419,18 @@
   <script src="/static/lib/jquery.lazyload.min.js"></script>
   <script src="/static/lib/swiper/swiper.min22.js"></script>
   <script src="/static/js/home.js"></script>
+  <script>
+   //轮播
+
+   var mySwiper2 = new Swiper('#swiper-container-video', {
+         autoplay: 5000,
+          loop: true,
+         paginationClickable: true,
+         resizeReInit: true,
+         pagination:'.swiper-pagination-video'
+         
+     });
+  </script>
 </body>
 
 </html>

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/font/iconfont.css">
   <link rel="stylesheet" href="/static/lib/swiper/swiper.min.css">
+  <link rel="stylesheet" href="/static/lib/bootsnav/bootsnav.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 
@@ -30,7 +31,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/index.html">
-          <img src="/static/images/logo_20190311.png"  alt="logo">
+          <img src="/static/images/logo_20191218.png"  alt="logo">
         </a>
       </div>
 
@@ -49,7 +50,7 @@
             <a href="audio.html">心密音频</a>
           </li>
           <li>
-            <a href="daochang.html">道场募捐</a>
+            <a href="daochang.html">道场简介</a>
           </li>
           <li>
             <a href="shoplink.html">法物流通</a>
@@ -82,95 +83,79 @@
   <!-- head -->
 
   <div class="main book clearfix">
-    <section class="book-type col-md-4 ">
-      <div role="tabpanel">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active">
-            <a href="#booktype1" aria-controls="booktype1" role="tab" data-toggle="tab">心密文集</a>
-          </li>
-          <li role="presentation">
-            <a href="#booktype2" aria-controls="booktype2" role="tab" data-toggle="tab">禅宗辑要</a>
-          </li>
-          <li role="presentation">
-            <a href="#booktype3" aria-controls="booktype3" role="tab" data-toggle="tab">大赞经</a>
-          </li>
-          <li role="presentation">
-            <a href="#booktype4" aria-controls="booktype4" role="tab" data-toggle="tab">大ss经</a>
-          </li>
-        </ul>
+    <section class="get-video clearfix">
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="booktype1">
-            <ul>
-              <li class="book-nav ">佛心经</li>
-              <li class="book-nav active">元音老人11</li>
-              <li class="book-nav">齐老师</li>
-            </ul>
+      <div class="container-fluid ">
+        <div class="row clearfix">
+          <div class="form-group pull-right  search-group col-md-3 col-sm-3  col-xs-12 ">
+            <input type="text" class="search" placeholder="从书库中搜索...">
+            <i class="iconfont icon-iconss"></i>
           </div>
-          <div role="tabpanel" class="tab-pane" id="booktype2">
-            <ul>
-              <li class="book-nav active">大愚祖师</li>
-              <li class="book-nav">元音老人22</li>
-              <li class="book-nav">好老师</li>
-            </ul>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="booktype3">
-            <ul>
-              <li class="book-nav">佛心经</li>
-              <li class="book-nav active">元音老人33</li>
-              <li class="book-nav">齐师</li>
-            </ul>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="booktype4">
-            <ul>
-              <li class="book-nav">佛心经4</li>
-              <li class="book-nav active">元音老人44</li>
-              <li class="book-nav">齐师</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="book-list col-md-8 col-sm-12 ">
-
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="panel-title clearfix">
-
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <div class="search-group col-sm-11 ">
-                  <input type="search" name="" placeholder="搜索所有音频" class="form-control" value="" required="required" title="">
-                  <a href="">
-                    <i class="iconfont icon-iconss"></i>
-                  </a>
-                </div>
+          <div class=" col-md-5 col-sm-5 col-xs-2 ">
+            <nav class="navbar navbar-default navbar-mobile bootsnav ">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu2">
+                  <i class="fa fa-bars"></i>
+                </button>
               </div>
+              <div class="collapse navbar-collapse" id="navbar-menu2">
+                <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
 
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <span class="click-num active">总点击</span>
-              <span class="updatetime">更新时间</span>
-              <span class="text-muted">共3668本作品</span>
-              <span class="text-muted m-color-hover" id="open-dowload-box">下载</span>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">心密文集</a>
+                    <ul class="dropdown-menu animated">
+                      <li>
+                        <a href="#">佛心经</a>
+                      </li>
+                      <li>
+                        <a href="#">大愚祖师</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">禅宗辑要</a>
+                    <ul class="dropdown-menu animated">
+                      <li>
+                        <a href="#">七佛</a>
+                      </li>
+                      <li>
+                        <a href="#">本师化迹</a>
+                      </li>
+                     
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+          <div class="form-group col-md-4 col-sm-4 col-xs-10">
+
+            <a class="btn btn-default click-num active">总点击</a>
+            <a class="btn btn-default updatetime">更新时间</a>
+            
+              <span class="text-muted m-color-hover mx-15" id="open-dowload-box">下载</span>
               <span class="hide" id="dowload-box">
                 <span class="text-info" id="select-all">全选</span>
-                <span class="text-default" id="cancel-dowload">取消</span>
+                <span class="text-default mx-15" id="cancel-dowload">取消</span>
                 <span class="text-success" id="dowload-action">下载</span>
               </span>
-            </div>
           </div>
+          
         </div>
+      </div>
+    </section>
+
+    <section class="book-list ">
+
+      <div class="panel panel-default">
+        
         <div class="panel-body">
 
           <div class="row">
 
-            <div class="media col-md-6 col-xs-6">
+            <div class="media col-md-4 col-xs-6">
               
               <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
@@ -185,7 +170,7 @@
               </div>
             </div>
 
-            <div class="media col-md-6 col-xs-6">
+            <div class="media col-md-4 col-xs-6">
                 <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
@@ -199,7 +184,7 @@
               </div>
             </div>
 
-            <div class="media col-md-6 col-xs-6">
+            <div class="media col-md-4 col-xs-6">
                 <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
@@ -213,7 +198,7 @@
               </div>
             </div>
 
-            <div class="media col-md-6 col-xs-6">
+            <div class="media col-md-4 col-xs-6">
                 <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
@@ -227,7 +212,7 @@
               </div>
             </div>
 
-            <div class="media col-md-6 col-xs-6">
+            <div class="media col-md-4 col-xs-6">
                 <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">
@@ -241,7 +226,7 @@
               </div>
             </div>
 
-            <div class="media col-md-6 col-xs-6">
+            <div class="media col-md-4 col-xs-6">
                 <i class="fa fa-square pull-left select-book hide" aria-hidden="true"></i>
               <a class="pull-left" href="bookdetail.html">
                 <img class="media-object" data-original="/static/images/book.png" alt="">

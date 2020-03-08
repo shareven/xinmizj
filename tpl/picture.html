@@ -30,7 +30,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/index.html">
-          <img src="/static/images/logo_20190311.png" alt="logo">
+          <img src="/static/images/logo_20191218.png" alt="logo">
         </a>
       </div>
 
@@ -52,7 +52,7 @@
             <a href="picture.html">心密图文</a>
           </li>
           <li>
-            <a href="daochang.html">道场募捐</a>
+            <a href="daochang.html">道场简介</a>
           </li>
           <li>
             <a href="shoplink.html">法物流通</a>
@@ -228,6 +228,14 @@
         <ul class="x-wrap">
           <li class="item">
             <div class="img-box">
+              <img class="media-object cursor" width="100%" src="https://www.xinmizj.com/res//picture/preview///2019/12/15/2c92ab8d6f091760016f092870580030.jpg" alt="">
+              <div class="select-pic hide" aria-hidden="true">
+                <i class="fa fa-square pull-left" aria-hidden="true"></i>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="img-box">
               <img class="media-object cursor" width="100%" src="/static/images/u3.jpg" alt="">
               <div class="select-pic hide" aria-hidden="true">
                 <i class="fa fa-square pull-left" aria-hidden="true"></i>
@@ -293,65 +301,98 @@
 
         </ul>
         <div class="text-center my-15 loading">正在努力加载图片...</div>
+        <div class="text-center my-15 no-more hide">没有更多了</div>
       </section>
 
       <!-- 加载更多 -->
       <div class="text-center">
-        <button class="btn-main my-15" onclick="loadMore()">查看更多</button>
+        <button class="btn-main my-15" id="view-more" onclick="loadMore()">查看更多</button>
       </div>
 
-    </div>
-    <div class="picture-preview hide">
-
-      <div class="preview-img-box">
-        <i class="fa fa-chevron-left picture-arrow arrow-left cursor prev-pic" aria-hidden="true"></i>
-        <img id="preview-img" src="/static/images/u3.jpg" alt="">
-        <i class="fa fa-chevron-right picture-arrow arrow-right cursor next-pic" aria-hidden="true"></i>
-        <a href="" target="_blank" class="download-wrap">
-          下载 <i class="fa fa-download" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div id="swiper-container5" class="swiper-container">
-        <i class="fa fa-chevron-left picture-arrow arrow-left cursor prev-page" aria-hidden="true"></i>
-
-        <div class="out-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide active">
-              <img class="cursor" src="/static/images/u3.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img class="cursor" src="/static/images/u4.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img class="cursor" src="/static/images/book.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img class="cursor" src="/static/images/u6.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img class="cursor" src="/static/images/daochang1.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img class="cursor" src="/static/images/daochang2.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img class="cursor" src="/static/images/img1.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img class="cursor" src="/static/images/img2.jpg" alt="">
-            </div>
-
-
-          </div>
-
-        </div>
-        <i class="fa fa-chevron-right picture-arrow arrow-right cursor next-page" aria-hidden="true"></i>
-      </div>
-      <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     </div>
   </div>
 
+  <div class="fullscreen hide">
 
+    <div class="preview-img-box">
+      <i class="fa fa-chevron-left picture-arrow arrow-left cursor prev-pic" aria-hidden="true"></i>
+       <img id="preview-img" src="/static/images/u3.jpg" alt="">
+      <i class="fa fa-chevron-right picture-arrow arrow-right cursor next-pic" aria-hidden="true"></i>
+      <a href="" target="_blank" class="download-wrap">
+        下载 <i class="fa fa-download" aria-hidden="true"></i>
+      </a>
+      <button class="btn btn-light long-pic-btn">长图预览</button>
+    </div>
+    <div id="swiper-container5" class="swiper-container list-up">
+      <div id="show-list" class="hide">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        展开列表
+      </div>
+      <div id="hide-list">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        收起列表
+      </div>
+
+      <i class="fa fa-chevron-left picture-arrow arrow-left cursor prev-page" aria-hidden="true"></i>
+
+      <div class="out-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide active">
+            <img class="cursor" src="https://www.xinmizj.com/res//picture/preview///2019/12/15/2c92ab8d6f091760016f092870580030.jpg" alt="">
+          </div>
+          <div class="swiper-slide ">
+            <img class="cursor" src="/static/images/u3.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="cursor" src="/static/images/u4.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="cursor" src="/static/images/book.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="cursor" src="/static/images/u6.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="cursor" src="/static/images/daochang1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="cursor" src="/static/images/daochang2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="cursor" src="/static/images/img1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="cursor" src="/static/images/img2.jpg" alt="">
+          </div>
+
+
+        </div>
+
+      </div>
+      <i class="fa fa-chevron-right picture-arrow arrow-right cursor next-page" aria-hidden="true"></i>
+    </div>
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <!-- 预览滑动提示 -->
+    <div class="modal" id="touchModalPrev" data-backdrop="false" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center1 ">
+            已是第一张 <br>
+            向左滑动查看更多
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="touchModalNext" data-backdrop="false" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center1 ">
+            已是最后一张
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- footer -->
   <footer>
     <div class="row">
@@ -407,31 +448,23 @@
 
 
   <script>
-    var initImgDate = [
-      { id: 1, url: '/static/images/u3.jpg' },
-      { id: 2, url: '/static/images/u4.jpg' },
-      { id: 3, url: '/static/images/u5.jpg' },
-      { id: 4, url: '/static/images/u6.jpg' },
-      { id: 5, url: '/static/images/daochang1.jpg' },
-      { id: 6, url: '/static/images/daochang2.jpg' },
-      { id: 7, url: '/static/images/daochang3.jpg' },
-      { id: 8, url: '/static/images/img1.jpg' },
-      { id: 9, url: '/static/images/img2.jpg' },
-    ];
-
-
     var $previewImg = $('#preview-img'),
       $bodyWidth = $(document.body).width(),
       isPhone = $bodyWidth < 768,
       singelWidth = 66, //单个预览列表图片+margin的宽度
       num = Math.floor(($bodyWidth - 60) / singelWidth);//预览单页显示个数
 
+    var $prevBox = $('.fullscreen')[0], //全屏预览元素
+      $prevListContainer = $('#swiper-container5'),//预览列表父容器
+      $showPreviewList = $('#show-list'),//展开列表按钮
+      $hidePreviewList = $('#hide-list');//收起列表按钮
+
     // 图片瀑布流
+    var fluid;
     imagesLoaded($('.x-wrap'), function () {
       $('.loading').addClass('hide');
-      var fluid = new $('.x-wrap').fluid({ col: isPhone?2:6, spacingX: 20, spacingY: 20 });
+      fluid = new $('.x-wrap').fluid({ col: isPhone ? 2 : 6, spacingX: 20, spacingY: 20 });
     });
-
     //提示查看分类
     var hasKnowTip = window.localStorage.getItem('hasKnowTip');
     if (!hasKnowTip) {
@@ -442,6 +475,34 @@
       });
     }
 
+    var search = location.search
+    var url = location.pathname + "?"
+    if (search.indexOf("?") != -1) {
+      var str = search.substr(1);
+      var strs = str.split("&");
+      for (var i = 0; i < strs.length; i++) {
+        var k = strs[i].split("=")[0], v = strs[i].split("=")[1]
+        if (k == "keyword" || k == "pageNo" || k == "orderCol") continue
+        url += k + "=" + v + "&"
+      }
+    }
+    var searchInput = $(".search-group .search").attr("placeholder", "从" + ($.trim($($(".navbar-nav a.active")[0]).text()) || "所有图文") + "中搜索").on("keypress", function (e) {
+      if (e.keyCode && e.keyCode != 13) return
+      var keyword = $.trim($(this).val())
+      e.preventDefault()
+      if (keyword.length > 20) {
+        alert("搜索关键词不可超过20个字符")
+        return
+      }
+      if (keyword.indexOf("%") > -1) {
+        alert("搜索关键词不可包含关键词'%'")
+        return
+      }
+      location.href = url + "orderCol=&keyword=" + encodeURIComponent(keyword)
+    })
+    $(".search-group i").click(function () {
+      searchInput.trigger("keypress")
+    })
 
     // 选择下载
     $("#open-dowload-box").on("click", function () {
@@ -450,11 +511,24 @@
       $(".select-pic").removeClass("hide");
     });
     // 开始下载勾选的图片
-    $("#dowload-action").on("click", function () {
-      /** 待完善 11111111111111111111111111111111111111111111111111111111111111111111111111*/
-
-      cancelDownload();
-    });
+    $("#dowload-action").click(function () {
+      var picIds = []
+      $(".fa-check-square").parent().prev().each(function () {
+        picIds.push($(this).attr("id"))
+      })
+      if (picIds.length < 1) {
+        alert("请选择您要下载的图片")
+        return
+      }
+      if (picIds.length > 10) {
+        alert("不可一次性下载超过10张图片")
+        return
+      }
+      window.open("/picture/download/" + picIds.join("-"), '_blank').location
+    })
+    $(".download-wrap").click(function () {
+      window.open("/picture/download/" + $(".swiper-slide.active").attr("id").replace("p_", ""), '_blank').location
+    })
     // 取消下载
     function cancelDownload() {
       $(".select-pic i").removeClass("fa-check-square").addClass("fa-square");
@@ -463,7 +537,6 @@
       $("#dowload-box").addClass("hide");
     }
     $("#cancel-dowload").on("click", cancelDownload);
-
     // 全选
     $("#select-all").on("click", function () {
       $(".select-pic i").removeClass("fa-square").addClass("fa-check-square");
@@ -476,18 +549,29 @@
     $(".picture-list .x-wrap").on("click", function (e) {
       if (e.target.nodeName == "IMG") {
         $('.picture-main').addClass('hide');
-        $('.picture-preview').removeClass('hide');
+        $('.fullscreen').removeClass('hide');
         var src = $(e.target).attr('src');
         $previewImg.attr('src', src);
         $(".out-container .swiper-slide.active").removeClass('active');
-        $(".out-container .swiper-slide").find('img[src="' + src + '"]').parents('.swiper-slide').addClass('active');
+        //dev 
+        // $(".out-container .swiper-slide").find('img[src="' + src + '"]').parents('.swiper-slide').addClass('active');
+        $("#p_" + $(e.target).attr('id')).addClass('active')
         stayCenter();
+        fullScreen()
       }
     });
     // 退出预览
-    $(".picture-preview .close").on("click", function () {
-      $('.picture-preview').addClass('hide');
+    $(".fullscreen .close").on("click", function () {
+      $('.fullscreen').addClass('hide');
       $('.picture-main').removeClass('hide');
+      cancelFullScreen();
+      //修复退出全屏时，瀑布流异常
+      fluid = new $('.x-wrap').fluid({ col: isPhone ? 2 : 6, spacingX: 20, spacingY: 20 });
+
+      var src = $(".out-container .swiper-slide.active img").attr('src');
+      //dev 
+      // window.scrollTo(0, $(".picture-list .x-wrap").find('img[src="' + src + '"]').offset().top);
+      window.scrollTo(0, $("#" + $(".swiper-slide.active").attr("id").replace("p_", "")).offset().top);
     });
     // 点击选择预览图片
     $(".out-container .swiper-wrapper").on("click", function (e) {
@@ -500,89 +584,293 @@
       }
     });
     // 切换上一张预览图片
-    $(".prev-pic").on("click", function (e) {
-      var $prev = $(".out-container .swiper-slide.active").prev();
-      if (!$prev.length) return;
-      var src = $prev.find('img').attr('src');
-      $previewImg.attr('src', src);
-      $(".out-container .swiper-slide.active").removeClass('active');
-      $prev.addClass('active');
-      stayCenter();
-    });
+    $(".prev-pic").on("click", showPrevPic);
     // 切换下一张预览图片
-    $(".next-pic").on("click", function (e) {
-      var $next = $(".out-container .swiper-slide.active").next();
-      if (!$next.length) return;
-      var src = $next.find('img').attr('src');
-      $previewImg.attr('src', src);
-      $(".out-container .swiper-slide.active").removeClass('active');
-      $next.addClass('active');
-      stayCenter()
-    });
+    $(".next-pic").on("click", showNextPic);
     // 切换上一页预览图片
     $(".prev-page").on("click", function (e) {
+      if (isElementInViewport($(".swiper-wrapper").children(".swiper-slide:first-child")[0])) {
+        return;
+      }
       var left = parseFloat($(".out-container .swiper-wrapper").css('left').replace('px', ''));
-      $('.out-container .swiper-wrapper').animate({ left: left + singelWidth * num + 'px' });
+      var newLeft = left + singelWidth * num;
+      if(newLeft >= 0) newLeft = 0;
+      $('.out-container .swiper-wrapper').animate({ left: newLeft + 'px' });
     });
     // 切换下一页预览图片
     $(".next-page").on("click", function (e) {
+      if (isElementInViewport($(".swiper-wrapper").children(".swiper-slide:last-child")[0]) && end) {
+        return;
+      }
       var left = parseFloat($(".out-container .swiper-wrapper").css('left').replace('px', ''));
-      $('.out-container .swiper-wrapper').animate({ left: left - singelWidth * num + 'px' });
+      var newLeft = left - singelWidth * num;
+      if(newLeft >= 0) newLeft = 0;
+      $('.out-container .swiper-wrapper').animate({ left: newLeft + 'px' });
       var listWidth = $(".out-container .swiper-wrapper").children().length * singelWidth;
       if (listWidth < 200 - left + $bodyWidth) {
         loadMore();
       }
     });
 
+    // 切换上一张预览图片
+    function showPrevPic() {
+      var $prev = $(".out-container .swiper-slide.active").prev();
+      if (!$prev.length) {
+        $('#touchModalPrev').modal('show');
+        setTimeout(function () {
+          $('#touchModalPrev').modal('hide');
+        }, 1500);
+        return
+      }
+      var src = $prev.find('img').attr('src');
+      $previewImg.attr('src', src);
+      $(".out-container .swiper-slide.active").removeClass('active');
+      $prev.addClass('active');
+      stayCenter();
+    }
+
+    // 切换下一张预览图片
+    function showNextPic() {
+      var $next = $(".out-container .swiper-slide.active").next();
+      if (!$next.length) {
+        $('#touchModalNext').modal('show');
+        setTimeout(function () {
+          $('#touchModalNext').modal('hide');
+        }, 1500);
+        return
+      }
+      var src = $next.find('img').attr('src');
+      $previewImg.attr('src', src);
+      $(".out-container .swiper-slide.active").removeClass('active');
+      $next.addClass('active');
+      stayCenter()
+    }
+
     //保持着选中框在中间位置
     function stayCenter() {
       var left = $(".out-container .swiper-slide.active").position().left;
       var listWidth = $(".out-container .swiper-wrapper").children().length * singelWidth;
-
       if (left > $bodyWidth / 2) {
         $('.out-container .swiper-wrapper').animate({ left: $bodyWidth / 2 - left - singelWidth + 'px' });
-
       } else {
         $('.out-container .swiper-wrapper').animate({ left: 0 + 'px' });
       }
-
       if (listWidth < 200 + left + ($bodyWidth / 2)) {
         loadMore();
+      }
+      mobileAutoLoadMore();
+    }
+    //手机预览 自动加载更多
+    function mobileAutoLoadMore() {
+      if (isPhone) {
+        var len = $('.picture-list .x-wrap').children().length;
+        // 总数小于10时自动加载更多
+        if (len < 10) {
+          loadMore()
+        } else {
+          var index = $(".out-container .swiper-slide.active").index();
+          // 距离最后一张还有8张时自动加载更多
+          if (index >= len - 8) {
+            loadMore()
+          }
+        }
       }
     }
 
     //加载更多
+    var loadFlag = false, end = false, pageNo = 2
     function loadMore() {
-      // addMoreData() 加载模拟数据
+      if (loadFlag || end) {
+        return
+      }
+      //dev
+      // let arr = [{ "id": "2c92ab8d6ef8f4cb016ef8f4cb660002", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cb660002.jpg", "keyword": "13、德山托钵", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cb750003", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cb750003.jpg", "keyword": "14、南泉斩猫", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cb860004", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cb860004.jpg", "keyword": "15、洞山三顿", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cb950005", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cb950005.jpg", "keyword": "16、钟声七条", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cba20006", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cba20006.jpg", "keyword": "17、国师三唤", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cbb30007", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cbb30007.jpg", "keyword": "18、洞山三斤", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cbc50008", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cbc50008.jpg", "keyword": "19、平常是道", "sortTypeStr": "ASC" }, { "id": "2c92ab8d6ef8f4cb016ef8f4cbd40009", "url": "/2019/12/12/2c92ab8d6ef8f4cb016ef8f4cbd40009.jpg", "keyword": "20、大力量人.jpg", "sortTypeStr": "ASC" }, { "id": "47d0a8c04111e310b6b06a715fbf8bc0994a50b2", "url": "/2019/12/08/47d0a8c04111e310b6b06a715fbf8bc0994a50b2.jpg", "keyword": "1、赵州狗子.jpg", "sortTypeStr": "ASC" }, { "id": "4cbe762c2bc0b3d2d8c6833eec5cf04f4098d61c", "url": "/2019/12/08/4cbe762c2bc0b3d2d8c6833eec5cf04f4098d61c.jpg", "keyword": "10、清税孤贫.jpg", "sortTypeStr": "ASC" }, { "id": "521b3d225356e0d5188a581fae8813a85a6cae08", "url": "/2019/12/08/521b3d225356e0d5188a581fae8813a85a6cae08.jpg", "keyword": "2、百丈野狐.jpg", "sortTypeStr": "ASC" }, { "id": "5c991b594cf8a1630b05328c1a29efcba93a48c4", "url": "/2019/12/08/5c991b594cf8a1630b05328c1a29efcba93a48c4.jpg", "keyword": "3、俱脂竖指.jpg", "sortTypeStr": "ASC" }, { "id": "5ee241dcddc047d2d1d24ae2f9ef6eee59067900", "url": "/2019/12/08/5ee241dcddc047d2d1d24ae2f9ef6eee59067900.jpg", "keyword": "8、奚仲造车.jpg", "sortTypeStr": "ASC" }, { "id": "bb2fc9349b0bc3b3a7d097dee466e331788b6eb9", "url": "/2019/12/08/bb2fc9349b0bc3b3a7d097dee466e331788b6eb9.jpg", "keyword": "4、胡子无须.jpg", "sortTypeStr": "ASC" }, { "id": "c4a97f302856500788fa3ab3b529db76d31575ac", "url": "/2019/12/08/c4a97f302856500788fa3ab3b529db76d31575ac.jpg", "keyword": "6、世尊拈花.jpg", "sortTypeStr": "ASC" }, { "id": "c54214ab9826060ff0df83d9374df5e11fd1dd5d", "url": "/2019/12/08/c54214ab9826060ff0df83d9374df5e11fd1dd5d.jpg", "keyword": "7、赵州洗钵.jpg", "sortTypeStr": "ASC" }, { "id": "daf14baf1ad8e5d3277b0f3864a495d05baf831e", "url": "/2019/12/08/daf14baf1ad8e5d3277b0f3864a495d05baf831e.jpg", "keyword": "9、大通智胜.jpg", "sortTypeStr": "ASC" }, { "id": "fc8b38355df500f3892733f0e58b1575b6045c82", "url": "/2019/12/08/fc8b38355df500f3892733f0e58b1575b6045c82.jpg", "keyword": "5、香严上树.jpg", "sortTypeStr": "ASC" }]
+      // addMoreData(arr)
+      loadFlag = true
       $('.loading').removeClass('hide');
-      /** 待完善 11111111111111111111111111111111111111111111111111111111111111111111111111*/
-
-      // 这里分页请求的分页数据个数最好>=变量num
-      $.get('/url', function () {
-        $('.loading').addClass('hide');
-
+      $.ajax({
+          url:"/picture/list.do",
+          data:{pageNo:pageNo},
+          success:function(data) {
+              end = data.length < 1
+              end && $('.no-more').removeClass('hide')
+              end && $('#view-more').addClass('hide')
+              $('.loading').addClass('hide')
+              pageNo += 1
+              addMoreData(data)
+          },
+          complete:function() {
+              loadFlag = false
+          }
       })
     }
-
-
-    function addMoreData() {
-      var list = '';
+    function addMoreData(imgData) {
+      var list = [];
       var listPreview = '';
-      initImgDate.map((v) => {
-        list += `<li class="">
-            <div class="img-box">
-              <img class="media-object cursor" width="100%" src="${v.url}" alt="">
-              <div class="select-pic hide" aria-hidden="true">
-                <i class="fa fa-square pull-left" aria-hidden="true"></i>
+      imgData.map((v) => {
+        list.push($(`<li class="item">
+              <div class="img-box">
+                <img id="` + v.id + `" class="media-object cursor" width="100%" src="https://www.xinmizj.com/res//picture/preview/` + v.url + `" alt="` + v.keyword + `">
+                <div class="select-pic hide" aria-hidden="true">
+                  <i class="fa fa-square pull-left" aria-hidden="true"></i>
+                </div>
               </div>
-            </div>
-          </li>`;
-        listPreview += `<div class="swiper-slide"><img class="cursor" src="${v.url}" alt=""></div>`;
-
+            </li>`))
+        listPreview += `<div id="p_` + v.id + `" class="swiper-slide"><img class="cursor" src="https://www.xinmizj.com/res//picture/preview/` + v.url + `" alt="` + v.keyword + `"></div>`;
       });
-      $('.picture-list .x-wrap').append($(list));
+      $('.picture-list .x-wrap').append(list);
+      imagesLoaded($('.x-wrap'), function () {
+        fluid.add(list);
+      });
       $('.out-container .swiper-wrapper').append($(listPreview));
     }
+    // 是否于界面显示
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+      );
+    }
+
+    // 展开预览列表
+    $showPreviewList.on('click', function () {
+      $prevListContainer.addClass('list-up');
+      $hidePreviewList.removeClass('hide')
+      $showPreviewList.addClass('hide')
+    });
+    // 收起预览列表
+    $hidePreviewList.on('click', function () {
+      $prevListContainer.removeClass('list-up');
+      $showPreviewList.removeClass('hide')
+      $hidePreviewList.addClass('hide')
+    });
+
+    // 手机端点击预览图片，隐藏和显示下载按钮,退出按钮
+    $previewImg.on('click', function () {
+      if (!isPhone) return;
+      $('.download-wrap').toggleClass('hide')
+      $(".fullscreen .close").toggleClass('hide')
+      $('.long-pic-btn').toggleClass('hide')
+
+    });
+
+    // 电脑端双击预览图片，修改样式，可以实现预览长图
+    $previewImg.on('dblclick', previewLongPic);
+
+    // 点击预览长图按钮，修改样式，可以实现预览长图
+    $('.long-pic-btn').on('click', previewLongPic);
+
+    // 预览长图
+    function previewLongPic(e){
+     var word= $('.long-pic-btn').text()=='长图预览'?'取消':'长图预览';
+     $('.long-pic-btn').text(word);
+      $previewImg.toggleClass('long-pic');
+    }
+
+
+    //全屏预览
+    function fullScreen() {
+      if ($prevBox.requestFullscreen) {
+        $prevBox.requestFullscreen();
+      }
+      else if ($prevBox.mozRequestFullScreen) {
+        console.log($prevBox.mozRequestFullScreen);
+        $prevBox.mozRequestFullScreen();
+      }
+      else if ($prevBox.webkitRequestFullScreen) {
+        console.log($prevBox.webkitRequestFullScreen);
+        $prevBox.webkitRequestFullScreen();
+      }
+      //手机端滑动切换图片
+      isPhone && listenTouch();
+      //pc端1.5s后隐藏预览列表
+      !isPhone && setTimeout(function () {
+        $hidePreviewList.click();
+      }, 1500);
+    }
+    //取消全屏预览
+    function cancelFullScreen() {
+      if (document.cancelFullscreen) {
+        document.cancelFullscreen();
+      } else if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.msCancelFullScreen) {
+        document.msCancelFullScreen();
+      }
+      //手机端滑动切换图片 取消监听
+      isPhone && cancelListenTouch()
+      //pc端显示预览列表
+      !isPhone && $showPreviewList.click();
+    }
+    // 取消监听触摸滑动
+    function cancelListenTouch() {
+      document.removeEventListener('touchstart', touch, false);
+      document.removeEventListener('touchmove', touch, false);
+      document.removeEventListener('touchend', touch, false);
+    }
+
+    // 监听触摸滑动
+    function listenTouch() {
+      document.addEventListener('touchstart', touch, false);
+      document.addEventListener('touchmove', touch, false);
+      document.addEventListener('touchend', touch, false);
+    }
+
+    function touch(event) {
+      var event = event || window.event;
+      var distance, clientX_start, clientX_end,
+        minRange = 50;
+      this.clientX_start;
+      this.direction;
+
+      this.callbackFun = function () {
+        if (this.direction == 'ltr') {
+          //  切换上一张图片
+          showPrevPic();
+        }
+        else if (this.direction == 'rtl') {
+          //  切换下一张图片
+          showNextPic();
+        }
+      }
+      switch (event.type) {
+        case "touchstart":
+          this.direction = '';
+          clientX_start = event.touches[0].clientX;
+          this.clientX_start = clientX_start;
+          break;
+        case "touchend":
+          this.callbackFun();
+          break;
+        case "touchmove":
+          // event.preventDefault();
+          if (event.cancelable) {
+            // 判断默认行为是否已经被禁用
+            if (!event.defaultPrevented) {
+              event.preventDefault();
+            }
+          }
+
+          clientX_end = event.changedTouches[0].clientX;
+          //判断移动的方向
+          distance = clientX_end - this.clientX_start;
+          if (this.clientX_start + minRange < clientX_end) {
+            this.direction = 'ltr';
+          }
+          else if (this.clientX_start - minRange > clientX_end) {
+            this.direction = 'rtl';
+          } else {
+            this.direction = '';
+          }
+          break;
+      }
+    }
+
   </script>
 </body>
 
