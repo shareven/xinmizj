@@ -374,7 +374,7 @@ header .navbar ul li.active:before {
   content: '';
   width: 72px;
   height: 7px;
-  background: url('images/nav.png');
+  background: url('./images/nav.png');
 }
 header .navbar ul li.active:after {
   display: block;
@@ -386,7 +386,7 @@ header .navbar ul li.active:after {
   content: '';
   width: 72px;
   height: 7px;
-  background: url('images/nav2.png');
+  background: url('./images/nav2.png');
 }
 header .navbar ul .login-btn {
   position: relative;
@@ -3918,7 +3918,7 @@ em.tip2 {
   }
   .home .top-video > div a {
     margin: 5px;
-    height: 230px;
+    height: 127px;
   }
   .home h1.title {
     padding: 20px 10px 15px;
