@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>心密之家</title>
+  <base href="/tpl/">
+
+  <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <div class=" donate">
+
+    <div class="container">
+      <a href="/daochang.html" class="goback">返回心密之家</a>
+      <form class="form box">
+        <h3 class="text-center">印心古寺捐助</h3>
+        <div class="form-group">
+
+          <input type="text" name="" class=" form-control " placeholder="功德主（选填）">
+        </div>
+
+        <div class="form-group">
+
+          <input type="text" name="" class=" form-control " placeholder="联系方式（选填）">
+        </div>
+        <div class="form-group">
+
+          <input type="text" name="" class=" form-control " placeholder="捐助金额">
+        </div>
+        <div class="form-group">
+
+          <!-- <input type="text" name="telephone" class=" form-control " placeholder="捐助事项"> -->
+          <select class="form-control donation-type" name="donation-type">
+            <option value="经书助印">经书助印</option>
+            <option value="禅堂建设">禅堂建设</option>
+            <option value="供养三宝">供养三宝</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>
+        <div class="form-group">
+
+          <input type="text" name="telephone" class=" form-control " placeholder="备注（选填）">
+        </div>
+
+        <div class="word-wrap text-center text-muted">
+          <p class="">愿以此功德，普及于一切，</p>
+          <p class="">我等于众生，皆共成佛道。</p>
+        </div>
+        <button type="submit " class="btn btn-m-bg btn-lg btn-block">提 交</button>
+
+      </form>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+  <script src="/static/lib/jquery.min.js"></script>
+  <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script>
+    ;
+    (function () {
+      // 从url中获取类型
+      var type = new URL(window.location.href).searchParams.get('type')
+      if (type) {
+        
+        $('.donation-type').val(type);
+
+      }
+
+
+    })()
+
+  </script>
+</body>
+
+</html>

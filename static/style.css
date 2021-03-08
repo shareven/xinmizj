@@ -196,6 +196,14 @@ a:hover {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+.py-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.px-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 .cursor {
   cursor: pointer;
 }
@@ -1738,7 +1746,7 @@ footer a {
   padding: 15px 3px;
 }
 .daochang .donation .gongdedongtai {
-  background: url('/static/images/gongdedongtai.jpg') no-repeat;
+  background: url('/static/images/gongdedongtai20210308.jpg') no-repeat;
   background-size: 100% 100%;
 }
 .daochang .donation .donation-box {
@@ -2173,6 +2181,36 @@ footer a {
 .book .book-list .panel .select-book {
   font-size: 18px;
   color: #4E8500;
+}
+.donate {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  line-height: 1;
+  background-image: url('/static/images/donate_pc_bg.jpg');
+  background-size: cover;
+}
+.donate .goback {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+.donate .goback:hover {
+  color: #4E8500;
+}
+.donate .box {
+  max-width: 320px;
+  margin: 150px auto 0;
+}
+.donate .box h3 {
+  margin: 15px auto 30px;
+}
+.donate .box .word-wrap {
+  margin: 30px auto;
+}
+.donate .box .word-wrap p {
+  margin: 15px auto;
+  font-size: 16px;
 }
 @media (max-width: 992px) {
   .book .book-list {
@@ -3531,6 +3569,9 @@ em.tip2 {
   }
 }
 @media (max-width: 768px) {
+  .donate {
+    background-image: url('/static/images/donate_m_bg.jpg');
+  }
   #tipModal .modal-dialog {
     margin: 110px 6px;
   }
