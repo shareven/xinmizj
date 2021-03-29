@@ -20,44 +20,63 @@
 
     <div class="container">
       <a href="/daochang.html" class="goback">返回心密之家</a>
-      <form class="form box">
+      <div class="box">
         <h3 class="text-center">印心古寺捐助</h3>
         <div class="form-group">
+          <div class="radio">
+            <input id="radio-alipay" name="pay" type="radio" checked>
+            <label for="radio-alipay" class="radio-label">支付宝支付</label>
+            <input id="radio-wechatpay" name="pay" type="radio">
+            <label for="radio-wechatpay" class="radio-label">微信支付</label>
+          </div>
+        </div>
+        <div class="wechatpay-box hide text-center my-15">
+          <p style="font-size: 12px;line-height:1.5; color:#666">*支付后，如需正式收据，请联系印心古寺财务（微信号：dj13883640883）核实后开具，感谢。</p>
 
-          <input type="text" name="" class=" form-control " placeholder="功德主（选填）">
+          <img class="my-15" src="/static/images/wechatpay.jpg" width="300"/>
         </div>
 
-        <div class="form-group">
+        <form class="form ">
 
-          <input type="text" name="" class=" form-control " placeholder="联系方式（选填）">
-        </div>
-        <div class="form-group">
+          
+          <div class="form-group">
 
-          <input type="text" name="" class=" form-control " placeholder="捐助金额">
-        </div>
-        <div class="form-group">
+            <input type="text" name="" required="required" class=" form-control" placeholder="捐助金额">
+          </div>
+          <div class="form-group">
 
-          <!-- <input type="text" name="telephone" class=" form-control " placeholder="捐助事项"> -->
-          <select class="form-control donation-type" name="donation-type">
-            <option value="经书助印">经书助印</option>
-            <option value="禅堂建设">禅堂建设</option>
-            <option value="供养三宝">供养三宝</option>
-            <option value="其他">其他</option>
-          </select>
-        </div>
-        <div class="form-group">
+            <select class="form-control donation-type" name="donation-type">
+              <option value="经书助印">经书助印</option>
+              <option value="禅堂建设">禅堂建设</option>
+              <option value="供养三宝">供养三宝</option>
+              <option value="其他">其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" name="" class=" form-control" placeholder="功德主（选填）">
+          </div>
 
-          <input type="text" name="telephone" class=" form-control " placeholder="备注（选填）">
-        </div>
+          <div class="form-group">
 
-        <div class="word-wrap text-center text-muted">
-          <p class="">愿以此功德，普及于一切，</p>
-          <p class="">我等于众生，皆共成佛道。</p>
-        </div>
-        <button type="submit " class="btn btn-m-bg btn-lg btn-block">提 交</button>
+            <input type="text" name="" class=" form-control" placeholder="联系方式（选填）">
+          </div>
+          <div class="form-group">
 
-      </form>
+            <input type="text" name="telephone" class=" form-control" placeholder="备注（选填）">
+          </div>
 
+          <div class="word-wrap text-center colorfff">
+            <p class="">愿以此功德，普及于一切，</p>
+            <p class="">我等于众生，皆共成佛道。</p>
+          </div>
+          <button type="submit" class="btn btn-m-bg btn-lg btn-block ">提 交</button>
+
+          <div class="tips  m-bgcolor px-15 py-15 hide">
+            <h4>暂不支持在微信中使用支付宝付款！</h4>
+            <h5>请点击右上角的"···"，然后点击"在浏览器中打开"，使用支付宝付款</h5>
+          </div>
+        </form>
+      </div>
 
     </div>
 
@@ -73,10 +92,34 @@
   <script>
     ;
     (function () {
+
+      function isWeiXin() {
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      if (isWeiXin()) {
+        $('button[type="submit"]').addClass('hide');
+        $('.tips').removeClass('hide')
+      }
+      $("input[type='radio']").on('change', function(e) {
+        if(e.target.id=="radio-alipay"){
+          $('.wechatpay-box').addClass('hide');
+          $('.form').removeClass('hide')
+        }else{
+          $('.form').addClass('hide');
+          $('.wechatpay-box').removeClass('hide')
+        }
+      })
+
       // 从url中获取类型
       var type = new URL(window.location.href).searchParams.get('type')
       if (type) {
-        
+
         $('.donation-type').val(type);
 
       }
