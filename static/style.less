@@ -454,6 +454,9 @@ header {
         ul {
             // width: 60%;
             height: 132px;
+            #xinting{
+                width:60px;
+            }
             li {
                 position: relative;
                 width: 100px;
@@ -632,6 +635,9 @@ header {
     header .navbar .navbar-right li {
       width: 100px;
     }
+    #xinting{
+        width:40px;
+    }
   }
 /* 分页 */
 
@@ -661,7 +667,7 @@ header {
     }
 }
 
-@media (min-width: 768px) and (max-width:1060px) {
+@media (min-width: 850px) and (max-width:1060px) {
     header .navbar .navbar-brand img {
         margin-top: 20px;
         height: 54px;
@@ -670,9 +676,9 @@ header {
         .navbar ul {
             height: 132px;
             li {
-                width: 57px;
+                width: 55px;
                 a {
-                    font-size: 13px;
+                    font-size: 12px;
                     
                 }
                 &.active::before,
@@ -681,12 +687,73 @@ header {
                     height: 7px;
                 }
             }
+            #xinting{
+                width:38px;
+            }
             &.nvabar-center {
                 margin-left: 0px;
             }
         }
         .navbar .navbar-right li {
-            width: 100px;
+            width: auto;
+            img{
+                width:40px;
+                height:40px;
+            }
+        }
+        .copyright {
+            text-align: center;
+        }
+    }
+    nav.navbar.bootsnav.navbar-mobile ul.nav {
+        margin-top: 120px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width:850px) {
+    header .navbar .navbar-brand img {
+        margin-top: 20px;
+        height: 54px;
+      }
+    header {
+        .navbar ul {
+            height: 132px;
+            li {
+                width: 52px;
+                a {
+                    font-size: 12px;
+                    
+                }
+                &.active::before,
+                &.active:after {
+                    width: 57px;
+                    height: 7px;
+                }
+            }
+            .login-btn{
+                width:90px;
+                a {
+                    margin: 0px 5px;
+                    width: 55px;
+                    line-height: 37px;
+                    font-size: 12px;
+                    font-family: 'AdobeInvisFont';
+                }
+            }
+            #xinting{
+                width:38px;
+            }
+            &.nvabar-center {
+                margin-left: 0px;
+            }
+        }
+        .navbar .navbar-right li {
+            width: auto;
+            img{
+                width:40px;
+                height:40px;
+            }
         }
         .copyright {
             text-align: center;
@@ -730,6 +797,9 @@ header {
                 margin-left: 60%;
                 width: 40%;
                 .m-bgcolor;
+                #xinting{
+                    width:100%;
+                }
                 li {
                     position: relative;
                     width: 100%; // text-align: right;

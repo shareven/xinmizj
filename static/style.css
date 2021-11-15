@@ -361,6 +361,9 @@ header .navbar .navbar-toggle .icon-bar + .icon-bar {
 header .navbar ul {
   height: 132px;
 }
+header .navbar ul #xinting {
+  width: 60px;
+}
 header .navbar ul li {
   position: relative;
   width: 100px;
@@ -534,6 +537,9 @@ header .navbar #logout-btn {
   header .navbar .navbar-right li {
     width: 100px;
   }
+  #xinting {
+    width: 40px;
+  }
 }
 /* 分页 */
 @media (max-width: 1060px) {
@@ -556,7 +562,7 @@ header .navbar #logout-btn {
     z-index: 1;
   }
 }
-@media (min-width: 768px) and (max-width: 1060px) {
+@media (min-width: 850px) and (max-width: 1060px) {
   header .navbar .navbar-brand img {
     margin-top: 20px;
     height: 54px;
@@ -565,21 +571,77 @@ header .navbar #logout-btn {
     height: 132px;
   }
   header .navbar ul li {
-    width: 57px;
+    width: 55px;
   }
   header .navbar ul li a {
-    font-size: 13px;
+    font-size: 12px;
   }
   header .navbar ul li.active::before,
   header .navbar ul li.active:after {
     width: 57px;
     height: 7px;
   }
+  header .navbar ul #xinting {
+    width: 38px;
+  }
   header .navbar ul.nvabar-center {
     margin-left: 0px;
   }
   header .navbar .navbar-right li {
-    width: 100px;
+    width: auto;
+  }
+  header .navbar .navbar-right li img {
+    width: 40px;
+    height: 40px;
+  }
+  header .copyright {
+    text-align: center;
+  }
+  nav.navbar.bootsnav.navbar-mobile ul.nav {
+    margin-top: 120px;
+  }
+}
+@media (min-width: 768px) and (max-width: 850px) {
+  header .navbar .navbar-brand img {
+    margin-top: 20px;
+    height: 54px;
+  }
+  header .navbar ul {
+    height: 132px;
+  }
+  header .navbar ul li {
+    width: 52px;
+  }
+  header .navbar ul li a {
+    font-size: 12px;
+  }
+  header .navbar ul li.active::before,
+  header .navbar ul li.active:after {
+    width: 57px;
+    height: 7px;
+  }
+  header .navbar ul .login-btn {
+    width: 90px;
+  }
+  header .navbar ul .login-btn a {
+    margin: 0px 5px;
+    width: 55px;
+    line-height: 37px;
+    font-size: 12px;
+    font-family: 'AdobeInvisFont';
+  }
+  header .navbar ul #xinting {
+    width: 38px;
+  }
+  header .navbar ul.nvabar-center {
+    margin-left: 0px;
+  }
+  header .navbar .navbar-right li {
+    width: auto;
+  }
+  header .navbar .navbar-right li img {
+    width: 40px;
+    height: 40px;
   }
   header .copyright {
     text-align: center;
@@ -627,6 +689,9 @@ header .navbar #logout-btn {
     background: #4E8500;
     border-color: #4E8500;
     color: #ffffff;
+  }
+  header .navbar ul #xinting {
+    width: 100%;
   }
   header .navbar ul li {
     position: relative;
