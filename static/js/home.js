@@ -2,7 +2,7 @@
      var $bodyWidth = $(document.body).width(),
          isPhone = $bodyWidth < 768;
      $('.main img').lazyload({
-         threshold: 100,
+        //  threshold: 100,
          placeholder: "/xinmizj/static/images/loading.svg",
          effects: "fadeIn"
      });
