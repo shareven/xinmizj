@@ -3,7 +3,7 @@
          isPhone = $bodyWidth < 768;
      $('.main img').lazyload({
          threshold: 100,
-         placeholder: "/static/images/loading.svg",
+         placeholder: "/xinmizj/static/images/loading.svg",
          effects: "fadeIn"
      });
      var mySwiper2 = new Swiper('#swiper-container2', {
@@ -77,7 +77,7 @@
  //  $(document).ready(function () {
  //      $('.main img').lazyload({
  //          threshold:100,
- //          placeholder: "/static/images/loading.svg",
+ //          placeholder: "/xinmizj/static/images/loading.svg",
  //          effects: "fadeIn"
  //      });
  //      var mySwiper2 = new Swiper('.swiper-container', {
