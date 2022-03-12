@@ -2249,6 +2249,12 @@ footer a {
   font-size: 18px;
   color: #4E8500;
 }
+.book .book-list .panel .hidden-xs {
+  max-height: 45px;
+}
+#dowload-box span:hover {
+  cursor: pointer;
+}
 .donate {
   position: relative;
   width: 100%;
