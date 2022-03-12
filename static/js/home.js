@@ -1,11 +1,7 @@
  $(document).ready(function () {
      var $bodyWidth = $(document.body).width(),
          isPhone = $bodyWidth < 768;
-     $('.main img').lazyload({
-        //  threshold: 100,
-         placeholder: "/xinmizj/static/images/loading.svg",
-         effects: "fadeIn"
-     });
+     
      var mySwiper2 = new Swiper('#swiper-container2', {
          autoplay: 3000,
          //   loop: true,
